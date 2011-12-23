@@ -1,0 +1,170 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Qualified:@Microsoft.VisualStudio.TestTools.UnitTesting.Assert">
+      <Item value="AreEqual`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Default">
+      <Item value="public" priority="12" />
+      <Item value="Object`0" priority="0" />
+      <Item value="return" priority="7" />
+      <Item value="reply" priority="2" />
+      <Item value="new" priority="9" />
+      <Item value="PResult" priority="2" />
+      <Item value="result" priority="9" />
+      <Item value="else" priority="1" />
+      <Item value="this" priority="3" />
+      <Item value="address" priority="0" />
+      <Item value="ITest`0" priority="2" />
+      <Item value="catch" priority="1" />
+      <Item value="Exception`0" priority="3" />
+      <Item value="PResult`0" priority="1" />
+      <Item value="e" priority="2" />
+      <Item value="rr" priority="6" />
+      <Item value="try" priority="0" />
+      <Item value="if" priority="0" />
+      <Item value="private" priority="2" />
+      <Item value="readonly" priority="1" />
+      <Item value="String`0" priority="7" />
+      <Item value="host" priority="1" />
+      <Item value="login" priority="0" />
+      <Item value="password" priority="0" />
+      <Item value="static" priority="0" />
+      <Item value="int" priority="5" />
+      <Item value="long" priority="2" />
+      <Item value="Console`0" priority="1" />
+      <Item value="TPing" priority="0" />
+      <Item value="IAsyncResult`0" priority="1" />
+      <Item value="ping" priority="0" />
+      <Item value="null" priority="2" />
+      <Item value="foreach" priority="0" />
+      <Item value="rep" priority="0" />
+      <Item value="class" priority="0" />
+      <Item value="Dtraceroute" priority="1" />
+      <Item value="maxHop" priority="1" />
+      <Item value="string" priority="0" />
+      <Item value="List" priority="0" />
+      <Item value="index" priority="1" />
+      <Item value="milisecond" priority="0" />
+      <Item value="TWMIRam" priority="0" />
+      <Item value="r" priority="0" />
+      <Item value="List&lt;string&gt;" priority="0" />
+      <Item value="TWMIDriver" priority="0" />
+      <Item value="d" priority="0" />
+      <Item value="Convert`0" priority="0" />
+      <Item value="oMs" priority="0" />
+      <Item value="ObjectQuery`0" priority="0" />
+      <Item value="oConn" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PService.PResult">
+      <Item value="errCode" priority="3" />
+      <Item value="result" priority="2" />
+      <Item value="message" priority="3" />
+      <Item value="exception" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Net.NetworkInformation.PingReply">
+      <Item value="Status" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Exception">
+      <Item value="Message" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="Count`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PService.tests.TWMIRam">
+      <Item value="password" priority="1" />
+      <Item value="login" priority="0" />
+      <Item value="getTest`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Console">
+      <Item value="ReadKey`0" priority="0" />
+      <Item value="WriteLine`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PService.tests.TPing">
+      <Item value="getTest`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@PConsole.Traceroute">
+      <Item value="Traceroute1`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PService.data.Dtraceroute">
+      <Item value="maxHop" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Net.IPAddress">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PService.tests.TWMIDriver">
+      <Item value="getTest`0" priority="0" />
+      <Item value="host" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="ToInt64`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PResult.cs" caret="325" fromTop="11" />
+      <File id="F081A3F0-92D4-4795-8CAC-F6BB23ADC89D/f:UnitPTest.cs" caret="1407" fromTop="13" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:data/f:DMemory.cs" caret="223" fromTop="10" />
+      <File id="BF642310-AA18-47A0-AF0F-E6A846671E17/f:Traceroute.cs" caret="2010" fromTop="30" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TPing.cs" caret="1496" fromTop="13" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:data/f:Dtraceroute.cs" caret="589" fromTop="21" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TTracert.cs" caret="840" fromTop="7" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TWMIRam.cs" caret="526" fromTop="19" />
+      <File id="BF642310-AA18-47A0-AF0F-E6A846671E17/f:Program.cs" caret="1776" fromTop="19" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TWMIDriver.cs" caret="1029" fromTop="14" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TTracert.cs" caret="349" fromTop="8" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TTracert.cs" caret="1435" fromTop="27" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TTracert.cs" caret="2520" fromTop="15" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TTracert.cs" caret="1435" fromTop="24" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TTracert.cs" caret="840" fromTop="7" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TWMIRam.cs" caret="671" fromTop="9" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TWMIRam.cs" caret="1633" fromTop="28" />
+      <File id="BF642310-AA18-47A0-AF0F-E6A846671E17/f:Program.cs" caret="1244" fromTop="18" />
+      <File id="BF642310-AA18-47A0-AF0F-E6A846671E17/f:Program.cs" caret="326" fromTop="1" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TWMIRam.cs" caret="626" fromTop="15" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TWMIRam.cs" caret="1256" fromTop="18" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TWMIDriver.cs" caret="4873" fromTop="26" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TWMIDriver.cs" caret="4881" fromTop="0" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TWMIDriver.cs" caret="4827" fromTop="30" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TWMIDriver.cs" caret="4827" fromTop="20" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TWMIDriver.cs" caret="4827" fromTop="29" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TWMIDriver.cs" caret="4827" fromTop="19" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TWMIDriver.cs" caret="4828" fromTop="24" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TWMIDriver.cs" caret="2002" fromTop="11" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TWMIDriver.cs" caret="3358" fromTop="23" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TWMIDriver.cs" caret="4275" fromTop="18" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TWMIDriver.cs" caret="1435" fromTop="13" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TWMIDriver.cs" caret="509" fromTop="15" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TWMIDriver.cs" caret="227" fromTop="6" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TWMIDriver.cs" caret="418" fromTop="12" />
+      <File id="BF642310-AA18-47A0-AF0F-E6A846671E17/f:Program.cs" caret="1798" fromTop="18" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TWMIDriver.cs" caret="1043" fromTop="24" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TWMIDriver.cs" caret="1026" fromTop="19" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TWMIDriver.cs" caret="1260" fromTop="25" />
+      <File id="BF642310-AA18-47A0-AF0F-E6A846671E17/f:Program.cs" caret="1776" fromTop="19" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>
