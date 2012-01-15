@@ -2,3 +2,11 @@
 /_ReSharper.PMonitor
 /PConsole/bin
 /PMonitor/bin
+/PTdd/bin
+/PTdd/obj
+/PService/obj
+/PService/bin
+/PService/bin
+/PMonitor/obj
+/PData/bin
+/PData/obj

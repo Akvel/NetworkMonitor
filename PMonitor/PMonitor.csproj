@@ -11,7 +11,8 @@
     <RootNamespace>PMonitor</RootNamespace>
     <AssemblyName>PMonitor</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -52,6 +53,11 @@
     <Compile Include="FMain.Designer.cs">
       <DependentUpon>FMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="monitorDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>monitorDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="views\FConnection.cs">
@@ -66,17 +72,11 @@
     <Compile Include="views\FDictionary.Designer.cs">
       <DependentUpon>FDictionary.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\FObjectInfo.cs">
+    <Compile Include="views\FUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\FObjectInfo.Designer.cs">
-      <DependentUpon>FObjectInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="views\FUsers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="views\FUsers.Designer.cs">
-      <DependentUpon>FUsers.cs</DependentUpon>
+    <Compile Include="views\FUser.Designer.cs">
+      <DependentUpon>FUser.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FMain.resx">
       <DependentUpon>FMain.cs</DependentUpon>
@@ -89,6 +89,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="views\FConnection.resx">
       <DependentUpon>FConnection.cs</DependentUpon>
@@ -96,9 +97,21 @@
     <EmbeddedResource Include="views\FDictionary.resx">
       <DependentUpon>FDictionary.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\FObjectInfo.resx">
-      <DependentUpon>FObjectInfo.cs</DependentUpon>
+    <EmbeddedResource Include="views\FUser.resx">
+      <DependentUpon>FUser.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="monitorDataSet.xsc">
+      <DependentUpon>monitorDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="monitorDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>monitorDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="monitorDataSet.xss">
+      <DependentUpon>monitorDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
