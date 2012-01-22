@@ -66,23 +66,35 @@
     <Compile Include="views\FConnection.Designer.cs">
       <DependentUpon>FConnection.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\FDictionary.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="views\FDictionary.Designer.cs">
-      <DependentUpon>FDictionary.cs</DependentUpon>
-    </Compile>
     <Compile Include="views\FHard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="views\FHard.Designer.cs">
       <DependentUpon>FHard.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\FHMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\FHMail.Designer.cs">
+      <DependentUpon>FHMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\FMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\FMonitor.Designer.cs">
+      <DependentUpon>FMonitor.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\FScan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="views\FScan.Designer.cs">
       <DependentUpon>FScan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\FSMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\FSMail.Designer.cs">
+      <DependentUpon>FSMail.cs</DependentUpon>
     </Compile>
     <Compile Include="views\FUser.cs">
       <SubType>Form</SubType>
@@ -106,14 +118,20 @@
     <EmbeddedResource Include="views\FConnection.resx">
       <DependentUpon>FConnection.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\FDictionary.resx">
-      <DependentUpon>FDictionary.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="views\FHard.resx">
       <DependentUpon>FHard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\FHMail.resx">
+      <DependentUpon>FHMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\FMonitor.resx">
+      <DependentUpon>FMonitor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\FScan.resx">
       <DependentUpon>FScan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\FSMail.resx">
+      <DependentUpon>FSMail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\FUser.resx">
       <DependentUpon>FUser.cs</DependentUpon>

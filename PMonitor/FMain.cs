@@ -15,8 +15,9 @@ namespace PMonitor
     public partial class fMain : Form
     {
         private FUser fUser = new FUser();
-        private FScan fScan = new FScan();
+        private FScan fScan ;
         private FHard fHard = new FHard();
+        private FMonitor fMon = new FMonitor();
 
 
         private readonly Dictionary<string, Hardware> treeHardware = new Dictionary<string, Hardware>();
@@ -24,6 +25,9 @@ namespace PMonitor
         public fMain()
         {
             InitializeComponent();
+
+
+            fScan = new FScan(this);
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -92,20 +96,74 @@ namespace PMonitor
 
         private void fMain_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'mset1.check_types' table. You can move, or remove it, as needed.
+            this.check_typesTableAdapter.Fill(this.mset1.check_types);
             // TODO: This line of code loads data into the 'mset1.software' table. You can move, or remove it, as needed.
             this.softwareTableAdapter.Fill(this.mset1.software);
+
+
+            toolStripButton3_Click(null, null);
 
         }
 
         private void tvTopolog_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
+           
+        }
+
+        private void softwareDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            fMon.ShowDialog();
+        }
+
+        private void tvTopolog_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tvTopolog_MouseUp(object sender, MouseEventArgs e)
+        {
+           
+        }
+
+        private void tvTopolog_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            lbLog.Items.Clear();
+            lbLog.Items.Add(">>" + tvTopolog.SelectedNode);
+
             if (tvTopolog.SelectedNode == null) return;
 
             Hardware hh = treeHardware[tvTopolog.SelectedNode.Text];
 
-            lbLog.Items.Add(tvTopolog.SelectedNode.ToString() + "  " + hh);
+            lbLog.Items.Add(tvTopolog.SelectedNode.ToString() + "  " + hh.device_id);
 
             this.softwareBindingSource.Filter = "id_device = " + hh.device_id;
+            // this.softwareBindingSource.
+        }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.softwareBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.mset1);
+        }
+
+        private void softwareDataGridView_RowValidating(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            softwareDataGridView[5, e.RowIndex].Value = int.Parse(treeHardware[tvTopolog.SelectedNode.Text].device_id);
+            //if (softwareDataGridView[5, e.RowIndex].Value == DBNull.Value)
+            //{
+            //    dgv.Rows[e.RowIndex].ErrorText = "You must enter a value for this field!";
+
+            // Tell the DataGridView not to accept this row
+            //   e.Cancel = true;
+            //}
+
         }
     }
 }

@@ -16,9 +16,15 @@ namespace PMonitor.views
 {
     public partial class FScan : Form
     {
-        public FScan()
+        private PMonitor.fMain fm;
+
+
+        public FScan(fMain fMain)
         {
             InitializeComponent();
+
+
+            this.fm = fMain;
         }
 
         private void bScan_Click(object sender, EventArgs e)
@@ -69,6 +75,43 @@ namespace PMonitor.views
                     }
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+
+             lbLog.Items.Clear();
+
+            foreach (Hardware hh in cbFind.CheckedItems)
+            {
+                lbLog.Items.Add(hh);
+                    
+
+                monitorDataSet.hardwaresRow row = fm.mset1.hardwares.NewhardwaresRow();
+                row.description = "scan";
+                row.dns_name = hh.hostname;
+                row.ip_address = hh.ip;
+                row.is_snmp = false;
+                try
+                {
+                    fm.mset1.hardwares.Rows.Add(row);
+                    fm.tableAdapterManager.UpdateAll(fm.mset1);
+
+
+                    PMonitor.monitorDataSetTableAdapters.hardwaresTableAdapter hardwaresTableAdapter = new PMonitor.monitorDataSetTableAdapters.hardwaresTableAdapter();
+                    hardwaresTableAdapter.Insert(hh.hostname, false, hh.ip , "scan", 1);
+
+
+                    lbLog.Items.Add("Added");
+                }catch (Exception ee)
+                {
+                    MessageBox.Show(ee.ToString());
+                }
+
+            }
+                
+            
         }
 
 
