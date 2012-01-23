@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="monitorDataSet.xsc">
       <DependentUpon>monitorDataSet.xsd</DependentUpon>
     </None>

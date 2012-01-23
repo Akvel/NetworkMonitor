@@ -6,6 +6,7 @@ using System.Net.NetworkInformation;
 using System.Text;
 using PService;
 using PService.data;
+using PService.sender;
 using PService.tests;
 
 namespace PConsole
@@ -42,9 +43,21 @@ namespace PConsole
             //r.getTest();
 
             Console.WriteLine("----------------------------------");
-            //TWMIDriver d = new TWMIDriver("microsof-2e3f2a", "test", "testtest");
-            TWMIDriver d = new TWMIDriver("192.168.1.41", "akvel", "testtest");
-            d.getTest();
+            //TWMIDriver d = new TWMIDriver("192.168.1.41", "akvel", "testtest");
+            //d.getTest();
+
+
+            //TSql tSql = new TSql("127.0.0.1",1433);
+
+            //Console.WriteLine(tSql.getTest());
+
+
+             //  TPort port =  new TPort("127.0.0.1", 2034);
+              // Console.WriteLine(">>>>" + port.getTest());
+
+            SGmail mail = new SGmail();
+            mail.send("Test");
+
 
             Console.WriteLine("Finished");
             Console.ReadKey();
