@@ -14,7 +14,7 @@ namespace PService
 
         public override string ToString()
         {
-            return result + " " + message + " " + errCode + " " + exception.Message;
+            return result + " " + message + " " + errCode + " " + (exception != null ? exception.Message : "");
         }
     }
 }

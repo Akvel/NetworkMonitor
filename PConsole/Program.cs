@@ -47,16 +47,16 @@ namespace PConsole
             //d.getTest();
 
 
-            //TSql tSql = new TSql("127.0.0.1",1433);
+            TSql tSql = new TSql("127.0.0.1",1028);
 
-            //Console.WriteLine(tSql.getTest());
+            Console.WriteLine(tSql.getTest());
 
 
              //  TPort port =  new TPort("127.0.0.1", 2034);
               // Console.WriteLine(">>>>" + port.getTest());
 
-            SGmail mail = new SGmail();
-            mail.send("Test");
+            //SGmail mail = new SGmail();
+            //mail.send("Test");
 
 
             Console.WriteLine("Finished");

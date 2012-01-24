@@ -20,9 +20,9 @@ namespace PMonitor {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("monitorDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("mset1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class monitorDataSet : global::System.Data.DataSet {
+    public partial class mset1 : global::System.Data.DataSet {
         
         private action_typesDataTable tableaction_types;
         
@@ -82,7 +82,7 @@ namespace PMonitor {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public monitorDataSet() {
+        public mset1() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -93,7 +93,7 @@ namespace PMonitor {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected monitorDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected mset1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -335,7 +335,7 @@ namespace PMonitor {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            monitorDataSet cln = ((monitorDataSet)(base.Clone()));
+            mset1 cln = ((mset1)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -529,9 +529,9 @@ namespace PMonitor {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "monitorDataSet";
+            this.DataSetName = "mset1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/monitorDataSet.xsd";
+            this.Namespace = "http://tempuri.org/mset1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableaction_types = new action_typesDataTable();
@@ -707,7 +707,7 @@ namespace PMonitor {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            monitorDataSet ds = new monitorDataSet();
+            mset1 ds = new mset1();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -1009,7 +1009,7 @@ namespace PMonitor {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                monitorDataSet ds = new monitorDataSet();
+                mset1 ds = new mset1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1337,7 +1337,7 @@ namespace PMonitor {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                monitorDataSet ds = new monitorDataSet();
+                mset1 ds = new mset1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1611,7 +1611,7 @@ namespace PMonitor {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                monitorDataSet ds = new monitorDataSet();
+                mset1 ds = new mset1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1889,7 +1889,7 @@ namespace PMonitor {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                monitorDataSet ds = new monitorDataSet();
+                mset1 ds = new mset1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2186,7 +2186,7 @@ namespace PMonitor {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                monitorDataSet ds = new monitorDataSet();
+                mset1 ds = new mset1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2527,7 +2527,7 @@ namespace PMonitor {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                monitorDataSet ds = new monitorDataSet();
+                mset1 ds = new mset1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2604,6 +2604,8 @@ namespace PMonitor {
             private global::System.Data.DataColumn columnid_action;
             
             private global::System.Data.DataColumn columnid_software;
+            
+            private global::System.Data.DataColumn columnis_active;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -2688,6 +2690,14 @@ namespace PMonitor {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn is_activeColumn {
+                get {
+                    return this.columnis_active;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2723,7 +2733,7 @@ namespace PMonitor {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public monitoringRow AddmonitoringRow(System.DateTime dt, int valuee, string comment, action_typesRow parentaction_typesRowBymonitor_action, softwareRow parentsoftwareRowBysoft_monitor) {
+            public monitoringRow AddmonitoringRow(System.DateTime dt, int valuee, string comment, action_typesRow parentaction_typesRowBymonitor_action, softwareRow parentsoftwareRowBysoft_monitor, int is_active) {
                 monitoringRow rowmonitoringRow = ((monitoringRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2731,7 +2741,8 @@ namespace PMonitor {
                         valuee,
                         comment,
                         null,
-                        null};
+                        null,
+                        is_active};
                 if ((parentaction_typesRowBymonitor_action != null)) {
                     columnValuesArray[4] = parentaction_typesRowBymonitor_action[0];
                 }
@@ -2773,6 +2784,7 @@ namespace PMonitor {
                 this.columncomment = base.Columns["comment"];
                 this.columnid_action = base.Columns["id_action"];
                 this.columnid_software = base.Columns["id_software"];
+                this.columnis_active = base.Columns["is_active"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2790,6 +2802,8 @@ namespace PMonitor {
                 base.Columns.Add(this.columnid_action);
                 this.columnid_software = new global::System.Data.DataColumn("id_software", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_software);
+                this.columnis_active = new global::System.Data.DataColumn("is_active", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnis_active);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AutoIncrement = true;
@@ -2869,7 +2883,7 @@ namespace PMonitor {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                monitorDataSet ds = new monitorDataSet();
+                mset1 ds = new mset1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3161,7 +3175,7 @@ namespace PMonitor {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                monitorDataSet ds = new monitorDataSet();
+                mset1 ds = new mset1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3473,7 +3487,7 @@ namespace PMonitor {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                monitorDataSet ds = new monitorDataSet();
+                mset1 ds = new mset1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3860,7 +3874,7 @@ namespace PMonitor {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                monitorDataSet ds = new monitorDataSet();
+                mset1 ds = new mset1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4157,7 +4171,7 @@ namespace PMonitor {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                monitorDataSet ds = new monitorDataSet();
+                mset1 ds = new mset1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4478,7 +4492,7 @@ namespace PMonitor {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                monitorDataSet ds = new monitorDataSet();
+                mset1 ds = new mset1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4850,7 +4864,7 @@ namespace PMonitor {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                monitorDataSet ds = new monitorDataSet();
+                mset1 ds = new mset1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -5500,6 +5514,22 @@ namespace PMonitor {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int is_active {
+                get {
+                    try {
+                        return ((int)(this[this.tablemonitoring.is_activeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'is_active\' in table \'monitoring\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablemonitoring.is_activeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public action_typesRow action_typesRow {
                 get {
                     return ((action_typesRow)(this.GetParentRow(this.Table.ParentRelations["monitor_action"])));
@@ -5542,6 +5572,18 @@ namespace PMonitor {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setid_softwareNull() {
                 this[this.tablemonitoring.id_softwareColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isis_activeNull() {
+                return this.IsNull(this.tablemonitoring.is_activeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setis_activeNull() {
+                this[this.tablemonitoring.is_activeColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -6833,7 +6875,7 @@ namespace PMonitor {
         }
     }
 }
-namespace PMonitor.monitorDataSetTableAdapters {
+namespace PMonitor.mset1TableAdapters {
     
     
     /// <summary>
@@ -7002,7 +7044,7 @@ namespace PMonitor.monitorDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(monitorDataSet.action_typesDataTable dataTable) {
+        public virtual int Fill(mset1.action_typesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7015,9 +7057,9 @@ namespace PMonitor.monitorDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual monitorDataSet.action_typesDataTable GetData() {
+        public virtual mset1.action_typesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            monitorDataSet.action_typesDataTable dataTable = new monitorDataSet.action_typesDataTable();
+            mset1.action_typesDataTable dataTable = new mset1.action_typesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7025,14 +7067,14 @@ namespace PMonitor.monitorDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(monitorDataSet.action_typesDataTable dataTable) {
+        public virtual int Update(mset1.action_typesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(monitorDataSet dataSet) {
+        public virtual int Update(mset1 dataSet) {
             return this.Adapter.Update(dataSet, "action_types");
         }
         
@@ -7324,7 +7366,7 @@ SELECT id, description, id_action_type, id_user, dt FROM audit WHERE (id = @id)"
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(monitorDataSet.auditDataTable dataTable) {
+        public virtual int Fill(mset1.auditDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7337,9 +7379,9 @@ SELECT id, description, id_action_type, id_user, dt FROM audit WHERE (id = @id)"
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual monitorDataSet.auditDataTable GetData() {
+        public virtual mset1.auditDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            monitorDataSet.auditDataTable dataTable = new monitorDataSet.auditDataTable();
+            mset1.auditDataTable dataTable = new mset1.auditDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7347,14 +7389,14 @@ SELECT id, description, id_action_type, id_user, dt FROM audit WHERE (id = @id)"
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(monitorDataSet.auditDataTable dataTable) {
+        public virtual int Update(mset1.auditDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(monitorDataSet dataSet) {
+        public virtual int Update(mset1 dataSet) {
             return this.Adapter.Update(dataSet, "audit");
         }
         
@@ -7663,7 +7705,7 @@ SELECT id, description, id_action_type, id_user, dt FROM audit WHERE (id = @id)"
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(monitorDataSet.check_typesDataTable dataTable) {
+        public virtual int Fill(mset1.check_typesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7676,9 +7718,9 @@ SELECT id, description, id_action_type, id_user, dt FROM audit WHERE (id = @id)"
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual monitorDataSet.check_typesDataTable GetData() {
+        public virtual mset1.check_typesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            monitorDataSet.check_typesDataTable dataTable = new monitorDataSet.check_typesDataTable();
+            mset1.check_typesDataTable dataTable = new mset1.check_typesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7686,14 +7728,14 @@ SELECT id, description, id_action_type, id_user, dt FROM audit WHERE (id = @id)"
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(monitorDataSet.check_typesDataTable dataTable) {
+        public virtual int Update(mset1.check_typesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(monitorDataSet dataSet) {
+        public virtual int Update(mset1 dataSet) {
             return this.Adapter.Update(dataSet, "check_types");
         }
         
@@ -7966,7 +8008,7 @@ SELECT id, description, id_action_type, id_user, dt FROM audit WHERE (id = @id)"
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(monitorDataSet.floorsDataTable dataTable) {
+        public virtual int Fill(mset1.floorsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7979,9 +8021,9 @@ SELECT id, description, id_action_type, id_user, dt FROM audit WHERE (id = @id)"
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual monitorDataSet.floorsDataTable GetData() {
+        public virtual mset1.floorsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            monitorDataSet.floorsDataTable dataTable = new monitorDataSet.floorsDataTable();
+            mset1.floorsDataTable dataTable = new mset1.floorsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7989,14 +8031,14 @@ SELECT id, description, id_action_type, id_user, dt FROM audit WHERE (id = @id)"
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(monitorDataSet.floorsDataTable dataTable) {
+        public virtual int Update(mset1.floorsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(monitorDataSet dataSet) {
+        public virtual int Update(mset1 dataSet) {
             return this.Adapter.Update(dataSet, "floors");
         }
         
@@ -8280,7 +8322,7 @@ SELECT id, id_user, id_device FROM hardware_mail_list WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(monitorDataSet.hardware_mail_listDataTable dataTable) {
+        public virtual int Fill(mset1.hardware_mail_listDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8293,9 +8335,9 @@ SELECT id, id_user, id_device FROM hardware_mail_list WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual monitorDataSet.hardware_mail_listDataTable GetData() {
+        public virtual mset1.hardware_mail_listDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            monitorDataSet.hardware_mail_listDataTable dataTable = new monitorDataSet.hardware_mail_listDataTable();
+            mset1.hardware_mail_listDataTable dataTable = new mset1.hardware_mail_listDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8303,14 +8345,14 @@ SELECT id, id_user, id_device FROM hardware_mail_list WHERE (id = @id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(monitorDataSet.hardware_mail_listDataTable dataTable) {
+        public virtual int Update(mset1.hardware_mail_listDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(monitorDataSet dataSet) {
+        public virtual int Update(mset1 dataSet) {
             return this.Adapter.Update(dataSet, "hardware_mail_list");
         }
         
@@ -8625,7 +8667,7 @@ SELECT id, dns_name, is_snmp, ip_address, description, id_room FROM hardwares WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(monitorDataSet.hardwaresDataTable dataTable) {
+        public virtual int Fill(mset1.hardwaresDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8638,9 +8680,9 @@ SELECT id, dns_name, is_snmp, ip_address, description, id_room FROM hardwares WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual monitorDataSet.hardwaresDataTable GetData() {
+        public virtual mset1.hardwaresDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            monitorDataSet.hardwaresDataTable dataTable = new monitorDataSet.hardwaresDataTable();
+            mset1.hardwaresDataTable dataTable = new mset1.hardwaresDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8648,14 +8690,14 @@ SELECT id, dns_name, is_snmp, ip_address, description, id_room FROM hardwares WH
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(monitorDataSet.hardwaresDataTable dataTable) {
+        public virtual int Update(mset1.hardwaresDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(monitorDataSet dataSet) {
+        public virtual int Update(mset1 dataSet) {
             return this.Adapter.Update(dataSet, "hardwares");
         }
         
@@ -8956,10 +8998,11 @@ SELECT id, dns_name, is_snmp, ip_address, description, id_room FROM hardwares WH
             tableMapping.ColumnMappings.Add("comment", "comment");
             tableMapping.ColumnMappings.Add("id_action", "id_action");
             tableMapping.ColumnMappings.Add("id_software", "id_software");
+            tableMapping.ColumnMappings.Add("is_active", "is_active");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[monitoring] WHERE (([id] = @Original_id) AND ([dt] = @Original_dt) AND ([valuee] = @Original_valuee) AND ([id_action] = @Original_id_action) AND ((@IsNull_id_software = 1 AND [id_software] IS NULL) OR ([id_software] = @Original_id_software)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[monitoring] WHERE (([id] = @Original_id) AND ([dt] = @Original_dt) AND ([valuee] = @Original_valuee) AND ([id_action] = @Original_id_action) AND ((@IsNull_id_software = 1 AND [id_software] IS NULL) OR ([id_software] = @Original_id_software)) AND ((@IsNull_is_active = 1 AND [is_active] IS NULL) OR ([is_active] = @Original_is_active)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dt", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dt", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -8967,34 +9010,38 @@ SELECT id, dns_name, is_snmp, ip_address, description, id_room FROM hardwares WH
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_action", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_action", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_software", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_software", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_software", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_software", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_is_active", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_active", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_is_active", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_active", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[monitoring] ([dt], [valuee], [comment], [id_action], [id_softw" +
-                "are]) VALUES (@dt, @valuee, @comment, @id_action, @id_software);\r\nSELECT id, dt," +
-                " valuee, comment, id_action, id_software FROM monitoring WHERE (id = SCOPE_IDENT" +
-                "ITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[monitoring] ([dt], [valuee], [comment], [id_action], [id_software], [is_active]) VALUES (@dt, @valuee, @comment, @id_action, @id_software, @is_active);
+SELECT id, dt, valuee, comment, id_action, id_software, is_active FROM monitoring WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dt", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@valuee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "valuee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@comment", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "comment", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_action", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_action", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_software", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_software", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@is_active", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_active", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[monitoring] SET [dt] = @dt, [valuee] = @valuee, [comment] = @comment, [id_action] = @id_action, [id_software] = @id_software WHERE (([id] = @Original_id) AND ([dt] = @Original_dt) AND ([valuee] = @Original_valuee) AND ([id_action] = @Original_id_action) AND ((@IsNull_id_software = 1 AND [id_software] IS NULL) OR ([id_software] = @Original_id_software)));
-SELECT id, dt, valuee, comment, id_action, id_software FROM monitoring WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[monitoring] SET [dt] = @dt, [valuee] = @valuee, [comment] = @comment, [id_action] = @id_action, [id_software] = @id_software, [is_active] = @is_active WHERE (([id] = @Original_id) AND ([dt] = @Original_dt) AND ([valuee] = @Original_valuee) AND ([id_action] = @Original_id_action) AND ((@IsNull_id_software = 1 AND [id_software] IS NULL) OR ([id_software] = @Original_id_software)) AND ((@IsNull_is_active = 1 AND [is_active] IS NULL) OR ([is_active] = @Original_is_active)));
+SELECT id, dt, valuee, comment, id_action, id_software, is_active FROM monitoring WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dt", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@valuee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "valuee", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@comment", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "comment", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_action", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_action", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_software", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_software", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@is_active", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_active", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dt", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dt", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_valuee", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "valuee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_action", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_action", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_software", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_software", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_software", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_software", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_is_active", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_active", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_is_active", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_active", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -9011,7 +9058,8 @@ SELECT id, dt, valuee, comment, id_action, id_software FROM monitoring WHERE (id
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, dt, valuee, comment, id_action, id_software FROM dbo.monitoring";
+            this._commandCollection[0].CommandText = "SELECT id, dt, valuee, comment, id_action, id_software, is_active FROM dbo.monito" +
+                "ring";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -9019,7 +9067,7 @@ SELECT id, dt, valuee, comment, id_action, id_software FROM monitoring WHERE (id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(monitorDataSet.monitoringDataTable dataTable) {
+        public virtual int Fill(mset1.monitoringDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9032,9 +9080,9 @@ SELECT id, dt, valuee, comment, id_action, id_software FROM monitoring WHERE (id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual monitorDataSet.monitoringDataTable GetData() {
+        public virtual mset1.monitoringDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            monitorDataSet.monitoringDataTable dataTable = new monitorDataSet.monitoringDataTable();
+            mset1.monitoringDataTable dataTable = new mset1.monitoringDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9042,14 +9090,14 @@ SELECT id, dt, valuee, comment, id_action, id_software FROM monitoring WHERE (id
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(monitorDataSet.monitoringDataTable dataTable) {
+        public virtual int Update(mset1.monitoringDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(monitorDataSet dataSet) {
+        public virtual int Update(mset1 dataSet) {
             return this.Adapter.Update(dataSet, "monitoring");
         }
         
@@ -9072,7 +9120,7 @@ SELECT id, dt, valuee, comment, id_action, id_software FROM monitoring WHERE (id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, System.DateTime Original_dt, int Original_valuee, int Original_id_action, global::System.Nullable<int> Original_id_software) {
+        public virtual int Delete(int Original_id, System.DateTime Original_dt, int Original_valuee, int Original_id_action, global::System.Nullable<int> Original_id_software, global::System.Nullable<int> Original_is_active) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_dt));
             this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_valuee));
@@ -9084,6 +9132,14 @@ SELECT id, dt, valuee, comment, id_action, id_software FROM monitoring WHERE (id
             else {
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((Original_is_active.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_is_active.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -9105,7 +9161,7 @@ SELECT id, dt, valuee, comment, id_action, id_software FROM monitoring WHERE (id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(System.DateTime dt, int valuee, string comment, int id_action, global::System.Nullable<int> id_software) {
+        public virtual int Insert(System.DateTime dt, int valuee, string comment, int id_action, global::System.Nullable<int> id_software, global::System.Nullable<int> is_active) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(dt));
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(valuee));
             if ((comment == null)) {
@@ -9120,6 +9176,12 @@ SELECT id, dt, valuee, comment, id_action, id_software FROM monitoring WHERE (id
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((is_active.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(is_active.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -9141,7 +9203,7 @@ SELECT id, dt, valuee, comment, id_action, id_software FROM monitoring WHERE (id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime dt, int valuee, string comment, int id_action, global::System.Nullable<int> id_software, int Original_id, System.DateTime Original_dt, int Original_valuee, int Original_id_action, global::System.Nullable<int> Original_id_software, int id) {
+        public virtual int Update(System.DateTime dt, int valuee, string comment, int id_action, global::System.Nullable<int> id_software, global::System.Nullable<int> is_active, int Original_id, System.DateTime Original_dt, int Original_valuee, int Original_id_action, global::System.Nullable<int> Original_id_software, global::System.Nullable<int> Original_is_active, int id) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(dt));
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(valuee));
             if ((comment == null)) {
@@ -9157,19 +9219,33 @@ SELECT id, dt, valuee, comment, id_action, id_software FROM monitoring WHERE (id
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_id));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(Original_dt));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_valuee));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_id_action));
-            if ((Original_id_software.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_id_software.Value));
+            if ((is_active.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(is_active.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(id));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_id));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_dt));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_valuee));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_id_action));
+            if ((Original_id_software.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_id_software.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Original_is_active.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_is_active.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -9190,8 +9266,8 @@ SELECT id, dt, valuee, comment, id_action, id_software FROM monitoring WHERE (id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime dt, int valuee, string comment, int id_action, global::System.Nullable<int> id_software, int Original_id, System.DateTime Original_dt, int Original_valuee, int Original_id_action, global::System.Nullable<int> Original_id_software) {
-            return this.Update(dt, valuee, comment, id_action, id_software, Original_id, Original_dt, Original_valuee, Original_id_action, Original_id_software, Original_id);
+        public virtual int Update(System.DateTime dt, int valuee, string comment, int id_action, global::System.Nullable<int> id_software, global::System.Nullable<int> is_active, int Original_id, System.DateTime Original_dt, int Original_valuee, int Original_id_action, global::System.Nullable<int> Original_id_software, global::System.Nullable<int> Original_is_active) {
+            return this.Update(dt, valuee, comment, id_action, id_software, is_active, Original_id, Original_dt, Original_valuee, Original_id_action, Original_id_software, Original_is_active, Original_id);
         }
     }
     
@@ -9364,7 +9440,7 @@ SELECT id, dt, valuee, comment, id_action, id_software FROM monitoring WHERE (id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(monitorDataSet.rolesDataTable dataTable) {
+        public virtual int Fill(mset1.rolesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9377,9 +9453,9 @@ SELECT id, dt, valuee, comment, id_action, id_software FROM monitoring WHERE (id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual monitorDataSet.rolesDataTable GetData() {
+        public virtual mset1.rolesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            monitorDataSet.rolesDataTable dataTable = new monitorDataSet.rolesDataTable();
+            mset1.rolesDataTable dataTable = new mset1.rolesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9387,14 +9463,14 @@ SELECT id, dt, valuee, comment, id_action, id_software FROM monitoring WHERE (id
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(monitorDataSet.rolesDataTable dataTable) {
+        public virtual int Update(mset1.rolesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(monitorDataSet dataSet) {
+        public virtual int Update(mset1 dataSet) {
             return this.Adapter.Update(dataSet, "roles");
         }
         
@@ -9693,7 +9769,7 @@ SELECT id, name, id_floor, id_main_user FROM rooms WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(monitorDataSet.roomsDataTable dataTable) {
+        public virtual int Fill(mset1.roomsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9706,9 +9782,9 @@ SELECT id, name, id_floor, id_main_user FROM rooms WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual monitorDataSet.roomsDataTable GetData() {
+        public virtual mset1.roomsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            monitorDataSet.roomsDataTable dataTable = new monitorDataSet.roomsDataTable();
+            mset1.roomsDataTable dataTable = new mset1.roomsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9716,14 +9792,14 @@ SELECT id, name, id_floor, id_main_user FROM rooms WHERE (id = @id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(monitorDataSet.roomsDataTable dataTable) {
+        public virtual int Update(mset1.roomsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(monitorDataSet dataSet) {
+        public virtual int Update(mset1 dataSet) {
             return this.Adapter.Update(dataSet, "rooms");
         }
         
@@ -9994,7 +10070,7 @@ SELECT id, name, id_floor, id_main_user FROM rooms WHERE (id = @id)";
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [software] WHERE (([id] = @Original_id) AND ([port] = @Original_port) AND ([is_active] = @Original_is_active) AND ([req_interval_sec] = @Original_req_interval_sec) AND ([id_check_type] = @Original_id_check_type) AND ((@IsNull_id_device = 1 AND [id_device] IS NULL) OR ([id_device] = @Original_id_device)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[software] WHERE (([id] = @Original_id) AND ([port] = @Original_port) AND ([is_active] = @Original_is_active) AND ([req_interval_sec] = @Original_req_interval_sec) AND ([id_check_type] = @Original_id_check_type) AND ((@IsNull_id_device = 1 AND [id_device] IS NULL) OR ([id_device] = @Original_id_device)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_port", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "port", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -10005,7 +10081,7 @@ SELECT id, name, id_floor, id_main_user FROM rooms WHERE (id = @id)";
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_device", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_device", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [software] ([port], [is_active], [req_interval_sec], [id_check_type], [id_device], [login], [password], [comment]) VALUES (@port, @is_active, @req_interval_sec, @id_check_type, @id_device, @login, @password, @comment);
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[software] ([port], [is_active], [req_interval_sec], [id_check_type], [id_device], [login], [password], [comment]) VALUES (@port, @is_active, @req_interval_sec, @id_check_type, @id_device, @login, @password, @comment);
 SELECT id, port, is_active, req_interval_sec, id_check_type, id_device, login, password, comment FROM software WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@port", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "port", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -10018,7 +10094,7 @@ SELECT id, port, is_active, req_interval_sec, id_check_type, id_device, login, p
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@comment", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "comment", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [software] SET [port] = @port, [is_active] = @is_active, [req_interval_sec] = @req_interval_sec, [id_check_type] = @id_check_type, [id_device] = @id_device, [login] = @login, [password] = @password, [comment] = @comment WHERE (([id] = @Original_id) AND ([port] = @Original_port) AND ([is_active] = @Original_is_active) AND ([req_interval_sec] = @Original_req_interval_sec) AND ([id_check_type] = @Original_id_check_type) AND ((@IsNull_id_device = 1 AND [id_device] IS NULL) OR ([id_device] = @Original_id_device)));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[software] SET [port] = @port, [is_active] = @is_active, [req_interval_sec] = @req_interval_sec, [id_check_type] = @id_check_type, [id_device] = @id_device, [login] = @login, [password] = @password, [comment] = @comment WHERE (([id] = @Original_id) AND ([port] = @Original_port) AND ([is_active] = @Original_is_active) AND ([req_interval_sec] = @Original_req_interval_sec) AND ([id_check_type] = @Original_id_check_type) AND ((@IsNull_id_device = 1 AND [id_device] IS NULL) OR ([id_device] = @Original_id_device)));
 SELECT id, port, is_active, req_interval_sec, id_check_type, id_device, login, password, comment FROM software WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@port", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "port", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -10052,8 +10128,8 @@ SELECT id, port, is_active, req_interval_sec, id_check_type, id_device, login, p
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT     id, port, is_active, req_interval_sec, id_check_type, id_device, login" +
-                ", password, comment\r\nFROM         software";
+            this._commandCollection[0].CommandText = "SELECT id, port, is_active, req_interval_sec, id_check_type, id_device, login, pa" +
+                "ssword, comment FROM dbo.software";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -10061,7 +10137,7 @@ SELECT id, port, is_active, req_interval_sec, id_check_type, id_device, login, p
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(monitorDataSet.softwareDataTable dataTable) {
+        public virtual int Fill(mset1.softwareDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -10074,9 +10150,9 @@ SELECT id, port, is_active, req_interval_sec, id_check_type, id_device, login, p
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual monitorDataSet.softwareDataTable GetData() {
+        public virtual mset1.softwareDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            monitorDataSet.softwareDataTable dataTable = new monitorDataSet.softwareDataTable();
+            mset1.softwareDataTable dataTable = new mset1.softwareDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -10084,14 +10160,14 @@ SELECT id, port, is_active, req_interval_sec, id_check_type, id_device, login, p
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(monitorDataSet.softwareDataTable dataTable) {
+        public virtual int Update(mset1.softwareDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(monitorDataSet dataSet) {
+        public virtual int Update(mset1 dataSet) {
             return this.Adapter.Update(dataSet, "software");
         }
         
@@ -10443,7 +10519,7 @@ SELECT id, id_user, id_software FROM software_mail_list WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(monitorDataSet.software_mail_listDataTable dataTable) {
+        public virtual int Fill(mset1.software_mail_listDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -10456,9 +10532,9 @@ SELECT id, id_user, id_software FROM software_mail_list WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual monitorDataSet.software_mail_listDataTable GetData() {
+        public virtual mset1.software_mail_listDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            monitorDataSet.software_mail_listDataTable dataTable = new monitorDataSet.software_mail_listDataTable();
+            mset1.software_mail_listDataTable dataTable = new mset1.software_mail_listDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -10466,14 +10542,14 @@ SELECT id, id_user, id_software FROM software_mail_list WHERE (id = @id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(monitorDataSet.software_mail_listDataTable dataTable) {
+        public virtual int Update(mset1.software_mail_listDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(monitorDataSet dataSet) {
+        public virtual int Update(mset1 dataSet) {
             return this.Adapter.Update(dataSet, "software_mail_list");
         }
         
@@ -10786,7 +10862,7 @@ SELECT name, principal_id, diagram_id, version, definition FROM sysdiagrams WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(monitorDataSet.sysdiagramsDataTable dataTable) {
+        public virtual int Fill(mset1.sysdiagramsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -10799,9 +10875,9 @@ SELECT name, principal_id, diagram_id, version, definition FROM sysdiagrams WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual monitorDataSet.sysdiagramsDataTable GetData() {
+        public virtual mset1.sysdiagramsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            monitorDataSet.sysdiagramsDataTable dataTable = new monitorDataSet.sysdiagramsDataTable();
+            mset1.sysdiagramsDataTable dataTable = new mset1.sysdiagramsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -10809,14 +10885,14 @@ SELECT name, principal_id, diagram_id, version, definition FROM sysdiagrams WHER
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(monitorDataSet.sysdiagramsDataTable dataTable) {
+        public virtual int Update(mset1.sysdiagramsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(monitorDataSet dataSet) {
+        public virtual int Update(mset1 dataSet) {
             return this.Adapter.Update(dataSet, "sysdiagrams");
         }
         
@@ -11167,7 +11243,7 @@ SELECT id, nick, fio, is_active, mail, id_role, comment, pwd FROM users WHERE (i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(monitorDataSet.usersDataTable dataTable) {
+        public virtual int Fill(mset1.usersDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -11180,9 +11256,9 @@ SELECT id, nick, fio, is_active, mail, id_role, comment, pwd FROM users WHERE (i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual monitorDataSet.usersDataTable GetData() {
+        public virtual mset1.usersDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            monitorDataSet.usersDataTable dataTable = new monitorDataSet.usersDataTable();
+            mset1.usersDataTable dataTable = new mset1.usersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -11190,14 +11266,14 @@ SELECT id, nick, fio, is_active, mail, id_role, comment, pwd FROM users WHERE (i
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(monitorDataSet.usersDataTable dataTable) {
+        public virtual int Update(mset1.usersDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(monitorDataSet dataSet) {
+        public virtual int Update(mset1 dataSet) {
             return this.Adapter.Update(dataSet, "users");
         }
         
@@ -11726,7 +11802,7 @@ SELECT id, nick, fio, is_active, mail, id_role, comment, pwd FROM users WHERE (i
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(monitorDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(mset1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._rolesTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.roles.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -11853,7 +11929,7 @@ SELECT id, nick, fio, is_active, mail, id_role, comment, pwd FROM users WHERE (i
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(monitorDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(mset1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._rolesTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.roles.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -11967,7 +12043,7 @@ SELECT id, nick, fio, is_active, mail, id_role, comment, pwd FROM users WHERE (i
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(monitorDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(mset1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._sysdiagramsTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.sysdiagrams.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -12105,7 +12181,7 @@ SELECT id, nick, fio, is_active, mail, id_role, comment, pwd FROM users WHERE (i
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(monitorDataSet dataSet) {
+        public virtual int UpdateAll(mset1 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

@@ -47,7 +47,8 @@ namespace PMonitor
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            fHard.ShowDialog();
+            fHard.ShowDialog(getCurrentDeviceId());
+            toolStripButton3_Click(null, null);
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
@@ -56,39 +57,20 @@ namespace PMonitor
             PMonitor.monitorDataSetTableAdapters.hardwaresTableAdapter hardwaresTableAdapter = new PMonitor.monitorDataSetTableAdapters.hardwaresTableAdapter();
 
             hardwaresTableAdapter.Fill(mset1.hardwares);
-            //DataTable hardware = mset1.hardwares..Tables["hardwares"];
-
-           // DataRow[] rows = hardware.Select();
-           
-
-            lbLog.Items.Add(">>" +  mset1.Tables["hardwares"].Rows.Count);
-
-            foreach (DataTable VARIABLE in mset1.Tables)
-            {
-                lbLog.Items.Add(">>" + VARIABLE.Rows.Count);
-            }
-
             var hArr =from myRow in mset1.hardwares.AsEnumerable()
-                //where myRow.Field<int>("RowNo") == 1
                 select myRow;
 
-
-            lbLog.Items.Add(">>" + hArr + " " + hArr.Count());
             treeHardware.Clear();
-            ;
+            tvTopolog.Nodes.Clear();
 
             foreach (DataRow h in mset1.hardwares.Rows)
             {
-                //lbLog.Items.Add(">>>>>>>" + h["ip"] + " " + h[0]);
-
                 Hardware hard = new Hardware();
                 hard.ip = ""  + h[3];
                 hard.desc = (string) h[4];
                 hard.hostname = "" + h[1];
                 hard.device_id = "" + h[0];
-
                 tvTopolog.Nodes.Add("" + hard);
-
                 treeHardware.Add("" + hard, hard);
             }
 
@@ -103,6 +85,8 @@ namespace PMonitor
 
 
             toolStripButton3_Click(null, null);
+            
+            //softwareDataGridView.Dock = DockStyle.Fill;
 
         }
 
@@ -133,14 +117,14 @@ namespace PMonitor
 
         private void tvTopolog_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            lbLog.Items.Clear();
-            lbLog.Items.Add(">>" + tvTopolog.SelectedNode);
+            //lbLog.Items.Clear();
+            //lbLog.Items.Add(">>" + tvTopolog.SelectedNode);
 
             if (tvTopolog.SelectedNode == null) return;
 
             Hardware hh = treeHardware[tvTopolog.SelectedNode.Text];
 
-            lbLog.Items.Add(tvTopolog.SelectedNode.ToString() + "  " + hh.device_id);
+            //lbLog.Items.Add(tvTopolog.SelectedNode.ToString() + "  " + hh.device_id);
 
             this.softwareBindingSource.Filter = "id_device = " + hh.device_id;
             // this.softwareBindingSource.
@@ -155,7 +139,7 @@ namespace PMonitor
 
         private void softwareDataGridView_RowValidating(object sender, DataGridViewCellCancelEventArgs e)
         {
-            softwareDataGridView[5, e.RowIndex].Value = int.Parse(treeHardware[tvTopolog.SelectedNode.Text].device_id);
+            softwareDataGridView[5, e.RowIndex].Value = getCurrentDeviceId();
             //if (softwareDataGridView[5, e.RowIndex].Value == DBNull.Value)
             //{
             //    dgv.Rows[e.RowIndex].ErrorText = "You must enter a value for this field!";
@@ -164,6 +148,13 @@ namespace PMonitor
             //   e.Cancel = true;
             //}
 
+        }
+
+
+
+        public int getCurrentDeviceId()
+        {
+            return int.Parse(treeHardware[tvTopolog.SelectedNode.Text].device_id);
         }
     }
 }

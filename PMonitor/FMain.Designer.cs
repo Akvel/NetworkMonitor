@@ -68,6 +68,9 @@
             this.checktypesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.login = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbLog = new System.Windows.Forms.ListBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.редактироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -111,7 +114,7 @@
             this.toolStripButton5});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(859, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1114, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -180,7 +183,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 25);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(859, 566);
+            this.panel1.Size = new System.Drawing.Size(1114, 566);
             this.panel1.TabIndex = 1;
             // 
             // splitContainer1
@@ -196,8 +199,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(859, 566);
-            this.splitContainer1.SplitterDistance = 286;
+            this.splitContainer1.Size = new System.Drawing.Size(1114, 566);
+            this.splitContainer1.SplitterDistance = 370;
             this.splitContainer1.TabIndex = 0;
             // 
             // tcOrganiz
@@ -207,7 +210,7 @@
             this.tcOrganiz.Location = new System.Drawing.Point(0, 0);
             this.tcOrganiz.Name = "tcOrganiz";
             this.tcOrganiz.SelectedIndex = 0;
-            this.tcOrganiz.Size = new System.Drawing.Size(286, 566);
+            this.tcOrganiz.Size = new System.Drawing.Size(370, 566);
             this.tcOrganiz.TabIndex = 0;
             // 
             // tabPage1
@@ -216,7 +219,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(278, 540);
+            this.tabPage1.Size = new System.Drawing.Size(362, 540);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Сетевое оборудование";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -227,7 +230,7 @@
             this.tvTopolog.HideSelection = false;
             this.tvTopolog.Location = new System.Drawing.Point(3, 3);
             this.tvTopolog.Name = "tvTopolog";
-            this.tvTopolog.Size = new System.Drawing.Size(272, 534);
+            this.tvTopolog.Size = new System.Drawing.Size(356, 534);
             this.tvTopolog.TabIndex = 0;
             this.tvTopolog.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvTopolog_AfterSelect);
             this.tvTopolog.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tvTopolog_NodeMouseClick);
@@ -251,7 +254,7 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.lbLog);
-            this.splitContainer2.Size = new System.Drawing.Size(569, 566);
+            this.splitContainer2.Size = new System.Drawing.Size(740, 566);
             this.splitContainer2.SplitterDistance = 292;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -281,7 +284,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(569, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(740, 25);
             this.bindingNavigator1.TabIndex = 2;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -413,11 +416,14 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
-            this.Column1});
+            this.Column1,
+            this.login,
+            this.password,
+            this.comment});
             this.softwareDataGridView.DataSource = this.softwareBindingSource;
-            this.softwareDataGridView.Location = new System.Drawing.Point(3, 61);
+            this.softwareDataGridView.Location = new System.Drawing.Point(3, 28);
             this.softwareDataGridView.Name = "softwareDataGridView";
-            this.softwareDataGridView.Size = new System.Drawing.Size(566, 229);
+            this.softwareDataGridView.Size = new System.Drawing.Size(734, 262);
             this.softwareDataGridView.TabIndex = 0;
             this.softwareDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.softwareDataGridView_CellContentClick);
             this.softwareDataGridView.RowValidating += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.softwareDataGridView_RowValidating);
@@ -481,13 +487,34 @@
             this.Column1.Name = "Column1";
             this.Column1.Width = 63;
             // 
+            // login
+            // 
+            this.login.DataPropertyName = "login";
+            this.login.HeaderText = "login";
+            this.login.Name = "login";
+            this.login.Width = 54;
+            // 
+            // password
+            // 
+            this.password.DataPropertyName = "password";
+            this.password.HeaderText = "password";
+            this.password.Name = "password";
+            this.password.Width = 77;
+            // 
+            // comment
+            // 
+            this.comment.DataPropertyName = "comment";
+            this.comment.HeaderText = "comment";
+            this.comment.Name = "comment";
+            this.comment.Width = 75;
+            // 
             // lbLog
             // 
             this.lbLog.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbLog.FormattingEnabled = true;
             this.lbLog.Location = new System.Drawing.Point(0, 0);
             this.lbLog.Name = "lbLog";
-            this.lbLog.Size = new System.Drawing.Size(569, 270);
+            this.lbLog.Size = new System.Drawing.Size(740, 270);
             this.lbLog.TabIndex = 0;
             // 
             // contextMenuStrip1
@@ -533,6 +560,7 @@
             this.tableAdapterManager.roomsTableAdapter = null;
             this.tableAdapterManager.software_mail_listTableAdapter = null;
             this.tableAdapterManager.softwareTableAdapter = this.softwareTableAdapter;
+            this.tableAdapterManager.sysdiagramsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = PMonitor.monitorDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usersTableAdapter = null;
             // 
@@ -544,7 +572,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(859, 591);
+            this.ClientSize = new System.Drawing.Size(1114, 591);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "fMain";
@@ -628,6 +656,9 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn login;
+        private System.Windows.Forms.DataGridViewTextBoxColumn password;
+        private System.Windows.Forms.DataGridViewTextBoxColumn comment;
 
 
     }
