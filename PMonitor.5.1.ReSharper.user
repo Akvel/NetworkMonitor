@@ -3,7 +3,7 @@
     <string />
     <integer />
     <boolean>
-      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="livetemplates.csharp.usevar">False</setting>
       <setting name="SolutionAnalysisEnabled">False</setting>
     </boolean>
   </SettingsComponent>
@@ -12,39 +12,39 @@
       <Item value="AreEqual`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Default">
-      <Item value="public" priority="14" />
+      <Item value="public" priority="17" />
       <Item value="Object`0" priority="0" />
       <Item value="return" priority="9" />
       <Item value="reply" priority="2" />
-      <Item value="new" priority="10" />
+      <Item value="new" priority="15" />
       <Item value="PResult" priority="2" />
-      <Item value="result" priority="9" />
-      <Item value="else" priority="1" />
-      <Item value="this" priority="6" />
+      <Item value="result" priority="13" />
+      <Item value="else" priority="2" />
+      <Item value="this" priority="8" />
       <Item value="address" priority="0" />
       <Item value="ITest`0" priority="2" />
       <Item value="catch" priority="1" />
       <Item value="Exception`0" priority="3" />
-      <Item value="PResult`0" priority="1" />
+      <Item value="PResult`0" priority="3" />
       <Item value="e" priority="4" />
-      <Item value="rr" priority="6" />
+      <Item value="rr" priority="7" />
       <Item value="try" priority="0" />
-      <Item value="if" priority="0" />
-      <Item value="private" priority="5" />
+      <Item value="if" priority="4" />
+      <Item value="private" priority="8" />
       <Item value="readonly" priority="1" />
       <Item value="String`0" priority="9" />
       <Item value="host" priority="1" />
       <Item value="login" priority="0" />
       <Item value="password" priority="0" />
-      <Item value="static" priority="0" />
-      <Item value="int" priority="9" />
+      <Item value="static" priority="1" />
+      <Item value="int" priority="11" />
       <Item value="long" priority="2" />
       <Item value="Console`0" priority="1" />
       <Item value="TPing" priority="0" />
       <Item value="IAsyncResult`0" priority="1" />
       <Item value="ping" priority="0" />
-      <Item value="null" priority="3" />
-      <Item value="foreach" priority="0" />
+      <Item value="null" priority="4" />
+      <Item value="foreach" priority="2" />
       <Item value="rep" priority="0" />
       <Item value="class" priority="0" />
       <Item value="Dtraceroute" priority="1" />
@@ -83,18 +83,51 @@
       <Item value="MessageBox`0" priority="0" />
       <Item value="deviceId" priority="0" />
       <Item value="deviceID" priority="0" />
+      <Item value="false" priority="1" />
+      <Item value="while" priority="1" />
+      <Item value="DateTime`0" priority="1" />
+      <Item value="predRefresh" priority="0" />
+      <Item value="ApplicationException`0" priority="0" />
+      <Item value="PService" priority="4" />
+      <Item value="monitoringTableAdapter`0" priority="1" />
+      <Item value="softwareTableAdapter`0" priority="0" />
+      <Item value="hardwaresTableAdapter`0" priority="0" />
+      <Item value="void" priority="0" />
+      <Item value="software_mail_listTableAdapter`0" priority="1" />
+      <Item value="hardware_mail_listTableAdapter`0" priority="1" />
+      <Item value="mset1" priority="4" />
+      <Item value="usersTableAdapter`0" priority="0" />
+      <Item value="_usersTableAdapter" priority="1" />
+      <Item value="usersTableAdapter" priority="0" />
+      <Item value="lbLog" priority="0" />
+      <Item value="DuplicateWaitObjectException`0" priority="0" />
+      <Item value="PTask`0" priority="2" />
+      <Item value="PTask" priority="0" />
+      <Item value="task" priority="3" />
+      <Item value="true" priority="1" />
+      <Item value="protected" priority="0" />
+      <Item value="Dictionary&lt;int,long&gt;" priority="0" />
+      <Item value="l" priority="4" />
+      <Item value="Running" priority="0" />
+      <Item value="Task`0" priority="1" />
+      <Item value="TTracert`0" priority="1" />
+      <Item value="Task&lt;PResult&gt;" priority="0" />
+      <Item value="lastStart" priority="0" />
+      <Item value="row" priority="4" />
+      <Item value="tableAdapterManager" priority="0" />
+      <Item value="monitoringTableAdapter" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:PService.PResult">
-      <Item value="errCode" priority="3" />
+      <Item value="errCode" priority="5" />
       <Item value="result" priority="2" />
-      <Item value="message" priority="3" />
-      <Item value="exception" priority="1" />
+      <Item value="message" priority="4" />
+      <Item value="exception" priority="3" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Net.NetworkInformation.PingReply">
       <Item value="Status" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Exception">
-      <Item value="Message" priority="1" />
+      <Item value="Message" priority="3" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
       <Item value="Count`1" priority="0" />
@@ -109,7 +142,7 @@
       <Item value="WriteLine`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:PService.tests.TPing">
-      <Item value="getTest`0" priority="0" />
+      <Item value="getTest`0" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@PConsole.Traceroute">
       <Item value="Traceroute1`0" priority="0" />
@@ -118,7 +151,9 @@
       <Item value="maxHop" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
-      <Item value="Add`0" priority="0" />
+      <Item value="Add`0" priority="1" />
+      <Item value="Remove`0" priority="0" />
+      <Item value="Clear`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Net.IPAddress">
       <Item value="ToString`0" priority="0" />
@@ -143,8 +178,12 @@
       <Item value="Empty" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.Dictionary`2">
-      <Item value="Remove`0" priority="0" />
-      <Item value="Clear`0" priority="0" />
+      <Item value="Remove`0" priority="2" />
+      <Item value="Clear`0" priority="2" />
+      <Item value="ContainsKey`0" priority="2" />
+      <Item value="Add`0" priority="1" />
+      <Item value="ContainsValue`0" priority="0" />
+      <Item value="GetEnumerator`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.TreeView">
       <Item value="Nodes" priority="0" />
@@ -174,6 +213,97 @@
     <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBox">
       <Item value="Show`0" priority="0" />
     </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="Ticks" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PService.Properties.Settings">
+      <Item value="db_refresh" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PService.monitorDataSetTableAdapters.softwareTableAdapter">
+      <Item value="Fill`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PService.monitorDataSet">
+      <Item value="software" priority="3" />
+      <Item value="hardware_mail_list" priority="0" />
+      <Item value="software_mail_list" priority="0" />
+      <Item value="users" priority="0" />
+      <Item value="monitoring" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PService.monitorDataSetTableAdapters.hardware_mail_listTableAdapter">
+      <Item value="Fill`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PService.monitorDataSetTableAdapters.software_mail_listTableAdapter">
+      <Item value="Fill`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PService.monitorDataSetTableAdapters.usersTableAdapter">
+      <Item value="Fill`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PService.PTask">
+      <Item value="lbLog" priority="0" />
+      <Item value="scan`0" priority="0" />
+      <Item value="needStop" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListBox">
+      <Item value="Items" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListBox+ObjectCollection">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PService.monitorDataSet+softwareDataTable">
+      <Item value="Count" priority="0" />
+      <Item value="Rows" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PService.FMain">
+      <Item value="lbLog" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.Thread">
+      <Item value="Start`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@PService.monitorDataSet">
+      <Item value="softwareRow`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PService.monitorDataSet+softwareRow">
+      <Item value="id" priority="1" />
+      <Item value="req_interval_sec" priority="0" />
+      <Item value="hardwaresRow" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.Tasks.Task">
+      <Item value="Status" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.Tasks.TaskStatus">
+      <Item value="RanToCompletion" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.Tasks.Task`1">
+      <Item value="Result" priority="0" />
+      <Item value="Id" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.Tasks.Task">
+      <Item value="Factory" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.Tasks.TaskFactory">
+      <Item value="StartNew`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PService.monitorDataSet+hardwaresRow">
+      <Item value="ip_address" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PService.monitorDataSet+monitoringDataTable">
+      <Item value="NewmonitoringRow`0" priority="0" />
+      <Item value="Rows" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PService.monitorDataSet+monitoringRow">
+      <Item value="dt" priority="0" />
+      <Item value="id_software" priority="0" />
+      <Item value="is_active" priority="0" />
+      <Item value="valuee" priority="0" />
+      <Item value="comment" priority="0" />
+      <Item value="id_action" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.DataRowCollection">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
   </CompletionStatisticsManager>
   <RecentFiles>
     <RecentFiles>
@@ -191,42 +321,50 @@
       <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PResult.cs" caret="323" fromTop="11" />
       <File id="BF642310-AA18-47A0-AF0F-E6A846671E17/f:Program.cs" caret="1784" fromTop="26" />
       <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSql.cs" caret="738" fromTop="12" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:app.config" caret="480" fromTop="7" />
       <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FHard.Designer.cs" caret="1592" fromTop="11" />
       <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FHard.cs" caret="517" fromTop="13" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="1938" fromTop="1" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:Program.cs" caret="485" fromTop="17" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:Program.cs" caret="414" fromTop="15" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:app.config" caret="0" fromTop="0" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:monitorDataSet.Designer.cs" caret="0" fromTop="0" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:FMain.Designer.cs" caret="4313" fromTop="24" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:FMain.cs" caret="427" fromTop="10" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="4159" fromTop="17" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:monitorDataSet.Designer.cs" caret="0" fromTop="0" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.Designer.cs" caret="36718" fromTop="15" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="6374" fromTop="16" />
     </RecentFiles>
     <RecentEdits>
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FScan.cs" caret="3808" fromTop="43" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSql.cs" caret="325" fromTop="14" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSql.cs" caret="1254" fromTop="30" />
-      <File id="0809D506-4C9B-4CB5-8FEC-0D9CCAD322F0/f:monitorDataSet.Designer.cs" caret="593090" fromTop="18" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSql.cs" caret="1002" fromTop="28" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSql.cs" caret="906" fromTop="22" />
-      <File id="BF642310-AA18-47A0-AF0F-E6A846671E17/f:Program.cs" caret="1737" fromTop="23" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PResult.cs" caret="474" fromTop="14" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PResult.cs" caret="461" fromTop="15" />
-      <File id="BF642310-AA18-47A0-AF0F-E6A846671E17/f:Program.cs" caret="1798" fromTop="26" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSql.cs" caret="494" fromTop="8" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="1672" fromTop="8" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="2122" fromTop="22" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="1852" fromTop="14" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="1776" fromTop="11" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="4874" fromTop="16" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="4849" fromTop="27" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="4392" fromTop="12" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="3744" fromTop="15" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="3548" fromTop="9" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="1342" fromTop="23" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="1212" fromTop="23" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FHard.cs" caret="2274" fromTop="25" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FHard.cs" caret="2274" fromTop="13" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FHard.cs" caret="298" fromTop="11" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FHard.cs" caret="1219" fromTop="14" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FHard.cs" caret="1618" fromTop="23" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FHard.cs" caret="1996" fromTop="23" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FHard.cs" caret="1652" fromTop="15" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="2728" fromTop="20" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="1813" fromTop="19" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="4874" fromTop="19" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="3754" fromTop="19" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:FMain.cs" caret="313" fromTop="8" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="6868" fromTop="19" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:FMain.cs" caret="694" fromTop="15" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="1438" fromTop="17" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="323" fromTop="1" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="1438" fromTop="16" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="3276" fromTop="30" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="3214" fromTop="24" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:FMain.Designer.cs" caret="4313" fromTop="24" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:FMain.cs" caret="434" fromTop="10" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:FMain.cs" caret="569" fromTop="15" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="3851" fromTop="11" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="6791" fromTop="20" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="184" fromTop="5" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="5453" fromTop="22" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="4661" fromTop="15" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="5069" fromTop="16" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="3467" fromTop="5" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="6619" fromTop="23" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="5709" fromTop="16" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="6381" fromTop="21" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="3011" fromTop="30" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="1367" fromTop="5" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="1038" fromTop="7" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="2655" fromTop="20" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="2189" fromTop="14" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="6161" fromTop="13" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
