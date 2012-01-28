@@ -34,6 +34,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="mib">
+      <HintPath>..\..\SNMPDLL_demo\SNMPDLL_demo\mib.dll</HintPath>
+    </Reference>
+    <Reference Include="snmp">
+      <HintPath>..\..\SNMPDLL_demo\SNMPDLL_demo\snmp.dll</HintPath>
+    </Reference>
+    <Reference Include="SnmpComp">
+      <HintPath>..\..\SNMPDLL_demo\SNMPDLL_demo\SnmpComp.dll</HintPath>
+    </Reference>
+    <Reference Include="SNMPDll">
+      <HintPath>..\..\SNMPDLL_demo\SNMPDLL_demo\SNMPDll.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -45,6 +57,12 @@
     <Reference Include="System.Data" />
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml" />
+    <Reference Include="TableReader">
+      <HintPath>..\..\SNMPDLL_demo\SNMPDLL_demo\TableReader.dll</HintPath>
+    </Reference>
+    <Reference Include="Tools">
+      <HintPath>..\..\SNMPDLL_demo\SNMPDLL_demo\Tools.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="data\DMemory.cs" />
@@ -73,6 +91,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tests\TPing.cs" />
     <Compile Include="tests\TPort.cs" />
+    <Compile Include="tests\TSNMPcheck.cs" />
     <Compile Include="tests\TSql.cs" />
     <Compile Include="tests\TTracert.cs" />
     <Compile Include="tests\TWMIDriver.cs" />

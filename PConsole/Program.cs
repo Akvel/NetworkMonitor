@@ -47,9 +47,9 @@ namespace PConsole
             //d.getTest();
 
 
-            TSql tSql = new TSql("127.0.0.1",1028);
+            //TSql tSql = new TSql("127.0.0.1",1028);
 
-            Console.WriteLine(tSql.getTest());
+            //Console.WriteLine(tSql.getTest());
 
 
              //  TPort port =  new TPort("127.0.0.1", 2034);
@@ -57,6 +57,14 @@ namespace PConsole
 
             //SGmail mail = new SGmail();
             //mail.send("Test");
+            List<string> ip = new List<string>();
+            ip.Add("192.168.1.1");
+            ip.Add("192.168.1.42");
+            ip.Add("192.168.1.44");
+            TSNMPcheck t = new TSNMPcheck("192.168.1.1", "", ip);
+
+          
+            Console.WriteLine(t.getTest());
 
 
             Console.WriteLine("Finished");
