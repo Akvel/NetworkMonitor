@@ -34,24 +34,24 @@
             this.software_mail_listBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.software_mail_listTableAdapter = new PMonitor.monitorDataSetTableAdapters.software_mail_listTableAdapter();
             this.tableAdapterManager = new PMonitor.monitorDataSetTableAdapters.TableAdapterManager();
+            this.softwareTableAdapter = new PMonitor.monitorDataSetTableAdapters.softwareTableAdapter();
+            this.usersTableAdapter = new PMonitor.monitorDataSetTableAdapters.usersTableAdapter();
             this.software_mail_listBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.software_mail_listBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.software_mail_listDataGridView = new System.Windows.Forms.DataGridView();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usersTableAdapter = new PMonitor.monitorDataSetTableAdapters.usersTableAdapter();
             this.softwareBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.softwareTableAdapter = new PMonitor.monitorDataSetTableAdapters.softwareTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -92,8 +92,17 @@
             this.tableAdapterManager.roomsTableAdapter = null;
             this.tableAdapterManager.software_mail_listTableAdapter = this.software_mail_listTableAdapter;
             this.tableAdapterManager.softwareTableAdapter = this.softwareTableAdapter;
+            this.tableAdapterManager.sysdiagramsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = PMonitor.monitorDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
+            // 
+            // softwareTableAdapter
+            // 
+            this.softwareTableAdapter.ClearBeforeFill = true;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
             // 
             // software_mail_listBindingNavigator
             // 
@@ -121,9 +130,34 @@
             this.software_mail_listBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.software_mail_listBindingNavigator.Name = "software_mail_listBindingNavigator";
             this.software_mail_listBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.software_mail_listBindingNavigator.Size = new System.Drawing.Size(403, 25);
+            this.software_mail_listBindingNavigator.Size = new System.Drawing.Size(444, 25);
             this.software_mail_listBindingNavigator.TabIndex = 0;
             this.software_mail_listBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(36, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -157,17 +191,10 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(36, 13);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -175,7 +202,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -184,38 +211,20 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // software_mail_listBindingNavigatorSaveItem
             // 
             this.software_mail_listBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.software_mail_listBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("software_mail_listBindingNavigatorSaveItem.Image")));
             this.software_mail_listBindingNavigatorSaveItem.Name = "software_mail_listBindingNavigatorSaveItem";
-            this.software_mail_listBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.software_mail_listBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.software_mail_listBindingNavigatorSaveItem.Text = "Save Data";
             this.software_mail_listBindingNavigatorSaveItem.Click += new System.EventHandler(this.software_mail_listBindingNavigatorSaveItem_Click);
             // 
@@ -231,7 +240,7 @@
             this.software_mail_listDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.software_mail_listDataGridView.Location = new System.Drawing.Point(0, 25);
             this.software_mail_listDataGridView.Name = "software_mail_listDataGridView";
-            this.software_mail_listDataGridView.Size = new System.Drawing.Size(403, 327);
+            this.software_mail_listDataGridView.Size = new System.Drawing.Size(444, 327);
             this.software_mail_listDataGridView.TabIndex = 1;
             // 
             // usersBindingSource
@@ -239,18 +248,10 @@
             this.usersBindingSource.DataMember = "users";
             this.usersBindingSource.DataSource = this.monitorDataSet;
             // 
-            // usersTableAdapter
-            // 
-            this.usersTableAdapter.ClearBeforeFill = true;
-            // 
             // softwareBindingSource
             // 
             this.softwareBindingSource.DataMember = "software";
             this.softwareBindingSource.DataSource = this.monitorDataSet;
-            // 
-            // softwareTableAdapter
-            // 
-            this.softwareTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -265,32 +266,36 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "id_user";
             this.dataGridViewTextBoxColumn2.DataSource = this.usersBindingSource;
             this.dataGridViewTextBoxColumn2.DisplayMember = "nick";
-            this.dataGridViewTextBoxColumn2.HeaderText = "id_user";
+            this.dataGridViewTextBoxColumn2.FillWeight = 200F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Пользователь";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn2.ValueMember = "id";
+            this.dataGridViewTextBoxColumn2.Width = 200;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "id_software";
             this.dataGridViewTextBoxColumn3.DataSource = this.softwareBindingSource;
             this.dataGridViewTextBoxColumn3.DisplayMember = "id";
-            this.dataGridViewTextBoxColumn3.HeaderText = "id_software";
+            this.dataGridViewTextBoxColumn3.FillWeight = 200F;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Тест";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn3.ValueMember = "id";
+            this.dataGridViewTextBoxColumn3.Width = 200;
             // 
             // FSMail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(403, 352);
+            this.ClientSize = new System.Drawing.Size(444, 352);
             this.Controls.Add(this.software_mail_listDataGridView);
             this.Controls.Add(this.software_mail_listBindingNavigator);
             this.Name = "FSMail";
-            this.Text = "FSMail";
+            this.Text = "Список рассылки по тестам";
             this.Load += new System.EventHandler(this.FSMail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.monitorDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.software_mail_listBindingSource)).EndInit();

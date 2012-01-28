@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label dns_nameLabel;
             System.Windows.Forms.Label is_snmpLabel;
             System.Windows.Forms.Label ip_addressLabel;
@@ -62,7 +61,6 @@
             this.id_roomComboBox = new System.Windows.Forms.ComboBox();
             this.roomsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.roomsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            idLabel = new System.Windows.Forms.Label();
             dns_nameLabel = new System.Windows.Forms.Label();
             is_snmpLabel = new System.Windows.Forms.Label();
             ip_addressLabel = new System.Windows.Forms.Label();
@@ -76,59 +74,51 @@
             ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(28, 66);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(18, 13);
-            idLabel.TabIndex = 1;
-            idLabel.Text = "id:";
-            // 
             // dns_nameLabel
             // 
             dns_nameLabel.AutoSize = true;
-            dns_nameLabel.Location = new System.Drawing.Point(28, 95);
+            dns_nameLabel.Location = new System.Drawing.Point(12, 43);
             dns_nameLabel.Name = "dns_nameLabel";
-            dns_nameLabel.Size = new System.Drawing.Size(56, 13);
+            dns_nameLabel.Size = new System.Drawing.Size(72, 13);
             dns_nameLabel.TabIndex = 3;
-            dns_nameLabel.Text = "dns name:";
+            dns_nameLabel.Text = "Сетевое имя";
             // 
             // is_snmpLabel
             // 
             is_snmpLabel.AutoSize = true;
-            is_snmpLabel.Location = new System.Drawing.Point(28, 121);
+            is_snmpLabel.Location = new System.Drawing.Point(39, 169);
             is_snmpLabel.Name = "is_snmpLabel";
             is_snmpLabel.Size = new System.Drawing.Size(45, 13);
             is_snmpLabel.TabIndex = 5;
             is_snmpLabel.Text = "is snmp:";
+            is_snmpLabel.Visible = false;
             // 
             // ip_addressLabel
             // 
             ip_addressLabel.AutoSize = true;
-            ip_addressLabel.Location = new System.Drawing.Point(28, 147);
+            ip_addressLabel.Location = new System.Drawing.Point(12, 76);
             ip_addressLabel.Name = "ip_addressLabel";
-            ip_addressLabel.Size = new System.Drawing.Size(58, 13);
+            ip_addressLabel.Size = new System.Drawing.Size(50, 13);
             ip_addressLabel.TabIndex = 7;
-            ip_addressLabel.Text = "ip address:";
+            ip_addressLabel.Text = "IP адрес";
             // 
             // descriptionLabel
             // 
             descriptionLabel.AutoSize = true;
-            descriptionLabel.Location = new System.Drawing.Point(28, 173);
+            descriptionLabel.Location = new System.Drawing.Point(12, 143);
             descriptionLabel.Name = "descriptionLabel";
-            descriptionLabel.Size = new System.Drawing.Size(61, 13);
+            descriptionLabel.Size = new System.Drawing.Size(57, 13);
             descriptionLabel.TabIndex = 9;
-            descriptionLabel.Text = "description:";
+            descriptionLabel.Text = "Описание";
             // 
             // id_roomLabel
             // 
             id_roomLabel.AutoSize = true;
-            id_roomLabel.Location = new System.Drawing.Point(28, 199);
+            id_roomLabel.Location = new System.Drawing.Point(12, 108);
             id_roomLabel.Name = "id_roomLabel";
-            id_roomLabel.Size = new System.Drawing.Size(44, 13);
+            id_roomLabel.Size = new System.Drawing.Size(82, 13);
             id_roomLabel.TabIndex = 11;
-            id_roomLabel.Text = "id room:";
+            id_roomLabel.Text = "Расположение";
             // 
             // monitorDataSet
             // 
@@ -295,42 +285,45 @@
             // idLabel1
             // 
             this.idLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.hardwaresBindingSource, "id", true));
-            this.idLabel1.Location = new System.Drawing.Point(95, 66);
+            this.idLabel1.Location = new System.Drawing.Point(7, 20);
             this.idLabel1.Name = "idLabel1";
-            this.idLabel1.Size = new System.Drawing.Size(121, 23);
+            this.idLabel1.Size = new System.Drawing.Size(77, 23);
             this.idLabel1.TabIndex = 2;
             this.idLabel1.Text = "label1";
+            this.idLabel1.Visible = false;
             // 
             // dns_nameTextBox
             // 
             this.dns_nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.hardwaresBindingSource, "dns_name", true));
-            this.dns_nameTextBox.Location = new System.Drawing.Point(95, 92);
+            this.dns_nameTextBox.Location = new System.Drawing.Point(95, 40);
             this.dns_nameTextBox.Name = "dns_nameTextBox";
-            this.dns_nameTextBox.Size = new System.Drawing.Size(121, 20);
+            this.dns_nameTextBox.Size = new System.Drawing.Size(185, 20);
             this.dns_nameTextBox.TabIndex = 4;
             // 
             // is_snmpTextBox
             // 
             this.is_snmpTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.hardwaresBindingSource, "is_snmp", true));
-            this.is_snmpTextBox.Location = new System.Drawing.Point(95, 118);
+            this.is_snmpTextBox.Location = new System.Drawing.Point(95, 166);
             this.is_snmpTextBox.Name = "is_snmpTextBox";
             this.is_snmpTextBox.Size = new System.Drawing.Size(121, 20);
             this.is_snmpTextBox.TabIndex = 6;
+            this.is_snmpTextBox.Text = "False";
+            this.is_snmpTextBox.Visible = false;
             // 
             // ip_addressTextBox
             // 
             this.ip_addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.hardwaresBindingSource, "ip_address", true));
-            this.ip_addressTextBox.Location = new System.Drawing.Point(95, 144);
+            this.ip_addressTextBox.Location = new System.Drawing.Point(95, 73);
             this.ip_addressTextBox.Name = "ip_addressTextBox";
-            this.ip_addressTextBox.Size = new System.Drawing.Size(121, 20);
+            this.ip_addressTextBox.Size = new System.Drawing.Size(185, 20);
             this.ip_addressTextBox.TabIndex = 8;
             // 
             // descriptionTextBox
             // 
             this.descriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.hardwaresBindingSource, "description", true));
-            this.descriptionTextBox.Location = new System.Drawing.Point(95, 170);
+            this.descriptionTextBox.Location = new System.Drawing.Point(95, 140);
             this.descriptionTextBox.Name = "descriptionTextBox";
-            this.descriptionTextBox.Size = new System.Drawing.Size(121, 20);
+            this.descriptionTextBox.Size = new System.Drawing.Size(185, 20);
             this.descriptionTextBox.TabIndex = 10;
             // 
             // id_roomComboBox
@@ -340,9 +333,9 @@
             this.id_roomComboBox.DataSource = this.roomsBindingSource;
             this.id_roomComboBox.DisplayMember = "name";
             this.id_roomComboBox.FormattingEnabled = true;
-            this.id_roomComboBox.Location = new System.Drawing.Point(95, 196);
+            this.id_roomComboBox.Location = new System.Drawing.Point(95, 105);
             this.id_roomComboBox.Name = "id_roomComboBox";
-            this.id_roomComboBox.Size = new System.Drawing.Size(121, 21);
+            this.id_roomComboBox.Size = new System.Drawing.Size(185, 21);
             this.id_roomComboBox.TabIndex = 12;
             this.id_roomComboBox.ValueMember = "id";
             // 
@@ -360,8 +353,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 266);
-            this.Controls.Add(idLabel);
+            this.ClientSize = new System.Drawing.Size(292, 194);
             this.Controls.Add(this.idLabel1);
             this.Controls.Add(dns_nameLabel);
             this.Controls.Add(this.dns_nameTextBox);
@@ -375,7 +367,7 @@
             this.Controls.Add(this.id_roomComboBox);
             this.Controls.Add(this.hardwaresBindingNavigator);
             this.Name = "FHard";
-            this.Text = "FHard";
+            this.Text = "Оборудование";
             this.Load += new System.EventHandler(this.FHard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.monitorDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hardwaresBindingSource)).EndInit();

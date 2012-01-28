@@ -154,7 +154,10 @@ namespace PMonitor
 
         public int getCurrentDeviceId()
         {
+            if (tvTopolog.SelectedNode != null)
             return int.Parse(treeHardware[tvTopolog.SelectedNode.Text].device_id);
+
+            return -1;
         }
     }
 }

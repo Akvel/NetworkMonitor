@@ -39,9 +39,9 @@
             // 
             // bScan
             // 
-            this.bScan.Location = new System.Drawing.Point(226, 9);
+            this.bScan.Location = new System.Drawing.Point(226, 13);
             this.bScan.Name = "bScan";
-            this.bScan.Size = new System.Drawing.Size(133, 23);
+            this.bScan.Size = new System.Drawing.Size(133, 20);
             this.bScan.TabIndex = 2;
             this.bScan.Text = "Сканировать";
             this.bScan.UseVisualStyleBackColor = true;
@@ -52,12 +52,12 @@
             this.cbFind.FormattingEnabled = true;
             this.cbFind.Location = new System.Drawing.Point(0, 57);
             this.cbFind.Name = "cbFind";
-            this.cbFind.Size = new System.Drawing.Size(712, 244);
+            this.cbFind.Size = new System.Drawing.Size(522, 244);
             this.cbFind.TabIndex = 3;
             // 
             // tbStart
             // 
-            this.tbStart.Location = new System.Drawing.Point(13, 13);
+            this.tbStart.Location = new System.Drawing.Point(13, 12);
             this.tbStart.Mask = "990\\.990\\.990\\.990";
             this.tbStart.Name = "tbStart";
             this.tbStart.Size = new System.Drawing.Size(100, 20);
@@ -80,14 +80,14 @@
             this.lbLog.Location = new System.Drawing.Point(0, 303);
             this.lbLog.Name = "lbLog";
             this.lbLog.ScrollAlwaysVisible = true;
-            this.lbLog.Size = new System.Drawing.Size(712, 69);
+            this.lbLog.Size = new System.Drawing.Size(522, 69);
             this.lbLog.TabIndex = 6;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(415, 9);
+            this.button1.Location = new System.Drawing.Point(365, 13);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(285, 23);
+            this.button1.Size = new System.Drawing.Size(149, 20);
             this.button1.TabIndex = 7;
             this.button1.Text = "Добавить выбранные";
             this.button1.UseVisualStyleBackColor = true;
@@ -106,7 +106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(712, 372);
+            this.ClientSize = new System.Drawing.Size(522, 372);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lbLog);
@@ -114,8 +114,10 @@
             this.Controls.Add(this.tbStart);
             this.Controls.Add(this.cbFind);
             this.Controls.Add(this.bScan);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FScan";
-            this.Text = "FScan";
+            this.Text = "Поиск нового оборудования";
             this.ResumeLayout(false);
             this.PerformLayout();
 

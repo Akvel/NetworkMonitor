@@ -19,16 +19,22 @@ namespace PService
             InitializeComponent();
 
             task = new PTask(this);
+            button2.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
                new Thread(task.scan).Start();
+            button1.Enabled = false;
+            button2.Enabled = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             task.needStop = true;
+
+            button1.Enabled = true;
+            button2.Enabled = false;
         }
     }
 }

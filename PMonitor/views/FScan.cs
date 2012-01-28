@@ -27,17 +27,12 @@ namespace PMonitor.views
             this.fm = fMain;
         }
 
-        private void bScan_Click(object sender, EventArgs e)
+        private void scan()
         {
-            //MessageBox.Show(tbStart.Text + "--" + tbStop.Text);
-            lbLog.Items.Clear();
-            cbFind.Items.Clear();
-            ;
-
-            String[] ipStart = tbStart.Text.Split(new Char[] {'.'});
+            String[] ipStart = tbStart.Text.Split(new Char[] { '.' });
             String[] ipStop = tbStop.Text.Split(new Char[] { '.' });
 
-           
+
 
             for (int i1 = Convert.ToInt32(ipStart[0]); i1 <= Convert.ToInt32(ipStop[0]); i1++)
             {
@@ -49,16 +44,17 @@ namespace PMonitor.views
                         {
                             String ip = i1 + "." + i2 + "." + i3 + "." + i4;
                             String hostname = "-";
-                            TPing ping = new TPing(ip,3);
+                            TPing ping = new TPing(ip, 3);
 
                             PResult result = ping.getTest();
 
-                            if (result.errCode ==0)
+                            if (result.errCode == 0)
                             {
                                 try
                                 {
                                     hostname = Dns.GetHostEntry(ip).HostName;
-                                }catch(Exception e12)
+                                }
+                                catch (Exception e12)
                                 {
                                     hostname = String.Empty;
                                 }
@@ -66,22 +62,69 @@ namespace PMonitor.views
                                 Hardware h = new Hardware();
                                 h.ip = ip;
                                 h.hostname = hostname;
-                                cbFind.Items.Add(h);
+                                ;
+                                //MessageBox.Show("" + fm.mset1.hardwares.Where(hhh => ip.Equals(hhh.ip_address)).Count());
+                                if (fm.mset1.hardwares.Where(hhh => ip.Equals(hhh.ip_address)).Count() == 0)
+                                {
+                                    this.Invoke(new MethodInvoker(
+                                                    delegate {
+                                                                 this.cbFind.Items.Add(h);
+                                                    }
+                                                    ));
+                                    AddToListBox(ip + "  добавлен");
+                                }
+                           
+                                else
+                                {
+                                    AddToListBox(ip + "  уже существует");
+                                }
+                 
+                                
+                            }
+                            else
+                            {
+                                AddToListBox(ip + " недоступен");
                             }
 
-                            lbLog.Items.Add(ip + " " + hostname + " " + result.errCode);
-                            Thread.CurrentThread.Interrupt();
+                           
+                            //Thread.CurrentThread.Interrupt();
                         }
                     }
                 }
             }
         }
 
+
+        private void AddToListBox(object oo)
+        {
+            try
+            {
+                this.Invoke(new MethodInvoker(
+                                delegate { this.lbLog.Items.Insert(0, oo); }
+                                ));
+            }catch( Exception e)
+            {
+            }
+        }
+
+        private void bScan_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show(tbStart.Text + "--" + tbStop.Text);
+            lbLog.Items.Clear();
+            cbFind.Items.Clear();
+            ;
+
+
+            new Thread(scan).Start();
+
+           
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
 
 
-             lbLog.Items.Clear();
+            // lbLog.Items.Clear();
 
             foreach (Hardware hh in cbFind.CheckedItems)
             {
