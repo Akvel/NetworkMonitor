@@ -57,6 +57,7 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.monitorDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.monitoringBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.monitoringBindingNavigator)).BeginInit();
@@ -92,6 +93,7 @@
             this.tableAdapterManager.roomsTableAdapter = null;
             this.tableAdapterManager.software_mail_listTableAdapter = null;
             this.tableAdapterManager.softwareTableAdapter = null;
+            this.tableAdapterManager.sysdiagramsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = PMonitor.monitorDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usersTableAdapter = null;
             // 
@@ -113,7 +115,8 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.monitoringBindingNavigatorSaveItem});
+            this.monitoringBindingNavigatorSaveItem,
+            this.toolStripButton1});
             this.monitoringBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.monitoringBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.monitoringBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -121,7 +124,7 @@
             this.monitoringBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.monitoringBindingNavigator.Name = "monitoringBindingNavigator";
             this.monitoringBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.monitoringBindingNavigator.Size = new System.Drawing.Size(441, 25);
+            this.monitoringBindingNavigator.Size = new System.Drawing.Size(782, 25);
             this.monitoringBindingNavigator.TabIndex = 0;
             this.monitoringBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -133,6 +136,7 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
+            this.bindingNavigatorAddNewItem.Visible = false;
             // 
             // bindingNavigatorCountItem
             // 
@@ -217,6 +221,7 @@
             this.monitoringBindingNavigatorSaveItem.Name = "monitoringBindingNavigatorSaveItem";
             this.monitoringBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.monitoringBindingNavigatorSaveItem.Text = "Save Data";
+            this.monitoringBindingNavigatorSaveItem.Visible = false;
             this.monitoringBindingNavigatorSaveItem.Click += new System.EventHandler(this.monitoringBindingNavigatorSaveItem_Click);
             // 
             // monitoringDataGridView
@@ -261,7 +266,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.monitoringDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.monitoringDataGridView.Size = new System.Drawing.Size(441, 342);
+            this.monitoringDataGridView.Size = new System.Drawing.Size(782, 359);
             this.monitoringDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -306,11 +311,21 @@
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // FMonitor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(441, 367);
+            this.ClientSize = new System.Drawing.Size(782, 384);
             this.Controls.Add(this.monitoringDataGridView);
             this.Controls.Add(this.monitoringBindingNavigator);
             this.Name = "FMonitor";
@@ -353,5 +368,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

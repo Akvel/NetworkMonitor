@@ -30,5 +30,10 @@ namespace PMonitor.views
             this.monitoringTableAdapter.Fill(this.monitorDataSet.monitoring);
 
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            Report.generate(monitorDataSet.monitoring);
+        }
     }
 }

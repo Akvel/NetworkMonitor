@@ -16,53 +16,53 @@
       <Item value="Object`0" priority="0" />
       <Item value="return" priority="9" />
       <Item value="reply" priority="2" />
-      <Item value="new" priority="17" />
+      <Item value="new" priority="24" />
       <Item value="PResult" priority="2" />
       <Item value="result" priority="13" />
       <Item value="else" priority="2" />
-      <Item value="this" priority="8" />
-      <Item value="address" priority="0" />
+      <Item value="this" priority="9" />
+      <Item value="address" priority="1" />
       <Item value="ITest`0" priority="2" />
-      <Item value="catch" priority="2" />
-      <Item value="Exception`0" priority="4" />
-      <Item value="PResult`0" priority="3" />
+      <Item value="catch" priority="3" />
+      <Item value="Exception`0" priority="5" />
+      <Item value="PResult`0" priority="5" />
       <Item value="e" priority="5" />
       <Item value="rr" priority="7" />
-      <Item value="try" priority="1" />
-      <Item value="if" priority="4" />
+      <Item value="try" priority="2" />
+      <Item value="if" priority="9" />
       <Item value="private" priority="8" />
       <Item value="readonly" priority="1" />
-      <Item value="String`0" priority="10" />
+      <Item value="String`0" priority="12" />
       <Item value="host" priority="1" />
       <Item value="login" priority="0" />
       <Item value="password" priority="0" />
       <Item value="static" priority="1" />
       <Item value="int" priority="11" />
       <Item value="long" priority="2" />
-      <Item value="Console`0" priority="3" />
+      <Item value="Console`0" priority="5" />
       <Item value="TPing" priority="0" />
       <Item value="IAsyncResult`0" priority="1" />
       <Item value="ping" priority="0" />
       <Item value="null" priority="4" />
-      <Item value="foreach" priority="3" />
+      <Item value="foreach" priority="4" />
       <Item value="rep" priority="0" />
       <Item value="class" priority="0" />
       <Item value="Dtraceroute" priority="1" />
       <Item value="maxHop" priority="1" />
-      <Item value="string" priority="1" />
-      <Item value="List" priority="0" />
+      <Item value="string" priority="7" />
+      <Item value="List" priority="1" />
       <Item value="index" priority="1" />
       <Item value="milisecond" priority="0" />
       <Item value="TWMIRam" priority="0" />
       <Item value="r" priority="0" />
-      <Item value="List&lt;string&gt;" priority="0" />
+      <Item value="List&lt;string&gt;" priority="2" />
       <Item value="TWMIDriver" priority="0" />
       <Item value="d" priority="0" />
       <Item value="Convert`0" priority="0" />
       <Item value="oMs" priority="0" />
       <Item value="ObjectQuery`0" priority="0" />
       <Item value="oConn" priority="0" />
-      <Item value="ip" priority="1" />
+      <Item value="ip" priority="2" />
       <Item value="port" priority="1" />
       <Item value="conn" priority="1" />
       <Item value="TSql`0" priority="0" />
@@ -121,6 +121,23 @@
       <Item value="SNMPObject`0" priority="0" />
       <Item value="walk`0" priority="0" />
       <Item value="VARIABLE" priority="0" />
+      <Item value="tv" priority="0" />
+      <Item value="BufferedStream`0" priority="0" />
+      <Item value="str" priority="0" />
+      <Item value="s1" priority="1" />
+      <Item value="Length" priority="1" />
+      <Item value="MemoryStream`0" priority="1" />
+      <Item value="MemoryStream" priority="0" />
+      <Item value="sw" priority="0" />
+      <Item value="path" priority="1" />
+      <Item value="Dictionary" priority="0" />
+      <Item value="Dictionary&lt;string,string&gt;" priority="0" />
+      <Item value="IpAddress`0" priority="0" />
+      <Item value="Contains`1" priority="0" />
+      <Item value="acc" priority="0" />
+      <Item value="Capacity" priority="0" />
+      <Item value="mac" priority="0" />
+      <Item value="Report`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:PService.PResult">
       <Item value="errCode" priority="5" />
@@ -144,7 +161,8 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Console">
       <Item value="ReadKey`0" priority="0" />
-      <Item value="WriteLine`0" priority="2" />
+      <Item value="WriteLine`0" priority="4" />
+      <Item value="Out" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:PService.tests.TPing">
       <Item value="getTest`0" priority="1" />
@@ -156,9 +174,10 @@
       <Item value="maxHop" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
-      <Item value="Add`0" priority="1" />
+      <Item value="Add`0" priority="3" />
       <Item value="Remove`0" priority="0" />
       <Item value="Clear`0" priority="0" />
+      <Item value="Contains`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Net.IPAddress">
       <Item value="ToString`0" priority="0" />
@@ -181,14 +200,16 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.String">
       <Item value="Empty" priority="0" />
+      <Item value="IsNullOrEmpty`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.Dictionary`2">
       <Item value="Remove`0" priority="2" />
       <Item value="Clear`0" priority="2" />
       <Item value="ContainsKey`0" priority="2" />
-      <Item value="Add`0" priority="1" />
+      <Item value="Add`0" priority="2" />
       <Item value="ContainsValue`0" priority="0" />
       <Item value="GetEnumerator`0" priority="0" />
+      <Item value="Keys" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.TreeView">
       <Item value="Nodes" priority="0" />
@@ -311,6 +332,7 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:SNMPDll.SNMPObject">
       <Item value="getValue`0" priority="0" />
+      <Item value="getSimpleValue`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:SNMPDll.SNMPAgent">
       <Item value="getCommunityRead`0" priority="0" />
@@ -324,10 +346,29 @@
     <ItemStatistics item="Qualified:System.Collections.Hashtable">
       <Item value="Values" priority="1" />
     </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Split`0" priority="0" />
+      <Item value="ToCharArray`0" priority="0" />
+      <Item value="Equals`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.MemoryStream">
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.StreamWriter">
+      <Item value="Flush`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Text.Encoding">
+      <Item value="GetBytes`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@PMonitor.Report">
+      <Item value="generate`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PMonitor.monitorDataSet">
+      <Item value="monitoring" priority="0" />
+    </ItemStatistics>
   </CompletionStatisticsManager>
   <RecentFiles>
     <RecentFiles>
-      <File id="BF642310-AA18-47A0-AF0F-E6A846671E17/f:Traceroute.cs" caret="2010" fromTop="30" />
       <File id="28580C5E-4118-4308-883F-168A5B86332F/d:data/f:Dtraceroute.cs" caret="589" fromTop="21" />
       <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TTracert.cs" caret="840" fromTop="7" />
       <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TWMIRam.cs" caret="526" fromTop="19" />
@@ -345,7 +386,6 @@
       <File id="28580C5E-4118-4308-883F-168A5B86332F/f:monitorDataSet.Designer.cs" caret="0" fromTop="0" />
       <File id="28580C5E-4118-4308-883F-168A5B86332F/f:FMain.Designer.cs" caret="4313" fromTop="24" />
       <File id="28580C5E-4118-4308-883F-168A5B86332F/f:FMain.cs" caret="427" fromTop="10" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="4159" fromTop="17" />
       <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:monitorDataSet.Designer.cs" caret="0" fromTop="0" />
       <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.Designer.cs" caret="36718" fromTop="15" />
       <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="6160" fromTop="13" />
@@ -353,40 +393,42 @@
       <File id="BF642310-AA18-47A0-AF0F-E6A846671E17/d:Properties/f:AssemblyInfo.cs" caret="0" fromTop="0" />
       <File id="BF642310-AA18-47A0-AF0F-E6A846671E17/f:App.config" caret="187" fromTop="6" />
       <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TPort.cs" caret="0" fromTop="0" />
-      <File id="BF642310-AA18-47A0-AF0F-E6A846671E17/f:Program.cs" caret="1886" fromTop="12" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="659" fromTop="10" />
+      <File id="BF642310-AA18-47A0-AF0F-E6A846671E17/f:Program.cs" caret="2014" fromTop="13" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="2983" fromTop="14" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:Report.cs" caret="2269" fromTop="36" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FMonitor.cs" caret="1069" fromTop="21" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="2344" fromTop="19" />
     </RecentFiles>
     <RecentEdits>
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="5069" fromTop="16" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="3467" fromTop="5" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="6619" fromTop="23" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="5709" fromTop="16" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="6381" fromTop="21" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="3011" fromTop="30" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="1367" fromTop="5" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="1038" fromTop="7" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="2655" fromTop="20" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="2189" fromTop="14" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="6161" fromTop="13" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="1661" fromTop="20" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="1421" fromTop="18" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="1810" fromTop="26" />
-      <File id="BF642310-AA18-47A0-AF0F-E6A846671E17/f:Program.cs" caret="1850" fromTop="17" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="235" fromTop="7" />
-      <File id="BF642310-AA18-47A0-AF0F-E6A846671E17/f:App.config" caret="58" fromTop="1" />
-      <File id="BF642310-AA18-47A0-AF0F-E6A846671E17/f:App.config" caret="169" fromTop="5" />
-      <File id="BF642310-AA18-47A0-AF0F-E6A846671E17/f:Program.cs" caret="2156" fromTop="20" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="781" fromTop="16" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="1523" fromTop="24" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="530" fromTop="1" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="530" fromTop="8" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="530" fromTop="14" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="530" fromTop="7" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="1258" fromTop="13" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="541" fromTop="12" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="530" fromTop="3" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="1208" fromTop="28" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="541" fromTop="3" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="796" fromTop="16" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="1012" fromTop="17" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="1127" fromTop="17" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="1269" fromTop="20" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="1485" fromTop="11" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="2499" fromTop="28" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="2499" fromTop="25" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="2910" fromTop="12" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="3276" fromTop="23" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="3583" fromTop="26" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="706" fromTop="27" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="395" fromTop="12" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="636" fromTop="20" />
+      <File id="BF642310-AA18-47A0-AF0F-E6A846671E17/f:Program.cs" caret="2333" fromTop="19" />
+      <File id="BF642310-AA18-47A0-AF0F-E6A846671E17/f:Program.cs" caret="2249" fromTop="19" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="2389" fromTop="21" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="3139" fromTop="19" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="3082" fromTop="14" />
+      <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" caret="3610" fromTop="14" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:Report.cs" caret="2410" fromTop="26" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:Report.cs" caret="433" fromTop="7" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:Report.cs" caret="531" fromTop="8" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:Report.cs" caret="810" fromTop="18" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:Report.cs" caret="1074" fromTop="20" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:Report.cs" caret="217" fromTop="6" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:Report.cs" caret="310" fromTop="14" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:Report.cs" caret="2005" fromTop="20" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:Report.cs" caret="2269" fromTop="18" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FMonitor.cs" caret="1069" fromTop="21" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -400,4 +442,7 @@
     </NUnitInstallDir>
     <UseAddins>Never</UseAddins>
   </UnitTestRunnerNUnit>
+  <Bookmarks>
+    <Bookmark owner="NumberedBookmarkManager" id="Bookmark9" file-id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSNMPcheck.cs" coords="(Doc Ln 38 Col 70)" />
+  </Bookmarks>
 </Configuration>
