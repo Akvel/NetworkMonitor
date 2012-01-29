@@ -13,6 +13,7 @@ namespace PService
     public partial class FMain : Form
     {
         private readonly PTask task;
+        private FConfig fConfig = new FConfig();
 
         public FMain()
         {
@@ -35,6 +36,11 @@ namespace PService
 
             button1.Enabled = true;
             button2.Enabled = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            fConfig.ShowDialog();
         }
     }
 }

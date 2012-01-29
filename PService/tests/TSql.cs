@@ -9,11 +9,18 @@ namespace PService.tests
     {
         private String ip;
         private int port;
+        private string login;
+        private string password;
+        private string db;
 
-        public TSql(String ip, int port)
+        public TSql(String ip, int port, string login, string password, string db)
         {
             this.ip = ip;
             this.port = port;
+
+            this.login = login;
+            this.password = password;
+            this.db = db;
         }
 
 
@@ -24,7 +31,7 @@ namespace PService.tests
                 System.Data.SqlClient.SqlConnection conn;
                 conn = new System.Data.SqlClient.SqlConnection();
                  conn.ConnectionString =
-                     "Data Source=" + ip + "," + port + ";Network Library=DBMSSOCN;Initial Catalog=monitor;User ID=sa;Password=12345678";
+                     "Data Source=" + ip + "," + port + ";Network Library=DBMSSOCN;Initial Catalog="+db+";User ID="+login+";Password=" + password;
 
                  conn.Open();
 
@@ -32,7 +39,6 @@ namespace PService.tests
 
                  PResult rr = new PResult();
                  rr.errCode = 0;
-                 //rr.exception = String.Empty;
                  rr.message = "Ok";
 
                  return rr;

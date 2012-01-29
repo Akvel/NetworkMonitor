@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Text;
@@ -99,6 +100,46 @@ namespace PService
                 {
                     if (!taskId.ContainsValue(l.id) && (!lastStart.ContainsKey(l.id) || ((DateTime.Now.Ticks - lastStart[l.id]) > l.req_interval_sec * 10000000)))
                     {
+                        ITest test;
+                        switch (l.id_check_type)
+                        {
+                            case 1 :
+                                {
+                                    test = new TPing(l.hardwaresRow.ip_address);
+                                    break;
+                                }
+                            case 2 :
+                                {
+                                    test = new TTracert(l.hardwaresRow.ip_address);
+                                    break;
+                                }
+                            case 3 :
+                                {
+                                    test = new TWMIDriver(l.hardwaresRow.ip_address, l.login, l.password);
+                                    break;
+                                }
+                            case 4 :
+                                {
+                                  
+                                    test = new TSNMPcheck(l.hardwaresRow.ip_address, l.comment, mset1.hardwares.Select(r => r.ip_address).ToList());
+                                    break
+                                    ;
+                                }
+                            case 5 :
+                                {
+                                    test = new TPort(l.hardwaresRow.ip_address, l.port);
+                                    break;
+                                }
+                            case 6 :
+                                {
+                                    test = new TSql(l.hardwaresRow.ip_address, l.port, l.login, l.password, l.comment);
+                                    break;
+
+                                }
+                                
+                        }
+
+
                         Task<PResult> tt = Task<PResult>.Factory.StartNew(new TPing(l.hardwaresRow.ip_address).getTest);
 
                         taskId.Add(tt.Id, l.id);

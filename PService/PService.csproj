@@ -67,6 +67,12 @@
   <ItemGroup>
     <Compile Include="data\DMemory.cs" />
     <Compile Include="data\Dtraceroute.cs" />
+    <Compile Include="FConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FConfig.Designer.cs">
+      <DependentUpon>FConfig.cs</DependentUpon>
+    </Compile>
     <Compile Include="FMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     <Compile Include="tests\TWMIRam.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FConfig.resx">
+      <DependentUpon>FConfig.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FMain.resx">
       <DependentUpon>FMain.cs</DependentUpon>
     </EmbeddedResource>

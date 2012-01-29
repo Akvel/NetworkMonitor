@@ -45,5 +45,53 @@ namespace PService.Properties {
                 this["db_refresh"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string smtp_server {
+            get {
+                return ((string)(this["smtp_server"]));
+            }
+            set {
+                this["smtp_server"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int smpt_port {
+            get {
+                return ((int)(this["smpt_port"]));
+            }
+            set {
+                this["smpt_port"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string system_mail {
+            get {
+                return ((string)(this["system_mail"]));
+            }
+            set {
+                this["system_mail"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string mail_password {
+            get {
+                return ((string)(this["mail_password"]));
+            }
+            set {
+                this["mail_password"] = value;
+            }
+        }
     }
 }
