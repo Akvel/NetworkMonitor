@@ -11,16 +11,26 @@ namespace PService.sender
     {
         private string mail = @"";
         private string pwd = @"";
+        private string smtp = "smtp.gmail.com";
+        private int port = 587;
 
 
-        public void send(string text)
+        public SGmail(string mail, string pwd, string smtp, int port)
         {
-            var client = new SmtpClient("smtp.gmail.com", 587)
+            this.smtp = smtp;
+            this.port = port;
+            this.mail = mail;
+            this.pwd = pwd;
+        }
+
+        public void send(string mailTo, string text)
+        {
+            var client = new SmtpClient(smtp, port )
             {
                 Credentials = new NetworkCredential(mail, pwd),
                 EnableSsl = true
             };
-            client.Send(mail, mail, "test", "testbody");
+            client.Send(mail, mailTo, "Monitoring Event", text);
         }
     }
 }

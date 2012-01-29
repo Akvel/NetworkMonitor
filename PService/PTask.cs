@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 using System.Windows.Forms;
 using PService.monitorDataSetTableAdapters;
+using PService.sender;
 using PService.tests;
 
 namespace PService
@@ -177,6 +178,19 @@ namespace PService
                             row.comment = result.message + (result.exception != null ? result.exception.Message : "");
                             mset1.monitoring.Rows.Add((row));
                             tableAdapterManager.UpdateAll(this.mset1);
+
+                            try
+                            {
+                                SGmail mail = new SGmail(Properties.Settings.Default.system_mail, Properties.Settings.Default.mail_password, Properties.Settings.Default.smtp_server, Properties.Settings.Default.smpt_port);
+
+                                foreach (monitorDataSet.software_mail_listRow sMail in mset1.software_mail_list.Where(a => a.id_software == taskId[task.Id]))
+                                {
+                                    mail.send(sMail.usersRow.mail, result.message + (result.exception != null ? result.exception.Message : ""));
+                                }
+                               }catch(Exception e)
+                            {
+                                AddToListBox("Cant send mail " + e.Message);
+                            }
 
                         }
                         taskId.Remove(task.Id);
