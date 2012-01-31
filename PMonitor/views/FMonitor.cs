@@ -11,6 +11,8 @@ namespace PMonitor.views
 {
     public partial class FMonitor : Form
     {
+        private object softwareTableAdapter;
+
         public FMonitor()
         {
             InitializeComponent();
@@ -19,21 +21,30 @@ namespace PMonitor.views
         private void monitoringBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.monitoringBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.monitorDataSet);
+
 
         }
 
         private void FMonitor_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'monitorDataSet.monitoring' table. You can move, or remove it, as needed.
-            this.monitoringTableAdapter.Fill(this.monitorDataSet.monitoring);
+            // TODO: This line of code loads data into the 'monitorDataSet.vmon' table. You can move, or remove it, as needed.
+            this.vmonTableAdapter.Fill(this.monitorDataSet.vmon);
 
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             Report.generate(monitorDataSet.monitoring);
+        }
+
+        private void monitoringDataGridView_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.vmonTableAdapter.Fill(this.monitorDataSet.vmon);
         }
     }
 }

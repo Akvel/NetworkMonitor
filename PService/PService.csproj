@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PService.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="mib">
       <HintPath>..\..\SNMPDLL_demo\SNMPDLL_demo\mib.dll</HintPath>

@@ -84,7 +84,7 @@ namespace PService
             {
                 if ((DateTime.Now.Ticks - predRefresh) > Properties.Settings.Default.db_refresh * 10000000)
                 {
-                    AddToListBox("Конфигурация обновляется..." + (DateTime.Now.Ticks - predRefresh) + " " + (Properties.Settings.Default.db_refresh * 10000000));
+                    AddToListBox("Конфигурация обновляется...");
                     predRefresh = DateTime.Now.Ticks;
                     hardwaresTableAdapter.Fill(mset1.hardwares);
                     softwareTableAdapter.Fill(mset1.software);
@@ -152,7 +152,7 @@ namespace PService
                         }
                         lastStart.Add(l.id, DateTime.Now.Ticks);
                         ;
-                        AddToListBox(tt.Id + " "+ l.id + " "  + l.hardwaresRow.ip_address);
+                        AddToListBox("Старт теста №" + l.id + "  для "  + l.hardwaresRow.ip_address);
                     }
                 }
 
@@ -163,7 +163,7 @@ namespace PService
                     if (task.Status == TaskStatus.RanToCompletion)
                     {
                         PResult result = task.Result;
-                        AddToListBox(task.Id + " " + result);
+                        AddToListBox("Тест окончен " + task.Id + " " + result);
                         
 
 
@@ -189,7 +189,7 @@ namespace PService
                                 }
                                }catch(Exception e)
                             {
-                                AddToListBox("Cant send mail " + e.Message);
+                                AddToListBox("Не могу отправить почту " + e.Message);
                             }
 
                         }
