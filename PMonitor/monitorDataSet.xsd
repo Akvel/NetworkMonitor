@@ -770,7 +770,7 @@ SELECT id, nick, fio, is_active, mail, id_role, comment, pwd FROM users WHERE (i
               <DbSource ConnectionRef="monitorConnectionString (Settings)" DbObjectName="monitor.dbo.vmon" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT name, Expr2, dns_name, ip_address, description, dt, valuee, comment, id_room, Expr1 FROM dbo.vmon</CommandText>
+                    <CommandText>SELECT name, Expr2, dns_name, ip_address, description, dt, valuee, comment, id_room, Expr1, id_action, id_check_type, id_device, id_monitor, id_roomm, id_software FROM vmon</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -787,6 +787,29 @@ SELECT id, nick, fio, is_active, mail, id_role, comment, pwd FROM users WHERE (i
               <Mapping SourceColumn="comment" DataSetColumn="comment" />
               <Mapping SourceColumn="id_room" DataSetColumn="id_room" />
               <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+              <Mapping SourceColumn="id_software" DataSetColumn="id_software" />
+              <Mapping SourceColumn="id_device" DataSetColumn="id_device" />
+              <Mapping SourceColumn="id_monitor" DataSetColumn="id_monitor" />
+              <Mapping SourceColumn="id_roomm" DataSetColumn="id_roomm" />
+              <Mapping SourceColumn="id_check_type" DataSetColumn="id_check_type" />
+              <Mapping SourceColumn="id_action" DataSetColumn="id_action" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vsoftTableAdapter" GeneratorDataComponentClassName="vsoftTableAdapter" Name="vsoft" UserDataComponentName="vsoftTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="monitorConnectionString (Settings)" DbObjectName="monitor.dbo.vsoft" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, dd FROM dbo.vsoft</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="dd" DataSetColumn="dd" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -1110,6 +1133,26 @@ SELECT id, nick, fio, is_active, mail, id_role, comment, pwd FROM users WHERE (i
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="id_software" msprop:Generator_ColumnVarNameInTable="columnid_software" msprop:Generator_ColumnPropNameInRow="id_software" msprop:Generator_ColumnPropNameInTable="id_softwareColumn" msprop:Generator_UserColumnName="id_software" type="xs:int" minOccurs="0" />
+              <xs:element name="id_device" msprop:Generator_ColumnVarNameInTable="columnid_device" msprop:Generator_ColumnPropNameInRow="id_device" msprop:Generator_ColumnPropNameInTable="id_deviceColumn" msprop:Generator_UserColumnName="id_device" type="xs:int" minOccurs="0" />
+              <xs:element name="id_monitor" msprop:Generator_ColumnVarNameInTable="columnid_monitor" msprop:Generator_ColumnPropNameInRow="id_monitor" msprop:Generator_ColumnPropNameInTable="id_monitorColumn" msprop:Generator_UserColumnName="id_monitor" type="xs:int" />
+              <xs:element name="id_roomm" msprop:Generator_ColumnVarNameInTable="columnid_roomm" msprop:Generator_ColumnPropNameInRow="id_roomm" msprop:Generator_ColumnPropNameInTable="id_roommColumn" msprop:Generator_UserColumnName="id_roomm" type="xs:int" minOccurs="0" />
+              <xs:element name="id_check_type" msprop:Generator_ColumnVarNameInTable="columnid_check_type" msprop:Generator_ColumnPropNameInRow="id_check_type" msprop:Generator_ColumnPropNameInTable="id_check_typeColumn" msprop:Generator_UserColumnName="id_check_type" type="xs:int" minOccurs="0" />
+              <xs:element name="id_action" msprop:Generator_ColumnVarNameInTable="columnid_action" msprop:Generator_ColumnPropNameInRow="id_action" msprop:Generator_ColumnPropNameInTable="id_actionColumn" msprop:Generator_UserColumnName="id_action" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vsoft" msprop:Generator_TableClassName="vsoftDataTable" msprop:Generator_TableVarName="tablevsoft" msprop:Generator_TablePropName="vsoft" msprop:Generator_RowDeletingName="vsoftRowDeleting" msprop:Generator_UserTableName="vsoft" msprop:Generator_RowChangingName="vsoftRowChanging" msprop:Generator_RowEvHandlerName="vsoftRowChangeEventHandler" msprop:Generator_RowDeletedName="vsoftRowDeleted" msprop:Generator_RowEvArgName="vsoftRowChangeEvent" msprop:Generator_RowChangedName="vsoftRowChanged" msprop:Generator_RowClassName="vsoftRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="dd" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndd" msprop:Generator_ColumnPropNameInRow="dd" msprop:Generator_ColumnPropNameInTable="ddColumn" msprop:Generator_UserColumnName="dd" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1165,6 +1208,10 @@ SELECT id, nick, fio, is_active, mail, id_role, comment, pwd FROM users WHERE (i
     </xs:unique>
     <xs:unique name="users_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:users" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="vsoft_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vsoft" />
       <xs:field xpath="mstns:id" />
     </xs:unique>
   </xs:element>

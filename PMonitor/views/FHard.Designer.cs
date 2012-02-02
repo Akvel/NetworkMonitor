@@ -258,6 +258,7 @@
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
+            this.bindingNavigatorMoveNextItem.Click += new System.EventHandler(this.bindingNavigatorMoveNextItem_Click);
             // 
             // bindingNavigatorMoveLastItem
             // 
@@ -328,9 +329,9 @@
             // 
             // id_roomComboBox
             // 
-            this.id_roomComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.roomsBindingSource1, "id", true));
             this.id_roomComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.roomsBindingSource1, "name", true));
-            this.id_roomComboBox.DataSource = this.roomsBindingSource;
+            this.id_roomComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.hardwaresBindingSource, "id_room", true));
+            this.id_roomComboBox.DataSource = this.roomsBindingSource1;
             this.id_roomComboBox.DisplayMember = "name";
             this.id_roomComboBox.FormattingEnabled = true;
             this.id_roomComboBox.Location = new System.Drawing.Point(95, 105);
@@ -367,6 +368,7 @@
             this.Controls.Add(this.id_roomComboBox);
             this.Controls.Add(this.hardwaresBindingNavigator);
             this.Name = "FHard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Оборудование";
             this.Load += new System.EventHandler(this.FHard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.monitorDataSet)).EndInit();

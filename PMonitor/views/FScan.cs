@@ -18,6 +18,8 @@ namespace PMonitor.views
     {
         private PMonitor.fMain fm;
 
+        public Boolean mustStop = false;
+
 
         public FScan(fMain fMain)
         {
@@ -34,13 +36,13 @@ namespace PMonitor.views
 
 
 
-            for (int i1 = Convert.ToInt32(ipStart[0]); i1 <= Convert.ToInt32(ipStop[0]); i1++)
+            for (int i1 = Convert.ToInt32(ipStart[0]); i1 <= Convert.ToInt32(ipStop[0]) && !mustStop; i1++)
             {
-                for (int i2 = Convert.ToInt32(ipStart[1]); i2 <= Convert.ToInt32(ipStop[1]); i2++)
+                for (int i2 = Convert.ToInt32(ipStart[1]); i2 <= Convert.ToInt32(ipStop[1]) && !mustStop; i2++)
                 {
-                    for (int i3 = Convert.ToInt32(ipStart[2]); i3 <= Convert.ToInt32(ipStop[2]); i3++)
+                    for (int i3 = Convert.ToInt32(ipStart[2]); i3 <= Convert.ToInt32(ipStop[2]) && !mustStop; i3++)
                     {
-                        for (int i4 = Convert.ToInt32(ipStart[3]); i4 <= Convert.ToInt32(ipStop[3]); i4++)
+                        for (int i4 = Convert.ToInt32(ipStart[3]); i4 <= Convert.ToInt32(ipStop[3]) && !mustStop; i4++)
                         {
                             String ip = i1 + "." + i2 + "." + i3 + "." + i4;
                             String hostname = "-";
@@ -92,6 +94,9 @@ namespace PMonitor.views
                     }
                 }
             }
+
+            bScan.Enabled = true;
+
         }
 
 
@@ -114,9 +119,10 @@ namespace PMonitor.views
             cbFind.Items.Clear();
             ;
 
-
+            mustStop = false;
+            bScan.Enabled = false;
+            button1.Enabled = true;
             new Thread(scan).Start();
-
            
         }
 
@@ -155,6 +161,13 @@ namespace PMonitor.views
             }
                 
             
+        }
+
+        private void FScan_Load(object sender, EventArgs e)
+        {
+            lbLog.Items.Clear();
+            cbFind.Items.Clear();
+            button1.Enabled = false;
         }
 
 

@@ -18,6 +18,7 @@ namespace PMonitor
         private FScan fScan ;
         private FHard fHard = new FHard();
         private FMonitor fMon = new FMonitor();
+        private FSMail fMail = new FSMail();
 
 
         private readonly Dictionary<string, Hardware> treeHardware = new Dictionary<string, Hardware>();
@@ -43,6 +44,8 @@ namespace PMonitor
         private void bShowScan_Click(object sender, EventArgs e)
         {
             fScan.ShowDialog();
+            fScan.mustStop = true;
+
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -78,6 +81,8 @@ namespace PMonitor
 
         private void fMain_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'mset1.vmon' table. You can move, or remove it, as needed.
+            this.vmonTableAdapter.Fill(this.mset1.vmon);
             // TODO: This line of code loads data into the 'mset1.check_types' table. You can move, or remove it, as needed.
             this.check_typesTableAdapter.Fill(this.mset1.check_types);
             // TODO: This line of code loads data into the 'mset1.software' table. You can move, or remove it, as needed.
@@ -117,40 +122,134 @@ namespace PMonitor
 
         private void tvTopolog_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            //lbLog.Items.Clear();
-            //lbLog.Items.Add(">>" + tvTopolog.SelectedNode);
-
             if (tvTopolog.SelectedNode == null) return;
-
             Hardware hh = treeHardware[tvTopolog.SelectedNode.Text];
-
-            //lbLog.Items.Add(tvTopolog.SelectedNode.ToString() + "  " + hh.device_id);
-
             this.softwareBindingSource.Filter = "id_device = " + hh.device_id;
-            // this.softwareBindingSource.
+
+            this.vmonBindingSource.Filter = "id_device = " + hh.device_id;
+
+            softwareDataGridView.Enabled = true;
         }
 
         private void toolStripButton6_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.softwareBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.mset1);
+            if (this.Validate())
+            {
+                this.softwareBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.mset1);
+            }
         }
 
         private void softwareDataGridView_RowValidating(object sender, DataGridViewCellCancelEventArgs e)
         {
-            softwareDataGridView[5, e.RowIndex].Value = getCurrentDeviceId();
-            //if (softwareDataGridView[5, e.RowIndex].Value == DBNull.Value)
-            //{
-            //    dgv.Rows[e.RowIndex].ErrorText = "You must enter a value for this field!";
+            softwareDataGridView.Rows[e.RowIndex].ErrorText = "";
+            softwareDataGridView[9, e.RowIndex].Value = getCurrentDeviceId();
 
-            // Tell the DataGridView not to accept this row
-            //   e.Cancel = true;
-            //}
-
-        }
+            if (softwareDataGridView[0, e.RowIndex].Value == DBNull.Value)
+            {
+                softwareDataGridView[0, e.RowIndex].Value = false;
+            }
 
 
+            if (softwareDataGridView == null || softwareDataGridView[1, e.RowIndex] == null || softwareDataGridView[1, e.RowIndex].Value == null)
+            {
+                e.Cancel = true;
+                return;
+            }
+
+            if (softwareDataGridView[1, e.RowIndex].Value == DBNull.Value)
+            {
+                softwareDataGridView.Rows[e.RowIndex].ErrorText = "Вы должны задать тип проверки";
+                e.Cancel = true;
+                return;
+            }
+
+            if ((int.Parse("" + softwareDataGridView[1, e.RowIndex].Value) > 2))
+            {
+
+                if (softwareDataGridView[2, e.RowIndex].Value == DBNull.Value)
+                {
+                    softwareDataGridView.Rows[e.RowIndex].ErrorText = "Вы должны задать порт";
+                    e.Cancel = true;
+                    return;
+                }
+
+
+                int port;
+                bool isNum = int.TryParse("" + softwareDataGridView[2, e.RowIndex].Value, out port);
+
+                if (!isNum || port < 0 || port > 65000)
+                {
+                    softwareDataGridView.Rows[e.RowIndex].ErrorText = "Неверный номер порта";
+                    e.Cancel = true;
+                    return;
+                }
+
+
+
+                if (int.Parse("" + softwareDataGridView[1, e.RowIndex].Value) == 3 ||
+                    int.Parse("" + softwareDataGridView[1, e.RowIndex].Value) == 4 ||
+                    int.Parse("" + softwareDataGridView[1, e.RowIndex].Value) == 6)
+                {
+
+                    if (softwareDataGridView[4, e.RowIndex].Value == DBNull.Value)
+                    {
+                        softwareDataGridView.Rows[e.RowIndex].ErrorText = "Укажите логин";
+                        e.Cancel = true;
+                        return;
+                    }
+
+                    if (softwareDataGridView[5, e.RowIndex].Value == DBNull.Value)
+                    {
+                        softwareDataGridView.Rows[e.RowIndex].ErrorText = "Укажите пароль";
+                        e.Cancel = true;
+                        return;
+                    }
+
+
+
+                    if (int.Parse("" + softwareDataGridView[1, e.RowIndex].Value) == 6)
+                    {
+                        if (softwareDataGridView[6, e.RowIndex].Value == DBNull.Value)
+                        {
+                            softwareDataGridView.Rows[e.RowIndex].ErrorText = "Укажите в опциях имя базы данных";
+                            e.Cancel = true;
+                            return;
+                        }
+                    }
+
+
+
+                }
+            }
+            else
+            {
+                softwareDataGridView[2, e.RowIndex].Value = 0;
+            }
+
+
+            if (softwareDataGridView[3, e.RowIndex].Value == DBNull.Value)
+                {
+                    softwareDataGridView.Rows[e.RowIndex].ErrorText = "Введите интервал";
+                    e.Cancel = true;
+                    return;
+                }
+
+
+                int inter;
+                bool isInter = int.TryParse("" + softwareDataGridView[3, e.RowIndex].Value, out inter);
+
+                if (!isInter || inter < 10 || inter > 65000)
+                {
+                    softwareDataGridView.Rows[e.RowIndex].ErrorText = "Неверный интервал. Введите 10 сек. и более";
+                    e.Cancel = true;
+                    return;
+                }
+
+            }
+           
+
+        
 
         public int getCurrentDeviceId()
         {
@@ -158,6 +257,31 @@ namespace PMonitor
             return int.Parse(treeHardware[tvTopolog.SelectedNode.Text].device_id);
 
             return -1;
+        }
+
+        private void softwareDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            fMail.ShowDialog();
+        }
+
+        private void softwareDataGridView_Validating(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void toolStripButton7_Click(object sender, EventArgs e)
+        {
+            //softwareDataGridView.Rows.Remove(softwareDataGridView.CurrentRow);
+        }
+
+        private void tvTopolog_DoubleClick(object sender, EventArgs e)
+        {
+            fHard.ShowDialog(getCurrentDeviceId());
         }
     }
 }

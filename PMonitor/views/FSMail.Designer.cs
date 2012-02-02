@@ -52,6 +52,8 @@
             this.software_mail_listDataGridView = new System.Windows.Forms.DataGridView();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.softwareBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vsoftBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vsoftTableAdapter = new PMonitor.monitorDataSetTableAdapters.vsoftTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -62,6 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.software_mail_listDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwareBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vsoftBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // monitorDataSet
@@ -230,6 +233,7 @@
             // 
             // software_mail_listDataGridView
             // 
+            this.software_mail_listDataGridView.AllowUserToAddRows = false;
             this.software_mail_listDataGridView.AutoGenerateColumns = false;
             this.software_mail_listDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.software_mail_listDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -252,6 +256,15 @@
             // 
             this.softwareBindingSource.DataMember = "software";
             this.softwareBindingSource.DataSource = this.monitorDataSet;
+            // 
+            // vsoftBindingSource
+            // 
+            this.vsoftBindingSource.DataMember = "vsoft";
+            this.vsoftBindingSource.DataSource = this.monitorDataSet;
+            // 
+            // vsoftTableAdapter
+            // 
+            this.vsoftTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -277,8 +290,8 @@
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "id_software";
-            this.dataGridViewTextBoxColumn3.DataSource = this.softwareBindingSource;
-            this.dataGridViewTextBoxColumn3.DisplayMember = "id";
+            this.dataGridViewTextBoxColumn3.DataSource = this.vsoftBindingSource;
+            this.dataGridViewTextBoxColumn3.DisplayMember = "dd";
             this.dataGridViewTextBoxColumn3.FillWeight = 200F;
             this.dataGridViewTextBoxColumn3.HeaderText = "Тест";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
@@ -295,6 +308,7 @@
             this.Controls.Add(this.software_mail_listDataGridView);
             this.Controls.Add(this.software_mail_listBindingNavigator);
             this.Name = "FSMail";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Список рассылки по тестам";
             this.Load += new System.EventHandler(this.FSMail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.monitorDataSet)).EndInit();
@@ -305,6 +319,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.software_mail_listDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwareBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vsoftBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,6 +349,8 @@
         private System.Windows.Forms.BindingSource usersBindingSource;
         private monitorDataSetTableAdapters.softwareTableAdapter softwareTableAdapter;
         private System.Windows.Forms.BindingSource softwareBindingSource;
+        private System.Windows.Forms.BindingSource vsoftBindingSource;
+        private monitorDataSetTableAdapters.vsoftTableAdapter vsoftTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn3;

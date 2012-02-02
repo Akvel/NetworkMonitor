@@ -26,17 +26,19 @@ namespace PMonitor.views
 
         private void FSMail_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'monitorDataSet.software' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'monitorDataSet.vsoft' table. You can move, or remove it, as needed.
+            this.vsoftTableAdapter.Fill(this.monitorDataSet.vsoft);
             this.softwareTableAdapter.Fill(this.monitorDataSet.software);
-            // TODO: This line of code loads data into the 'monitorDataSet.users' table. You can move, or remove it, as needed.
             this.usersTableAdapter.Fill(this.monitorDataSet.users);
-            // TODO: This line of code loads data into the 'monitorDataSet.software' table. You can move, or remove it, as needed.
             this.softwareTableAdapter.Fill(this.monitorDataSet.software);
-            // TODO: This line of code loads data into the 'monitorDataSet.users' table. You can move, or remove it, as needed.
             this.usersTableAdapter.Fill(this.monitorDataSet.users);
-            // TODO: This line of code loads data into the 'monitorDataSet.software_mail_list' table. You can move, or remove it, as needed.
             this.software_mail_listTableAdapter.Fill(this.monitorDataSet.software_mail_list);
 
+            //if (!this.monitorDataSet.software.Columns.Contains("FullName"))
+           //     this.monitorDataSet.software.Columns.Add("FullName", typeof(string), "id_check_type + ' ' + port");
+           // this.monitorDataSet.software.Columns.Add("FullName", typeof(string), "id_check_type + ' ' + port");
+
+           // dataGridViewTextBoxColumn3.DisplayMember= "FullName";
         }
     }
 }

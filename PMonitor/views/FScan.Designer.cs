@@ -41,7 +41,7 @@
             // 
             this.bScan.Location = new System.Drawing.Point(226, 13);
             this.bScan.Name = "bScan";
-            this.bScan.Size = new System.Drawing.Size(133, 20);
+            this.bScan.Size = new System.Drawing.Size(133, 38);
             this.bScan.TabIndex = 2;
             this.bScan.Text = "Сканировать";
             this.bScan.UseVisualStyleBackColor = true;
@@ -85,9 +85,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(365, 13);
+            this.button1.Location = new System.Drawing.Point(377, 13);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 20);
+            this.button1.Size = new System.Drawing.Size(137, 38);
             this.button1.TabIndex = 7;
             this.button1.Text = "Добавить выбранные";
             this.button1.UseVisualStyleBackColor = true;
@@ -117,7 +117,9 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FScan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Поиск нового оборудования";
+            this.Load += new System.EventHandler(this.FScan_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

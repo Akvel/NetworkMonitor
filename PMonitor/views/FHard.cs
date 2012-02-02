@@ -21,9 +21,11 @@ namespace PMonitor.views
 
         private void hardwaresBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.hardwaresBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.monitorDataSet);
+            if (this.Validate())
+            {
+                this.hardwaresBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.monitorDataSet);
+            }
 
         }
 
@@ -33,25 +35,13 @@ namespace PMonitor.views
             // TODO: This line of code loads data into the 'monitorDataSet.rooms' table. You can move, or remove it, as needed.
             this.roomsTableAdapter.Fill(this.monitorDataSet.rooms);
             // TODO: This line of code loads data into the 'monitorDataSet.hardwares' table. You can move, or remove it, as needed.
-            this.hardwaresTableAdapter.Fill(this.monitorDataSet.hardwares);
+           // this.hardwaresTableAdapter.Fill(this.monitorDataSet.hardwares);
 
 
-            ITypedList typedList = hardwaresBindingSource as ITypedList;
-
- 
-            PropertyDescriptorCollection props;
-
-            if (typedList != null) // obtain the PropertyDescriptors from the list
-            {
-                props = typedList.GetItemProperties(null);
-            }
-            else // use the TypeDescriptor on the first element of the list
-            {
-                props = TypeDescriptor.GetProperties(hardwaresBindingSource[0]);
-            }
+           
 
 
-           //ardwaresBindingSource.Position = hardwaresBindingSource.Find("id", deviceId);
+          // hardwaresBindingSource.Position = hardwaresBindingSource.Find("id", deviceId);
 
         }
 
@@ -59,7 +49,10 @@ namespace PMonitor.views
         {
             deviceId = deviceID;
             //hardwaresBindingSource.Position = this.bindingSource)
-            hardwaresBindingSource.Position = hardwaresBindingSource.Find("id", deviceId);
+            //hardwaresBindingSource.Current
+
+            this.hardwaresTableAdapter.Fill(this.monitorDataSet.hardwares);
+            hardwaresBindingSource.Position = hardwaresBindingSource.Find("Id", deviceId);
             this.ShowDialog();
         }
 
@@ -69,6 +62,11 @@ namespace PMonitor.views
         }
 
         private void bindingNavigatorCountItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
         {
 
         }
