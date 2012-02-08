@@ -64,7 +64,7 @@
             this.tbStart.Name = "tbStart";
             this.tbStart.Size = new System.Drawing.Size(100, 20);
             this.tbStart.TabIndex = 4;
-            this.tbStart.Text = "192168001000";
+            this.tbStart.Text = "192168001001";
             this.tbStart.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.tbStart_MaskInputRejected);
             this.tbStart.Validating += new System.ComponentModel.CancelEventHandler(this.tbStart_Validating);
             // 
@@ -75,7 +75,8 @@
             this.tbStop.Name = "tbStop";
             this.tbStop.Size = new System.Drawing.Size(100, 20);
             this.tbStop.TabIndex = 5;
-            this.tbStop.Text = "192168001255";
+            this.tbStop.Text = "192168001254";
+            this.tbStop.Validating += new System.ComponentModel.CancelEventHandler(this.tbStart_Validating);
             // 
             // lbLog
             // 

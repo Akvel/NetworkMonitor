@@ -54,7 +54,11 @@ namespace PMonitor.views
                             {
                                 try
                                 {
-                                    hostname = Dns.GetHostEntry(ip).HostName;
+                                    System.Net.IPHostEntry ipt = System.Net.Dns.GetHostByAddress(ip);
+                                    hostname  = ipt.HostName;
+
+
+                                    //hostname = Dns.GetHostEntry(ip).HostName;
                                 }
                                 catch (Exception e12)
                                 {
@@ -140,6 +144,12 @@ namespace PMonitor.views
             {
                 lbLog.Items.Add(hh);
                     
+                if (fm.mset1.hardwares.Where(a => a.ip_address.Equals(hh.ip)).Count() > 0)
+                {
+                    MessageBox.Show("Оборудование уже существует " + hh.hostname);
+                    continue;
+                    ;
+                }
 
                 monitorDataSet.hardwaresRow row = fm.mset1.hardwares.NewhardwaresRow();
                 row.description = "scan";

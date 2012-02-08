@@ -23,10 +23,42 @@ namespace PMonitor.views
         {
           //  if (ValidateChildren())
            /// {
-
+             
 
             ((DataRowView) hardwaresBindingSource.Current)["id_parent"] =
                 Convert.ToInt32(id_parentComboBox.SelectedValue);
+
+            Boolean chiled = false;
+            //var a
+            int currObj = (int) ((DataRowView) hardwaresBindingSource.Current)["id"];
+            int parentId = Convert.IsDBNull(((DataRowView)hardwaresBindingSource.Current)["id_parent"]) ? 0 : (int) ((DataRowView)hardwaresBindingSource.Current)["id_parent"]
+            ;
+            monitorDataSet.hardwaresRow row = monitorDataSet.hardwares.Where(b => b.id == parentId).First();
+            while (row.id_parent != null || !Convert.IsDBNull(row.id_parent))
+            {
+                int currParent = !Convert.IsDBNull(row.id_parent) ? row.id_parent : 0;
+
+                if (monitorDataSet.hardwares.Where(b => b.id == currParent).Count() == 0)
+                {
+                    break;
+                }
+
+                row = monitorDataSet.hardwares.Where(b => b.id == currParent).First();
+                if (row.id == parentId || row.id == currObj)
+                {
+                    chiled = true;
+                    break;
+                }
+            }
+            ;
+
+
+
+            if (chiled)
+            {
+                MessageBox.Show("Ошибка при связывание. Закольцованность связей");
+                return;
+            }
 
             //id_parentComboBox.SelectedItem.
 

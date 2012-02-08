@@ -13,12 +13,32 @@ namespace PData.data
         public string device_id;
 
 
+        public string id_parent;
+
+
         public override string ToString()
         {
             return "IP:" + ip + (String.Empty.Equals(hostname) ? "" : " (" + hostname + ")") + (String.Empty.Equals(desc) ? "" : " " + desc);
         }
 
+        public bool Equals(Hardware other)
+        {
+            if (ReferenceEquals(null, other)) return false;
+            if (ReferenceEquals(this, other)) return true;
+            return Equals(other.hostname, hostname);
+        }
 
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != typeof (Hardware)) return false;
+            return Equals((Hardware) obj);
+        }
 
+        public override int GetHashCode()
+        {
+            return (hostname != null ? hostname.GetHashCode() : 0);
+        }
     }
 }

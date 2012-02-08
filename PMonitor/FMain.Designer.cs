@@ -38,6 +38,7 @@
             this.bShowScan = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tcOrganiz = new System.Windows.Forms.TabControl();
@@ -93,7 +94,12 @@
             this.tableAdapterManager = new PMonitor.monitorDataSetTableAdapters.TableAdapterManager();
             this.check_typesTableAdapter = new PMonitor.monitorDataSetTableAdapters.check_typesTableAdapter();
             this.vmonTableAdapter = new PMonitor.monitorDataSetTableAdapters.vmonTableAdapter();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lAll = new System.Windows.Forms.Label();
+            this.lInNet = new System.Windows.Forms.Label();
+            this.lCount = new System.Windows.Forms.Label();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersTableAdapter = new PMonitor.monitorDataSetTableAdapters.usersTableAdapter();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -117,6 +123,8 @@
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.monitorDataSet1)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -202,6 +210,16 @@
             this.toolStripButton1.Text = "Оборудование";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
+            // toolStripButton7
+            // 
+            this.toolStripButton7.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
+            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(60, 22);
+            this.toolStripButton7.Text = "Выход";
+            this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click_1);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.splitContainer1);
@@ -240,6 +258,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.AutoScroll = true;
+            this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.tvTopolog);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -299,8 +319,8 @@
             this.bindingNavigatorPositionItem,
             this.bindingNavigatorCountItem,
             this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
@@ -343,6 +363,7 @@
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(36, 22);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            this.bindingNavigatorCountItem.Visible = false;
             // 
             // bindingNavigatorDeleteItem
             // 
@@ -361,6 +382,7 @@
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            this.bindingNavigatorMoveFirstItem.Visible = false;
             // 
             // bindingNavigatorMovePreviousItem
             // 
@@ -370,11 +392,13 @@
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            this.bindingNavigatorMovePreviousItem.Visible = false;
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
             this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator.Visible = false;
             // 
             // bindingNavigatorPositionItem
             // 
@@ -384,11 +408,13 @@
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 21);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            this.bindingNavigatorPositionItem.Visible = false;
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator1.Visible = false;
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -398,6 +424,7 @@
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
+            this.bindingNavigatorMoveNextItem.Visible = false;
             // 
             // bindingNavigatorMoveLastItem
             // 
@@ -407,11 +434,13 @@
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
+            this.bindingNavigatorMoveLastItem.Visible = false;
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator2.Visible = false;
             // 
             // toolStripButton6
             // 
@@ -694,15 +723,52 @@
             // 
             this.vmonTableAdapter.ClearBeforeFill = true;
             // 
-            // toolStripButton7
+            // panel2
             // 
-            this.toolStripButton7.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(60, 22);
-            this.toolStripButton7.Text = "Выход";
-            this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click_1);
+            this.panel2.Controls.Add(this.lCount);
+            this.panel2.Controls.Add(this.lInNet);
+            this.panel2.Controls.Add(this.lAll);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(3, 484);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(356, 53);
+            this.panel2.TabIndex = 1;
+            // 
+            // lAll
+            // 
+            this.lAll.AutoSize = true;
+            this.lAll.Location = new System.Drawing.Point(5, 10);
+            this.lAll.Name = "lAll";
+            this.lAll.Size = new System.Drawing.Size(35, 13);
+            this.lAll.TabIndex = 0;
+            this.lAll.Text = "label1";
+            // 
+            // lInNet
+            // 
+            this.lInNet.AutoSize = true;
+            this.lInNet.Location = new System.Drawing.Point(162, 10);
+            this.lInNet.Name = "lInNet";
+            this.lInNet.Size = new System.Drawing.Size(104, 13);
+            this.lInNet.TabIndex = 1;
+            this.lInNet.Text = "Количество в сети:";
+            // 
+            // lCount
+            // 
+            this.lCount.AutoSize = true;
+            this.lCount.Location = new System.Drawing.Point(272, 10);
+            this.lCount.Name = "lCount";
+            this.lCount.Size = new System.Drawing.Size(35, 13);
+            this.lCount.TabIndex = 2;
+            this.lCount.Text = "label1";
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "users";
+            this.usersBindingSource.DataSource = this.mset1;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
             // 
             // fMain
             // 
@@ -741,6 +807,9 @@
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bsMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.monitorDataSet1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -812,6 +881,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton toolStripButton7;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lAll;
+        private System.Windows.Forms.Label lInNet;
+        private System.Windows.Forms.Label lCount;
+        private System.Windows.Forms.BindingSource usersBindingSource;
+        private monitorDataSetTableAdapters.usersTableAdapter usersTableAdapter;
 
 
     }

@@ -34,8 +34,8 @@
             System.Windows.Forms.Label ip_addressLabel;
             System.Windows.Forms.Label descriptionLabel;
             System.Windows.Forms.Label id_roomLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FHard));
             System.Windows.Forms.Label id_parentLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FHard));
             this.monitorDataSet = new PMonitor.monitorDataSet();
             this.hardwaresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hardwaresTableAdapter = new PMonitor.monitorDataSetTableAdapters.hardwaresTableAdapter();
@@ -64,9 +64,9 @@
             this.roomsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.id_parentComboBox = new System.Windows.Forms.ComboBox();
+            this.hardwaresBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.monitorDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hardwaresBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.hardwaresBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             dns_nameLabel = new System.Windows.Forms.Label();
             is_snmpLabel = new System.Windows.Forms.Label();
             ip_addressLabel = new System.Windows.Forms.Label();
@@ -79,9 +79,9 @@
             this.hardwaresBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hardwaresBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.monitorDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hardwaresBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hardwaresBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // dns_nameLabel
@@ -129,6 +129,15 @@
             id_roomLabel.Size = new System.Drawing.Size(82, 13);
             id_roomLabel.TabIndex = 11;
             id_roomLabel.Text = "Расположение";
+            // 
+            // id_parentLabel
+            // 
+            id_parentLabel.AutoSize = true;
+            id_parentLabel.Location = new System.Drawing.Point(5, 174);
+            id_parentLabel.Name = "id_parentLabel";
+            id_parentLabel.Size = new System.Drawing.Size(89, 26);
+            id_parentLabel.TabIndex = 13;
+            id_parentLabel.Text = "Связь с другим \r\nоборудованием";
             // 
             // monitorDataSet
             // 
@@ -369,15 +378,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // id_parentLabel
-            // 
-            id_parentLabel.AutoSize = true;
-            id_parentLabel.Location = new System.Drawing.Point(38, 182);
-            id_parentLabel.Name = "id_parentLabel";
-            id_parentLabel.Size = new System.Drawing.Size(51, 13);
-            id_parentLabel.TabIndex = 13;
-            id_parentLabel.Text = "id parent:";
-            // 
             // id_parentComboBox
             // 
             this.id_parentComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.hardwaresBindingSource, "id_parent", true));
@@ -390,6 +390,11 @@
             this.id_parentComboBox.TabIndex = 14;
             this.id_parentComboBox.ValueMember = "id";
             // 
+            // hardwaresBindingSource2
+            // 
+            this.hardwaresBindingSource2.DataMember = "hardwares";
+            this.hardwaresBindingSource2.DataSource = this.monitorDataSet;
+            // 
             // monitorDataSetBindingSource
             // 
             this.monitorDataSetBindingSource.DataSource = this.monitorDataSet;
@@ -399,11 +404,6 @@
             // 
             this.hardwaresBindingSource1.DataMember = "hardwares";
             this.hardwaresBindingSource1.DataSource = this.monitorDataSetBindingSource;
-            // 
-            // hardwaresBindingSource2
-            // 
-            this.hardwaresBindingSource2.DataMember = "hardwares";
-            this.hardwaresBindingSource2.DataSource = this.monitorDataSet;
             // 
             // FHard
             // 
@@ -437,9 +437,9 @@
             this.hardwaresBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hardwaresBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.monitorDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hardwaresBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hardwaresBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

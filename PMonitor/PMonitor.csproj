@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dictionary.cs" />
     <Compile Include="FMain.cs">
       <SubType>Form</SubType>
     </Compile>
