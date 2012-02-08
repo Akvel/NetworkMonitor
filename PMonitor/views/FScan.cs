@@ -114,16 +114,20 @@ namespace PMonitor.views
 
         private void bScan_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(tbStart.Text + "--" + tbStop.Text);
-            lbLog.Items.Clear();
-            cbFind.Items.Clear();
-            ;
 
-            mustStop = false;
-            bScan.Enabled = false;
-            button1.Enabled = true;
-            new Thread(scan).Start();
-           
+            if (ValidateChildren())
+            {
+                //MessageBox.Show(tbStart.Text + "--" + tbStop.Text);
+                lbLog.Items.Clear();
+                cbFind.Items.Clear();
+                ;
+
+                mustStop = false;
+                bScan.Enabled = false;
+                button1.Enabled = true;
+                new Thread(scan).Start();
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -149,8 +153,11 @@ namespace PMonitor.views
 
 
                     PMonitor.monitorDataSetTableAdapters.hardwaresTableAdapter hardwaresTableAdapter = new PMonitor.monitorDataSetTableAdapters.hardwaresTableAdapter();
-                    hardwaresTableAdapter.Insert(hh.hostname, false, hh.ip , "scan", 1);
+                    hardwaresTableAdapter.Insert(hh.hostname, false, hh.ip , "scan", 1, null) ;
 
+
+                    if (!fMain.newHard.ContainsKey(hh.hostname))
+                        fMain.newHard.Add(hh.hostname, 1);
 
                     lbLog.Items.Add("Added");
                 }catch (Exception ee)
@@ -168,6 +175,41 @@ namespace PMonitor.views
             lbLog.Items.Clear();
             cbFind.Items.Clear();
             button1.Enabled = false;
+        }
+
+        private void tbStart_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void tbStart_Validating(object sender, CancelEventArgs e)
+        {
+            try
+            {
+
+                String[] ipStart = (sender as MaskedTextBox).Text.Split(new Char[] { '.' });
+                if (Convert.ToInt32(ipStart[0]) < 1 || Convert.ToInt32(ipStart[0]) > 254) e.Cancel = true;;
+                if (Convert.ToInt32(ipStart[1]) < 1 || Convert.ToInt32(ipStart[1]) > 254) e.Cancel = true; ;
+                if (Convert.ToInt32(ipStart[2]) < 1 || Convert.ToInt32(ipStart[2]) > 254) e.Cancel = true; ;
+                if (Convert.ToInt32(ipStart[3]) < 1 || Convert.ToInt32(ipStart[3]) > 254) e.Cancel = true; ;
+
+
+
+            }
+            catch(Exception ee)
+            {
+                  e.Cancel = true;
+            }
+
+            if (e.Cancel)
+            {
+                MessageBox.Show("Вы ввели неверный IP:" + (sender as MaskedTextBox).Text);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
 

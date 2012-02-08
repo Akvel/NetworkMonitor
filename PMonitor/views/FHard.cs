@@ -21,12 +21,26 @@ namespace PMonitor.views
 
         private void hardwaresBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            if (this.Validate())
-            {
+          //  if (ValidateChildren())
+           /// {
+
+
+            ((DataRowView) hardwaresBindingSource.Current)["id_parent"] =
+                Convert.ToInt32(id_parentComboBox.SelectedValue);
+
+            //id_parentComboBox.SelectedItem.
+
+
+                is_snmpTextBox.Text = "False";
                 this.hardwaresBindingSource.EndEdit();
                 this.tableAdapterManager.UpdateAll(this.monitorDataSet);
-            }
 
+
+
+                if (!fMain.newHard.ContainsKey(dns_nameTextBox.Text))
+                fMain.newHard.Add(dns_nameTextBox.Text,1);
+            //}
+            
         }
 
         private void FHard_Load(object sender, EventArgs e)
@@ -69,6 +83,11 @@ namespace PMonitor.views
         private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

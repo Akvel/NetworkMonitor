@@ -2334,6 +2334,8 @@ namespace PMonitor {
             
             private global::System.Data.DataColumn columnid_room;
             
+            private global::System.Data.DataColumn columnid_parent;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public hardwaresDataTable() {
@@ -2417,6 +2419,14 @@ namespace PMonitor {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn id_parentColumn {
+                get {
+                    return this.columnid_parent;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2452,7 +2462,7 @@ namespace PMonitor {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public hardwaresRow AddhardwaresRow(string dns_name, bool is_snmp, string ip_address, string description, roomsRow parentroomsRowByhard_room) {
+            public hardwaresRow AddhardwaresRow(string dns_name, bool is_snmp, string ip_address, string description, roomsRow parentroomsRowByhard_room, int id_parent) {
                 hardwaresRow rowhardwaresRow = ((hardwaresRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2460,7 +2470,8 @@ namespace PMonitor {
                         is_snmp,
                         ip_address,
                         description,
-                        null};
+                        null,
+                        id_parent};
                 if ((parentroomsRowByhard_room != null)) {
                     columnValuesArray[5] = parentroomsRowByhard_room[0];
                 }
@@ -2499,6 +2510,7 @@ namespace PMonitor {
                 this.columnip_address = base.Columns["ip_address"];
                 this.columndescription = base.Columns["description"];
                 this.columnid_room = base.Columns["id_room"];
+                this.columnid_parent = base.Columns["id_parent"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2516,6 +2528,8 @@ namespace PMonitor {
                 base.Columns.Add(this.columndescription);
                 this.columnid_room = new global::System.Data.DataColumn("id_room", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_room);
+                this.columnid_parent = new global::System.Data.DataColumn("id_parent", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_parent);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AutoIncrement = true;
@@ -3319,6 +3333,8 @@ namespace PMonitor {
             
             private global::System.Data.DataColumn columnid_main_user;
             
+            private global::System.Data.DataColumn columnname_full;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public roomsDataTable() {
@@ -3386,6 +3402,14 @@ namespace PMonitor {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn name_fullColumn {
+                get {
+                    return this.columnname_full;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3421,13 +3445,14 @@ namespace PMonitor {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public roomsRow AddroomsRow(string name, floorsRow parentfloorsRowByfloor_room, usersRow parentusersRowByR_12) {
+            public roomsRow AddroomsRow(string name, floorsRow parentfloorsRowByfloor_room, usersRow parentusersRowByR_12, string name_full) {
                 roomsRow rowroomsRow = ((roomsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         name,
                         null,
-                        null};
+                        null,
+                        name_full};
                 if ((parentfloorsRowByfloor_room != null)) {
                     columnValuesArray[2] = parentfloorsRowByfloor_room[0];
                 }
@@ -3467,6 +3492,7 @@ namespace PMonitor {
                 this.columnname = base.Columns["name"];
                 this.columnid_floor = base.Columns["id_floor"];
                 this.columnid_main_user = base.Columns["id_main_user"];
+                this.columnname_full = base.Columns["name_full"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3480,6 +3506,8 @@ namespace PMonitor {
                 base.Columns.Add(this.columnid_floor);
                 this.columnid_main_user = new global::System.Data.DataColumn("id_main_user", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_main_user);
+                this.columnname_full = new global::System.Data.DataColumn("name_full", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnname_full);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AutoIncrement = true;
@@ -3490,6 +3518,7 @@ namespace PMonitor {
                 this.columnid.Unique = true;
                 this.columnname.MaxLength = 2147483647;
                 this.columnid_floor.AllowDBNull = false;
+                this.columnname_full.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3641,6 +3670,10 @@ namespace PMonitor {
             
             private global::System.Data.DataColumn columncomment;
             
+            private global::System.Data.DataColumn columndate_start;
+            
+            private global::System.Data.DataColumn columndate_stop;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public softwareDataTable() {
@@ -3748,6 +3781,22 @@ namespace PMonitor {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn date_startColumn {
+                get {
+                    return this.columndate_start;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn date_stopColumn {
+                get {
+                    return this.columndate_stop;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3783,7 +3832,7 @@ namespace PMonitor {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public softwareRow AddsoftwareRow(int port, bool is_active, int req_interval_sec, check_typesRow parentcheck_typesRowBysoft_type, hardwaresRow parenthardwaresRowBysoft_hard, string login, string password, string comment) {
+            public softwareRow AddsoftwareRow(int port, bool is_active, int req_interval_sec, check_typesRow parentcheck_typesRowBysoft_type, hardwaresRow parenthardwaresRowBysoft_hard, string login, string password, string comment, string date_start, string date_stop) {
                 softwareRow rowsoftwareRow = ((softwareRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -3794,7 +3843,9 @@ namespace PMonitor {
                         null,
                         login,
                         password,
-                        comment};
+                        comment,
+                        date_start,
+                        date_stop};
                 if ((parentcheck_typesRowBysoft_type != null)) {
                     columnValuesArray[4] = parentcheck_typesRowBysoft_type[0];
                 }
@@ -3839,6 +3890,8 @@ namespace PMonitor {
                 this.columnlogin = base.Columns["login"];
                 this.columnpassword = base.Columns["password"];
                 this.columncomment = base.Columns["comment"];
+                this.columndate_start = base.Columns["date_start"];
+                this.columndate_stop = base.Columns["date_stop"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3862,6 +3915,10 @@ namespace PMonitor {
                 base.Columns.Add(this.columnpassword);
                 this.columncomment = new global::System.Data.DataColumn("comment", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncomment);
+                this.columndate_start = new global::System.Data.DataColumn("date_start", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndate_start);
+                this.columndate_stop = new global::System.Data.DataColumn("date_stop", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndate_stop);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AutoIncrement = true;
@@ -3877,6 +3934,8 @@ namespace PMonitor {
                 this.columnlogin.MaxLength = 2147483647;
                 this.columnpassword.MaxLength = 2147483647;
                 this.columncomment.MaxLength = 2147483647;
+                this.columndate_start.MaxLength = 2147483647;
+                this.columndate_stop.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5236,7 +5295,7 @@ namespace PMonitor {
                         string dns_name, 
                         string ip_address, 
                         string description, 
-                        System.DateTime dt, 
+                        string dt, 
                         int valuee, 
                         string comment, 
                         int id_room, 
@@ -5318,7 +5377,7 @@ namespace PMonitor {
                 base.Columns.Add(this.columnip_address);
                 this.columndescription = new global::System.Data.DataColumn("description", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndescription);
-                this.columndt = new global::System.Data.DataColumn("dt", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columndt = new global::System.Data.DataColumn("dt", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndt);
                 this.columnvaluee = new global::System.Data.DataColumn("valuee", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnvaluee);
@@ -6193,6 +6252,22 @@ namespace PMonitor {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int id_parent {
+                get {
+                    try {
+                        return ((int)(this[this.tablehardwares.id_parentColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'id_parent\' in table \'hardwares\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablehardwares.id_parentColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public roomsRow roomsRow {
                 get {
                     return ((roomsRow)(this.GetParentRow(this.Table.ParentRelations["hard_room"])));
@@ -6224,6 +6299,18 @@ namespace PMonitor {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setid_roomNull() {
                 this[this.tablehardwares.id_roomColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isid_parentNull() {
+                return this.IsNull(this.tablehardwares.id_parentColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setid_parentNull() {
+                this[this.tablehardwares.id_parentColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6577,6 +6664,22 @@ namespace PMonitor {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string name_full {
+                get {
+                    try {
+                        return ((string)(this[this.tablerooms.name_fullColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'name_full\' in table \'rooms\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerooms.name_fullColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public floorsRow floorsRow {
                 get {
                     return ((floorsRow)(this.GetParentRow(this.Table.ParentRelations["floor_room"])));
@@ -6619,6 +6722,18 @@ namespace PMonitor {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setid_main_userNull() {
                 this[this.tablerooms.id_main_userColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isname_fullNull() {
+                return this.IsNull(this.tablerooms.name_fullColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setname_fullNull() {
+                this[this.tablerooms.name_fullColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6768,6 +6883,38 @@ namespace PMonitor {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string date_start {
+                get {
+                    try {
+                        return ((string)(this[this.tablesoftware.date_startColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'date_start\' in table \'software\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesoftware.date_startColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string date_stop {
+                get {
+                    try {
+                        return ((string)(this[this.tablesoftware.date_stopColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'date_stop\' in table \'software\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesoftware.date_stopColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public hardwaresRow hardwaresRow {
                 get {
                     return ((hardwaresRow)(this.GetParentRow(this.Table.ParentRelations["soft_hard"])));
@@ -6834,6 +6981,30 @@ namespace PMonitor {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetcommentNull() {
                 this[this.tablesoftware.commentColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isdate_startNull() {
+                return this.IsNull(this.tablesoftware.date_startColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setdate_startNull() {
+                this[this.tablesoftware.date_startColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isdate_stopNull() {
+                return this.IsNull(this.tablesoftware.date_stopColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setdate_stopNull() {
+                this[this.tablesoftware.date_stopColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7355,9 +7526,9 @@ namespace PMonitor {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime dt {
+            public string dt {
                 get {
-                    return ((global::System.DateTime)(this[this.tablevmon.dtColumn]));
+                    return ((string)(this[this.tablevmon.dtColumn]));
                 }
                 set {
                     this[this.tablevmon.dtColumn] = value;
@@ -9966,43 +10137,48 @@ SELECT id, id_user, id_device FROM hardware_mail_list WHERE (id = @id)";
             tableMapping.ColumnMappings.Add("ip_address", "ip_address");
             tableMapping.ColumnMappings.Add("description", "description");
             tableMapping.ColumnMappings.Add("id_room", "id_room");
+            tableMapping.ColumnMappings.Add("id_parent", "id_parent");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[hardwares] WHERE (([id] = @Original_id) AND ([is_snmp] = @Orig" +
-                "inal_is_snmp) AND ([ip_address] = @Original_ip_address) AND ((@IsNull_id_room = " +
-                "1 AND [id_room] IS NULL) OR ([id_room] = @Original_id_room)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [hardwares] WHERE (([id] = @Original_id) AND ([is_snmp] = @Original_is_snmp) AND ([ip_address] = @Original_ip_address) AND ((@IsNull_id_room = 1 AND [id_room] IS NULL) OR ([id_room] = @Original_id_room)) AND ((@IsNull_id_parent = 1 AND [id_parent] IS NULL) OR ([id_parent] = @Original_id_parent)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_is_snmp", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_snmp", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ip_address", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ip_address", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_room", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_room", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_room", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_room", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_parent", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_parent", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_parent", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_parent", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[hardwares] ([dns_name], [is_snmp], [ip_address], [description], [id_room]) VALUES (@dns_name, @is_snmp, @ip_address, @description, @id_room);
-SELECT id, dns_name, is_snmp, ip_address, description, id_room FROM hardwares WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [hardwares] ([dns_name], [is_snmp], [ip_address], [description], [id_room], [id_parent]) VALUES (@dns_name, @is_snmp, @ip_address, @description, @id_room, @id_parent);
+SELECT id, dns_name, is_snmp, ip_address, description, id_room, id_parent FROM hardwares WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dns_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dns_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@is_snmp", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_snmp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ip_address", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ip_address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@description", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_room", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_room", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_parent", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_parent", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[hardwares] SET [dns_name] = @dns_name, [is_snmp] = @is_snmp, [ip_address] = @ip_address, [description] = @description, [id_room] = @id_room WHERE (([id] = @Original_id) AND ([is_snmp] = @Original_is_snmp) AND ([ip_address] = @Original_ip_address) AND ((@IsNull_id_room = 1 AND [id_room] IS NULL) OR ([id_room] = @Original_id_room)));
-SELECT id, dns_name, is_snmp, ip_address, description, id_room FROM hardwares WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [hardwares] SET [dns_name] = @dns_name, [is_snmp] = @is_snmp, [ip_address] = @ip_address, [description] = @description, [id_room] = @id_room, [id_parent] = @id_parent WHERE (([id] = @Original_id) AND ([is_snmp] = @Original_is_snmp) AND ([ip_address] = @Original_ip_address) AND ((@IsNull_id_room = 1 AND [id_room] IS NULL) OR ([id_room] = @Original_id_room)) AND ((@IsNull_id_parent = 1 AND [id_parent] IS NULL) OR ([id_parent] = @Original_id_parent)));
+SELECT id, dns_name, is_snmp, ip_address, description, id_room, id_parent FROM hardwares WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dns_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dns_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@is_snmp", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_snmp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ip_address", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ip_address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@description", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_room", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_room", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_parent", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_parent", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_is_snmp", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_snmp", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ip_address", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ip_address", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_room", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_room", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_room", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_room", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_parent", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_parent", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_parent", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_parent", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -10019,8 +10195,8 @@ SELECT id, dns_name, is_snmp, ip_address, description, id_room FROM hardwares WH
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, dns_name, is_snmp, ip_address, description, id_room FROM dbo.hardwares" +
-                "";
+            this._commandCollection[0].CommandText = "SELECT id, dns_name, is_snmp, ip_address, description, id_room, id_parent FROM ha" +
+                "rdwares";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -10081,7 +10257,7 @@ SELECT id, dns_name, is_snmp, ip_address, description, id_room FROM hardwares WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, bool Original_is_snmp, string Original_ip_address, global::System.Nullable<int> Original_id_room) {
+        public virtual int Delete(int Original_id, bool Original_is_snmp, string Original_ip_address, global::System.Nullable<int> Original_id_room, global::System.Nullable<int> Original_id_parent) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((bool)(Original_is_snmp));
             if ((Original_ip_address == null)) {
@@ -10097,6 +10273,14 @@ SELECT id, dns_name, is_snmp, ip_address, description, id_room FROM hardwares WH
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Original_id_parent.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_id_parent.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -10118,7 +10302,7 @@ SELECT id, dns_name, is_snmp, ip_address, description, id_room FROM hardwares WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string dns_name, bool is_snmp, string ip_address, string description, global::System.Nullable<int> id_room) {
+        public virtual int Insert(string dns_name, bool is_snmp, string ip_address, string description, global::System.Nullable<int> id_room, global::System.Nullable<int> id_parent) {
             if ((dns_name == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -10144,6 +10328,12 @@ SELECT id, dns_name, is_snmp, ip_address, description, id_room FROM hardwares WH
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
+            if ((id_parent.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(id_parent.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -10164,7 +10354,7 @@ SELECT id, dns_name, is_snmp, ip_address, description, id_room FROM hardwares WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string dns_name, bool is_snmp, string ip_address, string description, global::System.Nullable<int> id_room, int Original_id, bool Original_is_snmp, string Original_ip_address, global::System.Nullable<int> Original_id_room, int id) {
+        public virtual int Update(string dns_name, bool is_snmp, string ip_address, string description, global::System.Nullable<int> id_room, global::System.Nullable<int> id_parent, int Original_id, bool Original_is_snmp, string Original_ip_address, global::System.Nullable<int> Original_id_room, global::System.Nullable<int> Original_id_parent, int id) {
             if ((dns_name == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -10190,23 +10380,37 @@ SELECT id, dns_name, is_snmp, ip_address, description, id_room FROM hardwares WH
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_id));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((bool)(Original_is_snmp));
+            if ((id_parent.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(id_parent.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_id));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((bool)(Original_is_snmp));
             if ((Original_ip_address == null)) {
                 throw new global::System.ArgumentNullException("Original_ip_address");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_ip_address));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_ip_address));
             }
             if ((Original_id_room.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_id_room.Value));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_id_room.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(id));
+            if ((Original_id_parent.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_id_parent.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -10227,8 +10431,8 @@ SELECT id, dns_name, is_snmp, ip_address, description, id_room FROM hardwares WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string dns_name, bool is_snmp, string ip_address, string description, global::System.Nullable<int> id_room, int Original_id, bool Original_is_snmp, string Original_ip_address, global::System.Nullable<int> Original_id_room) {
-            return this.Update(dns_name, is_snmp, ip_address, description, id_room, Original_id, Original_is_snmp, Original_ip_address, Original_id_room, Original_id);
+        public virtual int Update(string dns_name, bool is_snmp, string ip_address, string description, global::System.Nullable<int> id_room, global::System.Nullable<int> id_parent, int Original_id, bool Original_is_snmp, string Original_ip_address, global::System.Nullable<int> Original_id_room, global::System.Nullable<int> Original_id_parent) {
+            return this.Update(dns_name, is_snmp, ip_address, description, id_room, id_parent, Original_id, Original_is_snmp, Original_ip_address, Original_id_room, Original_id_parent, Original_id);
         }
     }
     
@@ -11074,12 +11278,13 @@ SELECT id, dt, valuee, comment, id_action, id_software, is_active FROM monitorin
             tableMapping.ColumnMappings.Add("name", "name");
             tableMapping.ColumnMappings.Add("id_floor", "id_floor");
             tableMapping.ColumnMappings.Add("id_main_user", "id_main_user");
+            tableMapping.ColumnMappings.Add("name_full", "name_full");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[rooms] WHERE (([id] = @Original_id) AND ([id_floor] = @Origina" +
-                "l_id_floor) AND ((@IsNull_id_main_user = 1 AND [id_main_user] IS NULL) OR ([id_m" +
-                "ain_user] = @Original_id_main_user)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [rooms] WHERE (([id] = @Original_id) AND ([id_floor] = @Original_id_f" +
+                "loor) AND ((@IsNull_id_main_user = 1 AND [id_main_user] IS NULL) OR ([id_main_us" +
+                "er] = @Original_id_main_user)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_floor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_floor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -11087,21 +11292,23 @@ SELECT id, dt, valuee, comment, id_action, id_software, is_active FROM monitorin
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_main_user", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_main_user", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[rooms] ([name], [id_floor], [id_main_user]) VALUES (@name, @id" +
-                "_floor, @id_main_user);\r\nSELECT id, name, id_floor, id_main_user FROM rooms WHER" +
-                "E (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [rooms] ([name], [id_floor], [id_main_user], [name_full]) VALUES (@na" +
+                "me, @id_floor, @id_main_user, @name_full);\r\nSELECT id, name, id_floor, id_main_u" +
+                "ser, name_full FROM rooms WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_floor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_floor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_main_user", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_main_user", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name_full", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_full", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[rooms] SET [name] = @name, [id_floor] = @id_floor, [id_main_user] = @id_main_user WHERE (([id] = @Original_id) AND ([id_floor] = @Original_id_floor) AND ((@IsNull_id_main_user = 1 AND [id_main_user] IS NULL) OR ([id_main_user] = @Original_id_main_user)));
-SELECT id, name, id_floor, id_main_user FROM rooms WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [rooms] SET [name] = @name, [id_floor] = @id_floor, [id_main_user] = @id_main_user, [name_full] = @name_full WHERE (([id] = @Original_id) AND ([id_floor] = @Original_id_floor) AND ((@IsNull_id_main_user = 1 AND [id_main_user] IS NULL) OR ([id_main_user] = @Original_id_main_user)));
+SELECT id, name, id_floor, id_main_user, name_full FROM rooms WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_floor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_floor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_main_user", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_main_user", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name_full", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name_full", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_floor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_floor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_main_user", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_main_user", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -11122,7 +11329,7 @@ SELECT id, name, id_floor, id_main_user FROM rooms WHERE (id = @id)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, name, id_floor, id_main_user FROM dbo.rooms";
+            this._commandCollection[0].CommandText = "SELECT id, name, id_floor, id_main_user, name_full FROM rooms";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -11214,7 +11421,7 @@ SELECT id, name, id_floor, id_main_user FROM rooms WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string name, int id_floor, global::System.Nullable<int> id_main_user) {
+        public virtual int Insert(string name, int id_floor, global::System.Nullable<int> id_main_user, string name_full) {
             if ((name == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -11227,6 +11434,12 @@ SELECT id, name, id_floor, id_main_user FROM rooms WHERE (id = @id)";
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((name_full == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(name_full));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -11248,7 +11461,7 @@ SELECT id, name, id_floor, id_main_user FROM rooms WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string name, int id_floor, global::System.Nullable<int> id_main_user, int Original_id, int Original_id_floor, global::System.Nullable<int> Original_id_main_user, int id) {
+        public virtual int Update(string name, int id_floor, global::System.Nullable<int> id_main_user, string name_full, int Original_id, int Original_id_floor, global::System.Nullable<int> Original_id_main_user, int id) {
             if ((name == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -11262,17 +11475,23 @@ SELECT id, name, id_floor, id_main_user FROM rooms WHERE (id = @id)";
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_id));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_id_floor));
-            if ((Original_id_main_user.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_id_main_user.Value));
+            if ((name_full == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(name_full));
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(id));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_id));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_id_floor));
+            if ((Original_id_main_user.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_id_main_user.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -11293,8 +11512,8 @@ SELECT id, name, id_floor, id_main_user FROM rooms WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string name, int id_floor, global::System.Nullable<int> id_main_user, int Original_id, int Original_id_floor, global::System.Nullable<int> Original_id_main_user) {
-            return this.Update(name, id_floor, id_main_user, Original_id, Original_id_floor, Original_id_main_user, Original_id);
+        public virtual int Update(string name, int id_floor, global::System.Nullable<int> id_main_user, string name_full, int Original_id, int Original_id_floor, global::System.Nullable<int> Original_id_main_user) {
+            return this.Update(name, id_floor, id_main_user, name_full, Original_id, Original_id_floor, Original_id_main_user, Original_id);
         }
     }
     
@@ -11428,6 +11647,8 @@ SELECT id, name, id_floor, id_main_user FROM rooms WHERE (id = @id)";
             tableMapping.ColumnMappings.Add("login", "login");
             tableMapping.ColumnMappings.Add("password", "password");
             tableMapping.ColumnMappings.Add("comment", "comment");
+            tableMapping.ColumnMappings.Add("date_start", "date_start");
+            tableMapping.ColumnMappings.Add("date_stop", "date_stop");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -11442,8 +11663,8 @@ SELECT id, name, id_floor, id_main_user FROM rooms WHERE (id = @id)";
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_device", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_device", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [software] ([port], [is_active], [req_interval_sec], [id_check_type], [id_device], [login], [password], [comment]) VALUES (@port, @is_active, @req_interval_sec, @id_check_type, @id_device, @login, @password, @comment);
-SELECT id, port, is_active, req_interval_sec, id_check_type, id_device, login, password, comment FROM software WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [software] ([port], [is_active], [req_interval_sec], [id_check_type], [id_device], [login], [password], [comment], [date_start], [date_stop]) VALUES (@port, @is_active, @req_interval_sec, @id_check_type, @id_device, @login, @password, @comment, @date_start, @date_stop);
+SELECT id, port, is_active, req_interval_sec, id_check_type, id_device, login, password, comment, date_start, date_stop FROM software WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@port", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "port", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@is_active", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_active", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -11453,10 +11674,12 @@ SELECT id, port, is_active, req_interval_sec, id_check_type, id_device, login, p
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@login", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "login", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@password", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@comment", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "comment", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_start", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_start", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_stop", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_stop", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [software] SET [port] = @port, [is_active] = @is_active, [req_interval_sec] = @req_interval_sec, [id_check_type] = @id_check_type, [id_device] = @id_device, [login] = @login, [password] = @password, [comment] = @comment WHERE (([id] = @Original_id) AND ([port] = @Original_port) AND ([is_active] = @Original_is_active) AND ([req_interval_sec] = @Original_req_interval_sec) AND ([id_check_type] = @Original_id_check_type) AND ((@IsNull_id_device = 1 AND [id_device] IS NULL) OR ([id_device] = @Original_id_device)));
-SELECT id, port, is_active, req_interval_sec, id_check_type, id_device, login, password, comment FROM software WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [software] SET [port] = @port, [is_active] = @is_active, [req_interval_sec] = @req_interval_sec, [id_check_type] = @id_check_type, [id_device] = @id_device, [login] = @login, [password] = @password, [comment] = @comment, [date_start] = @date_start, [date_stop] = @date_stop WHERE (([id] = @Original_id) AND ([port] = @Original_port) AND ([is_active] = @Original_is_active) AND ([req_interval_sec] = @Original_req_interval_sec) AND ([id_check_type] = @Original_id_check_type) AND ((@IsNull_id_device = 1 AND [id_device] IS NULL) OR ([id_device] = @Original_id_device)));
+SELECT id, port, is_active, req_interval_sec, id_check_type, id_device, login, password, comment, date_start, date_stop FROM software WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@port", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "port", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@is_active", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_active", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -11466,6 +11689,8 @@ SELECT id, port, is_active, req_interval_sec, id_check_type, id_device, login, p
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@login", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "login", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@password", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@comment", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "comment", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_start", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_start", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_stop", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_stop", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_port", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "port", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_is_active", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_active", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -11489,8 +11714,8 @@ SELECT id, port, is_active, req_interval_sec, id_check_type, id_device, login, p
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT     id, port, is_active, req_interval_sec, id_check_type, id_device, login" +
-                ", password, comment\r\nFROM         software";
+            this._commandCollection[0].CommandText = "SELECT id, port, is_active, req_interval_sec, id_check_type, id_device, login, pa" +
+                "ssword, comment, date_start, date_stop FROM software";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -11585,7 +11810,7 @@ SELECT id, port, is_active, req_interval_sec, id_check_type, id_device, login, p
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int port, bool is_active, int req_interval_sec, int id_check_type, global::System.Nullable<int> id_device, string login, string password, string comment) {
+        public virtual int Insert(int port, bool is_active, int req_interval_sec, int id_check_type, global::System.Nullable<int> id_device, string login, string password, string comment, string date_start, string date_stop) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(port));
             this.Adapter.InsertCommand.Parameters[1].Value = ((bool)(is_active));
             this.Adapter.InsertCommand.Parameters[2].Value = ((int)(req_interval_sec));
@@ -11614,6 +11839,18 @@ SELECT id, port, is_active, req_interval_sec, id_check_type, id_device, login, p
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = ((string)(comment));
             }
+            if ((date_start == null)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(date_start));
+            }
+            if ((date_stop == null)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(date_stop));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -11634,7 +11871,24 @@ SELECT id, port, is_active, req_interval_sec, id_check_type, id_device, login, p
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int port, bool is_active, int req_interval_sec, int id_check_type, global::System.Nullable<int> id_device, string login, string password, string comment, int Original_id, int Original_port, bool Original_is_active, int Original_req_interval_sec, int Original_id_check_type, global::System.Nullable<int> Original_id_device, int id) {
+        public virtual int Update(
+                    int port, 
+                    bool is_active, 
+                    int req_interval_sec, 
+                    int id_check_type, 
+                    global::System.Nullable<int> id_device, 
+                    string login, 
+                    string password, 
+                    string comment, 
+                    string date_start, 
+                    string date_stop, 
+                    int Original_id, 
+                    int Original_port, 
+                    bool Original_is_active, 
+                    int Original_req_interval_sec, 
+                    int Original_id_check_type, 
+                    global::System.Nullable<int> Original_id_device, 
+                    int id) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(port));
             this.Adapter.UpdateCommand.Parameters[1].Value = ((bool)(is_active));
             this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(req_interval_sec));
@@ -11663,20 +11917,32 @@ SELECT id, port, is_active, req_interval_sec, id_check_type, id_device, login, p
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(comment));
             }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_id));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_port));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((bool)(Original_is_active));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_req_interval_sec));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_id_check_type));
-            if ((Original_id_device.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_id_device.Value));
+            if ((date_start == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(date_start));
             }
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(id));
+            if ((date_stop == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(date_stop));
+            }
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_id));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_port));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((bool)(Original_is_active));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_req_interval_sec));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_id_check_type));
+            if ((Original_id_device.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_id_device.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -11697,8 +11963,24 @@ SELECT id, port, is_active, req_interval_sec, id_check_type, id_device, login, p
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int port, bool is_active, int req_interval_sec, int id_check_type, global::System.Nullable<int> id_device, string login, string password, string comment, int Original_id, int Original_port, bool Original_is_active, int Original_req_interval_sec, int Original_id_check_type, global::System.Nullable<int> Original_id_device) {
-            return this.Update(port, is_active, req_interval_sec, id_check_type, id_device, login, password, comment, Original_id, Original_port, Original_is_active, Original_req_interval_sec, Original_id_check_type, Original_id_device, Original_id);
+        public virtual int Update(
+                    int port, 
+                    bool is_active, 
+                    int req_interval_sec, 
+                    int id_check_type, 
+                    global::System.Nullable<int> id_device, 
+                    string login, 
+                    string password, 
+                    string comment, 
+                    string date_start, 
+                    string date_stop, 
+                    int Original_id, 
+                    int Original_port, 
+                    bool Original_is_active, 
+                    int Original_req_interval_sec, 
+                    int Original_id_check_type, 
+                    global::System.Nullable<int> Original_id_device) {
+            return this.Update(port, is_active, req_interval_sec, id_check_type, id_device, login, password, comment, date_start, date_stop, Original_id, Original_port, Original_is_active, Original_req_interval_sec, Original_id_check_type, Original_id_device, Original_id);
         }
     }
     

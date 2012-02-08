@@ -34,5 +34,10 @@ namespace PMonitor.views
             this.hardware_mail_listTableAdapter.Fill(this.monitorDataSet.hardware_mail_list);
 
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

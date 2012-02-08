@@ -50,11 +50,12 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.hardware_mail_listBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.hardware_mail_listDataGridView = new System.Windows.Forms.DataGridView();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hardwaresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.hardwaresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.monitorDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hardware_mail_listBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hardware_mail_listBindingNavigator)).BeginInit();
@@ -122,7 +123,8 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.hardware_mail_listBindingNavigatorSaveItem});
+            this.hardware_mail_listBindingNavigatorSaveItem,
+            this.toolStripButton1});
             this.hardware_mail_listBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.hardware_mail_listBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.hardware_mail_listBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -130,7 +132,7 @@
             this.hardware_mail_listBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.hardware_mail_listBindingNavigator.Name = "hardware_mail_listBindingNavigator";
             this.hardware_mail_listBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.hardware_mail_listBindingNavigator.Size = new System.Drawing.Size(442, 25);
+            this.hardware_mail_listBindingNavigator.Size = new System.Drawing.Size(444, 25);
             this.hardware_mail_listBindingNavigator.TabIndex = 0;
             this.hardware_mail_listBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -240,18 +242,8 @@
             this.hardware_mail_listDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.hardware_mail_listDataGridView.Location = new System.Drawing.Point(0, 25);
             this.hardware_mail_listDataGridView.Name = "hardware_mail_listDataGridView";
-            this.hardware_mail_listDataGridView.Size = new System.Drawing.Size(442, 424);
+            this.hardware_mail_listDataGridView.Size = new System.Drawing.Size(444, 424);
             this.hardware_mail_listDataGridView.TabIndex = 1;
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "users";
-            this.usersBindingSource.DataSource = this.monitorDataSet;
-            // 
-            // hardwaresBindingSource
-            // 
-            this.hardwaresBindingSource.DataMember = "hardwares";
-            this.hardwaresBindingSource.DataSource = this.monitorDataSet;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -273,6 +265,11 @@
             this.dataGridViewTextBoxColumn2.ValueMember = "id";
             this.dataGridViewTextBoxColumn2.Width = 200;
             // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "users";
+            this.usersBindingSource.DataSource = this.monitorDataSet;
+            // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "id_device";
@@ -286,11 +283,26 @@
             this.dataGridViewTextBoxColumn3.ValueMember = "id";
             this.dataGridViewTextBoxColumn3.Width = 200;
             // 
+            // hardwaresBindingSource
+            // 
+            this.hardwaresBindingSource.DataMember = "hardwares";
+            this.hardwaresBindingSource.DataSource = this.monitorDataSet;
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(60, 22);
+            this.toolStripButton1.Text = "Выход";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // FHMail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 449);
+            this.ClientSize = new System.Drawing.Size(444, 449);
             this.Controls.Add(this.hardware_mail_listDataGridView);
             this.Controls.Add(this.hardware_mail_listBindingNavigator);
             this.Name = "FHMail";
@@ -336,5 +348,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

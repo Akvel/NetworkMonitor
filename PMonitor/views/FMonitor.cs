@@ -46,5 +46,15 @@ namespace PMonitor.views
         {
             this.vmonTableAdapter.Fill(this.monitorDataSet.vmon);
         }
+
+        private void vmonDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -50,21 +50,21 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.software_mail_listBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.software_mail_listDataGridView = new System.Windows.Forms.DataGridView();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.softwareBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vsoftBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vsoftTableAdapter = new PMonitor.monitorDataSetTableAdapters.vsoftTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.vsoftBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.softwareBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vsoftTableAdapter = new PMonitor.monitorDataSetTableAdapters.vsoftTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.monitorDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.software_mail_listBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.software_mail_listBindingNavigator)).BeginInit();
             this.software_mail_listBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.software_mail_listDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.softwareBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vsoftBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.softwareBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // monitorDataSet
@@ -247,25 +247,6 @@
             this.software_mail_listDataGridView.Size = new System.Drawing.Size(444, 327);
             this.software_mail_listDataGridView.TabIndex = 1;
             // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "users";
-            this.usersBindingSource.DataSource = this.monitorDataSet;
-            // 
-            // softwareBindingSource
-            // 
-            this.softwareBindingSource.DataMember = "software";
-            this.softwareBindingSource.DataSource = this.monitorDataSet;
-            // 
-            // vsoftBindingSource
-            // 
-            this.vsoftBindingSource.DataMember = "vsoft";
-            this.vsoftBindingSource.DataSource = this.monitorDataSet;
-            // 
-            // vsoftTableAdapter
-            // 
-            this.vsoftTableAdapter.ClearBeforeFill = true;
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
@@ -287,6 +268,11 @@
             this.dataGridViewTextBoxColumn2.ValueMember = "id";
             this.dataGridViewTextBoxColumn2.Width = 200;
             // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "users";
+            this.usersBindingSource.DataSource = this.monitorDataSet;
+            // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "id_software";
@@ -300,6 +286,20 @@
             this.dataGridViewTextBoxColumn3.ValueMember = "id";
             this.dataGridViewTextBoxColumn3.Width = 200;
             // 
+            // vsoftBindingSource
+            // 
+            this.vsoftBindingSource.DataMember = "vsoft";
+            this.vsoftBindingSource.DataSource = this.monitorDataSet;
+            // 
+            // softwareBindingSource
+            // 
+            this.softwareBindingSource.DataMember = "software";
+            this.softwareBindingSource.DataSource = this.monitorDataSet;
+            // 
+            // vsoftTableAdapter
+            // 
+            this.vsoftTableAdapter.ClearBeforeFill = true;
+            // 
             // FSMail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -307,6 +307,7 @@
             this.ClientSize = new System.Drawing.Size(444, 352);
             this.Controls.Add(this.software_mail_listDataGridView);
             this.Controls.Add(this.software_mail_listBindingNavigator);
+            this.MaximizeBox = false;
             this.Name = "FSMail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Список рассылки по тестам";
@@ -318,8 +319,8 @@
             this.software_mail_listBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.software_mail_listDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.softwareBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vsoftBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.softwareBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

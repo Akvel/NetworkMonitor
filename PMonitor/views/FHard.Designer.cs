@@ -35,6 +35,7 @@
             System.Windows.Forms.Label descriptionLabel;
             System.Windows.Forms.Label id_roomLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FHard));
+            System.Windows.Forms.Label id_parentLabel;
             this.monitorDataSet = new PMonitor.monitorDataSet();
             this.hardwaresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hardwaresTableAdapter = new PMonitor.monitorDataSetTableAdapters.hardwaresTableAdapter();
@@ -61,17 +62,26 @@
             this.id_roomComboBox = new System.Windows.Forms.ComboBox();
             this.roomsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.roomsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.id_parentComboBox = new System.Windows.Forms.ComboBox();
+            this.monitorDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hardwaresBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.hardwaresBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             dns_nameLabel = new System.Windows.Forms.Label();
             is_snmpLabel = new System.Windows.Forms.Label();
             ip_addressLabel = new System.Windows.Forms.Label();
             descriptionLabel = new System.Windows.Forms.Label();
             id_roomLabel = new System.Windows.Forms.Label();
+            id_parentLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.monitorDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hardwaresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hardwaresBindingNavigator)).BeginInit();
             this.hardwaresBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.monitorDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hardwaresBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hardwaresBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // dns_nameLabel
@@ -182,7 +192,7 @@
             this.hardwaresBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.hardwaresBindingNavigator.Name = "hardwaresBindingNavigator";
             this.hardwaresBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.hardwaresBindingNavigator.Size = new System.Drawing.Size(292, 25);
+            this.hardwaresBindingNavigator.Size = new System.Drawing.Size(301, 25);
             this.hardwaresBindingNavigator.TabIndex = 0;
             this.hardwaresBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -306,10 +316,9 @@
             this.is_snmpTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.hardwaresBindingSource, "is_snmp", true));
             this.is_snmpTextBox.Location = new System.Drawing.Point(95, 166);
             this.is_snmpTextBox.Name = "is_snmpTextBox";
-            this.is_snmpTextBox.Size = new System.Drawing.Size(121, 20);
+            this.is_snmpTextBox.Size = new System.Drawing.Size(0, 20);
             this.is_snmpTextBox.TabIndex = 6;
             this.is_snmpTextBox.Text = "False";
-            this.is_snmpTextBox.Visible = false;
             // 
             // ip_addressTextBox
             // 
@@ -350,11 +359,60 @@
             this.roomsBindingSource.DataMember = "rooms";
             this.roomsBindingSource.DataSource = this.monitorDataSet;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(205, 218);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Закрыть";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // id_parentLabel
+            // 
+            id_parentLabel.AutoSize = true;
+            id_parentLabel.Location = new System.Drawing.Point(38, 182);
+            id_parentLabel.Name = "id_parentLabel";
+            id_parentLabel.Size = new System.Drawing.Size(51, 13);
+            id_parentLabel.TabIndex = 13;
+            id_parentLabel.Text = "id parent:";
+            // 
+            // id_parentComboBox
+            // 
+            this.id_parentComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.hardwaresBindingSource, "id_parent", true));
+            this.id_parentComboBox.DataSource = this.hardwaresBindingSource2;
+            this.id_parentComboBox.DisplayMember = "dns_name";
+            this.id_parentComboBox.FormattingEnabled = true;
+            this.id_parentComboBox.Location = new System.Drawing.Point(95, 179);
+            this.id_parentComboBox.Name = "id_parentComboBox";
+            this.id_parentComboBox.Size = new System.Drawing.Size(185, 21);
+            this.id_parentComboBox.TabIndex = 14;
+            this.id_parentComboBox.ValueMember = "id";
+            // 
+            // monitorDataSetBindingSource
+            // 
+            this.monitorDataSetBindingSource.DataSource = this.monitorDataSet;
+            this.monitorDataSetBindingSource.Position = 0;
+            // 
+            // hardwaresBindingSource1
+            // 
+            this.hardwaresBindingSource1.DataMember = "hardwares";
+            this.hardwaresBindingSource1.DataSource = this.monitorDataSetBindingSource;
+            // 
+            // hardwaresBindingSource2
+            // 
+            this.hardwaresBindingSource2.DataMember = "hardwares";
+            this.hardwaresBindingSource2.DataSource = this.monitorDataSet;
+            // 
             // FHard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 194);
+            this.ClientSize = new System.Drawing.Size(301, 261);
+            this.Controls.Add(id_parentLabel);
+            this.Controls.Add(this.id_parentComboBox);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.idLabel1);
             this.Controls.Add(dns_nameLabel);
             this.Controls.Add(this.dns_nameTextBox);
@@ -367,6 +425,7 @@
             this.Controls.Add(id_roomLabel);
             this.Controls.Add(this.id_roomComboBox);
             this.Controls.Add(this.hardwaresBindingNavigator);
+            this.MaximizeBox = false;
             this.Name = "FHard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Оборудование";
@@ -378,6 +437,9 @@
             this.hardwaresBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.monitorDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hardwaresBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hardwaresBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -411,5 +473,10 @@
         private monitorDataSetTableAdapters.roomsTableAdapter roomsTableAdapter;
         private System.Windows.Forms.BindingSource roomsBindingSource;
         private System.Windows.Forms.BindingSource roomsBindingSource1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox id_parentComboBox;
+        private System.Windows.Forms.BindingSource hardwaresBindingSource1;
+        private System.Windows.Forms.BindingSource monitorDataSetBindingSource;
+        private System.Windows.Forms.BindingSource hardwaresBindingSource2;
     }
 }

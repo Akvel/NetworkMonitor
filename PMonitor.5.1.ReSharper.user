@@ -12,31 +12,31 @@
       <Item value="AreEqual`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Default">
-      <Item value="public" priority="19" />
+      <Item value="public" priority="20" />
       <Item value="Object`0" priority="0" />
       <Item value="return" priority="9" />
       <Item value="reply" priority="2" />
-      <Item value="new" priority="32" />
+      <Item value="new" priority="33" />
       <Item value="PResult" priority="3" />
       <Item value="result" priority="16" />
-      <Item value="else" priority="2" />
-      <Item value="this" priority="19" />
+      <Item value="else" priority="3" />
+      <Item value="this" priority="26" />
       <Item value="address" priority="1" />
       <Item value="ITest`0" priority="3" />
-      <Item value="catch" priority="6" />
-      <Item value="Exception`0" priority="8" />
+      <Item value="catch" priority="7" />
+      <Item value="Exception`0" priority="9" />
       <Item value="PResult`0" priority="6" />
-      <Item value="e" priority="8" />
+      <Item value="e" priority="16" />
       <Item value="rr" priority="7" />
-      <Item value="try" priority="4" />
-      <Item value="if" priority="12" />
+      <Item value="try" priority="5" />
+      <Item value="if" priority="19" />
       <Item value="private" priority="10" />
       <Item value="readonly" priority="1" />
       <Item value="String`0" priority="12" />
       <Item value="host" priority="1" />
       <Item value="login" priority="2" />
       <Item value="password" priority="2" />
-      <Item value="static" priority="1" />
+      <Item value="static" priority="2" />
       <Item value="int" priority="13" />
       <Item value="long" priority="2" />
       <Item value="Console`0" priority="5" />
@@ -49,7 +49,7 @@
       <Item value="class" priority="0" />
       <Item value="Dtraceroute" priority="1" />
       <Item value="maxHop" priority="1" />
-      <Item value="string" priority="13" />
+      <Item value="string" priority="14" />
       <Item value="List" priority="1" />
       <Item value="index" priority="1" />
       <Item value="milisecond" priority="0" />
@@ -74,16 +74,16 @@
       <Item value="DockStyle`0" priority="0" />
       <Item value="treeHardware" priority="1" />
       <Item value="hardwaresBindingNavigator" priority="1" />
-      <Item value="hardwaresBindingSource" priority="4" />
+      <Item value="hardwaresBindingSource" priority="5" />
       <Item value="c" priority="1" />
       <Item value="var" priority="0" />
       <Item value="from" priority="1" />
       <Item value="where" priority="1" />
       <Item value="select" priority="0" />
-      <Item value="MessageBox`0" priority="0" />
+      <Item value="MessageBox`0" priority="1" />
       <Item value="deviceId" priority="0" />
       <Item value="deviceID" priority="0" />
-      <Item value="false" priority="4" />
+      <Item value="false" priority="5" />
       <Item value="while" priority="1" />
       <Item value="DateTime`0" priority="1" />
       <Item value="predRefresh" priority="0" />
@@ -130,7 +130,7 @@
       <Item value="MemoryStream" priority="0" />
       <Item value="sw" priority="0" />
       <Item value="path" priority="1" />
-      <Item value="Dictionary" priority="0" />
+      <Item value="Dictionary" priority="2" />
       <Item value="Dictionary&lt;string,string&gt;" priority="0" />
       <Item value="IpAddress`0" priority="0" />
       <Item value="Contains`1" priority="0" />
@@ -146,7 +146,7 @@
       <Item value="tbPort" priority="1" />
       <Item value="tbLogin" priority="0" />
       <Item value="tbPassword" priority="0" />
-      <Item value="TextBox`0" priority="0" />
+      <Item value="TextBox`0" priority="5" />
       <Item value="switch" priority="0" />
       <Item value="case" priority="5" />
       <Item value="test" priority="3" />
@@ -171,11 +171,26 @@
       <Item value="FSMail`0" priority="0" />
       <Item value="FSMail" priority="0" />
       <Item value="getCurrentDeviceId`0" priority="0" />
-      <Item value="monitorDataSet`0" priority="0" />
+      <Item value="monitorDataSet`0" priority="2" />
       <Item value="Boolean`0" priority="0" />
       <Item value="button1" priority="1" />
       <Item value="bScan" priority="0" />
       <Item value="dataGridViewTextBoxColumn3" priority="0" />
+      <Item value="usersDataGridView" priority="0" />
+      <Item value="as" priority="1" />
+      <Item value="t" priority="0" />
+      <Item value="Color`0" priority="0" />
+      <Item value="Dictionary&lt;string,int&gt;" priority="0" />
+      <Item value="fMain`0" priority="0" />
+      <Item value="dns_nameTextBox" priority="0" />
+      <Item value="FMain`0" priority="0" />
+      <Item value="is_snmpTextBox" priority="0" />
+      <Item value="ValidateChildren`0" priority="1" />
+      <Item value="sender" priority="0" />
+      <Item value="MaskedTextBox`0" priority="0" />
+      <Item value="Application`0" priority="0" />
+      <Item value="id_parentComboBox" priority="1" />
+      <Item value="OK" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:PService.PResult">
       <Item value="errCode" priority="6" />
@@ -226,6 +241,7 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Convert">
       <Item value="ToInt64`0" priority="0" />
+      <Item value="ToInt32`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:PService.tests.TSql">
       <Item value="ip" priority="0" />
@@ -243,8 +259,8 @@
     <ItemStatistics item="Qualified:System.Collections.Generic.Dictionary`2">
       <Item value="Remove`0" priority="2" />
       <Item value="Clear`0" priority="2" />
-      <Item value="ContainsKey`0" priority="2" />
-      <Item value="Add`0" priority="2" />
+      <Item value="ContainsKey`0" priority="4" />
+      <Item value="Add`0" priority="3" />
       <Item value="ContainsValue`0" priority="0" />
       <Item value="GetEnumerator`0" priority="0" />
       <Item value="Keys" priority="0" />
@@ -269,18 +285,20 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:PMonitor.views.FHard">
       <Item value="ShowDialog`0" priority="1" />
-      <Item value="monitorDataSet" priority="0" />
+      <Item value="monitorDataSet" priority="1" />
+      <Item value="Close`0" priority="0" />
+      <Item value="DialogResult" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.BindingSource">
-      <Item value="Position" priority="2" />
+      <Item value="Position" priority="3" />
       <Item value="GetEnumerator`0" priority="1" />
       <Item value="List" priority="1" />
       <Item value="Filter" priority="0" />
       <Item value="Find`0" priority="0" />
-      <Item value="Current" priority="2" />
+      <Item value="Current" priority="4" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBox">
-      <Item value="Show`0" priority="0" />
+      <Item value="Show`0" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.DateTime">
       <Item value="Now" priority="1" />
@@ -423,7 +441,7 @@
     <ItemStatistics item="Qualified:PMonitor.monitorDataSet">
       <Item value="monitoring" priority="1" />
       <Item value="software" priority="2" />
-      <Item value="hardwares" priority="1" />
+      <Item value="hardwares" priority="2" />
       <Item value="hardwaresRow`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:PService.FConfig">
@@ -432,7 +450,9 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.TextBox">
       <Item value="Validated" priority="0" />
-      <Item value="Text" priority="4" />
+      <Item value="Text" priority="7" />
+      <Item value="PasswordChar" priority="1" />
+      <Item value="Visible" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@PService.Properties.Settings">
       <Item value="Default" priority="5" />
@@ -493,6 +513,7 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:PMonitor.views.FScan">
       <Item value="tbStop" priority="0" />
+      <Item value="Close`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.Button">
       <Item value="Enabled" priority="2" />
@@ -505,17 +526,69 @@
       <Item value="Contains`0" priority="0" />
       <Item value="Add`0" priority="0" />
     </ItemStatistics>
+    <ItemStatistics item="Qualified:PMonitor.views.FUser">
+      <Item value="dataGridViewTextBoxColumn7" priority="0" />
+      <Item value="usersDataGridView" priority="0" />
+      <Item value="passwd" priority="1" />
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewCellPaintingEventArgs">
+      <Item value="RowIndex" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewCellFormattingEventArgs">
+      <Item value="ColumnIndex" priority="0" />
+      <Item value="CellStyle" priority="1" />
+      <Item value="Value" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewCellStyle">
+      <Item value="Tag" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewEditingControlShowingEventArgs">
+      <Item value="CellStyle" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TreeNode">
+      <Item value="BackColor" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Color">
+      <Item value="Red" priority="0" />
+      <Item value="BlueViolet" priority="0" />
+      <Item value="Yellow" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PData.data.Hardware">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@PMonitor.fMain">
+      <Item value="newHard" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.ComponentModel.CancelEventArgs">
+      <Item value="Cancel" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.Application">
+      <Item value="Exit`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PMonitor.views.FHMail">
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PMonitor.views.FMonitor">
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@PMonitor.monitorDataSet">
+      <Item value="hardwaresRow`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PMonitor.monitorDataSet+hardwaresRow">
+      <Item value="id_parent" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ComboBox">
+      <Item value="SelectedItem" priority="2" />
+      <Item value="ValueMember" priority="0" />
+      <Item value="SelectedValue" priority="0" />
+    </ItemStatistics>
   </CompletionStatisticsManager>
   <RecentFiles>
     <RecentFiles>
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PResult.cs" caret="323" fromTop="11" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FHard.Designer.cs" caret="22861" fromTop="11" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:Program.cs" caret="485" fromTop="17" />
-      <File id="28580C5E-4118-4308-883F-168A5B86332F/f:Program.cs" caret="414" fromTop="15" />
       <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:app.config" caret="0" fromTop="0" />
       <File id="28580C5E-4118-4308-883F-168A5B86332F/f:monitorDataSet.Designer.cs" caret="0" fromTop="0" />
       <File id="28580C5E-4118-4308-883F-168A5B86332F/f:FMain.Designer.cs" caret="4350" fromTop="24" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:monitorDataSet.Designer.cs" caret="0" fromTop="0" />
       <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TPing.cs" caret="1475" fromTop="25" />
       <File id="BF642310-AA18-47A0-AF0F-E6A846671E17/d:Properties/f:AssemblyInfo.cs" caret="0" fromTop="0" />
       <File id="BF642310-AA18-47A0-AF0F-E6A846671E17/f:App.config" caret="187" fromTop="6" />
@@ -529,47 +602,52 @@
       <File id="28580C5E-4118-4308-883F-168A5B86332F/d:tests/f:TSql.cs" caret="1146" fromTop="20" />
       <File id="28580C5E-4118-4308-883F-168A5B86332F/f:FMain.cs" caret="629" fromTop="14" />
       <File id="28580C5E-4118-4308-883F-168A5B86332F/f:PTask.cs" caret="9014" fromTop="19" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FMonitor.Designer.cs" caret="9934" fromTop="196" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FMonitor.cs" caret="826" fromTop="23" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FMonitor.Designer.cs" caret="11258" fromTop="196" />
       <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.Designer.cs" caret="484" fromTop="0" />
       <File id="d:Miscellaneous Files/f:ClassDependencies1.dgml/l:C!?_diplom?NetworkMonitor?ClassDependencies1.dgml" caret="500502" fromTop="22" />
       <File id="0809D506-4C9B-4CB5-8FEC-0D9CCAD322F0/d:data/f:PObject.cs" caret="141" fromTop="7" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FHard.cs" caret="538" fromTop="21" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="8816" fromTop="103" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FScan.cs" caret="538" fromTop="0" />
       <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FSMail.cs" caret="261" fromTop="5" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FUser.Designer.cs" caret="22820" fromTop="319" />
+      <File id="0809D506-4C9B-4CB5-8FEC-0D9CCAD322F0/d:data/f:Hardware.cs" caret="533" fromTop="19" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="10071" fromTop="22" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FHMail.cs" caret="1483" fromTop="22" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FUser.cs" caret="2600" fromTop="22" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FScan.cs" caret="5384" fromTop="22" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FMonitor.cs" caret="839" fromTop="20" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FHard.cs" caret="2560" fromTop="58" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:monitorDataSet.Designer.cs" caret="590724" fromTop="22" />
     </RecentFiles>
     <RecentEdits>
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="5656" fromTop="22" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="559" fromTop="11" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="5633" fromTop="22" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="9076" fromTop="28" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="4656" fromTop="11" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="5053" fromTop="20" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="9314" fromTop="20" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="9291" fromTop="25" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FHard.cs" caret="1215" fromTop="26" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FHard.cs" caret="1608" fromTop="28" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FHard.cs" caret="1197" fromTop="13" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FHard.cs" caret="681" fromTop="26" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FHard.cs" caret="538" fromTop="21" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FHard.cs" caret="2075" fromTop="21" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FScan.cs" caret="4333" fromTop="29" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FScan.cs" caret="450" fromTop="15" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FScan.cs" caret="1281" fromTop="27" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FScan.cs" caret="3616" fromTop="36" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="1095" fromTop="21" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="4043" fromTop="21" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="5814" fromTop="21" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FScan.cs" caret="5758" fromTop="22" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FScan.cs" caret="5712" fromTop="26" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FScan.cs" caret="4291" fromTop="20" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FScan.cs" caret="5758" fromTop="20" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FSMail.cs" caret="855" fromTop="16" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FSMail.cs" caret="1702" fromTop="26" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FSMail.cs" caret="1702" fromTop="26" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FSMail.cs" caret="1625" fromTop="34" />
-      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FSMail.cs" caret="1702" fromTop="5" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="9741" fromTop="18" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="9752" fromTop="18" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="9939" fromTop="23" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="650" fromTop="22" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="2372" fromTop="23" />
+      <File id="0809D506-4C9B-4CB5-8FEC-0D9CCAD322F0/d:data/f:Hardware.cs" caret="533" fromTop="19" />
+      <File id="0809D506-4C9B-4CB5-8FEC-0D9CCAD322F0/d:data/f:Hardware.cs" caret="547" fromTop="19" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FScan.cs" caret="5911" fromTop="15" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FScan.cs" caret="4392" fromTop="23" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FScan.cs" caret="4432" fromTop="34" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FScan.cs" caret="6694" fromTop="21" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FScan.cs" caret="6970" fromTop="33" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FScan.cs" caret="6250" fromTop="17" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="10069" fromTop="22" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:FMain.cs" caret="10094" fromTop="22" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FHMail.cs" caret="1483" fromTop="22" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FHMail.cs" caret="1506" fromTop="22" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FMonitor.cs" caret="1520" fromTop="22" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FMonitor.cs" caret="1543" fromTop="22" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FScan.cs" caret="7108" fromTop="22" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FUser.cs" caret="2600" fromTop="22" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FUser.cs" caret="2623" fromTop="22" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FScan.cs" caret="5384" fromTop="22" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FScan.cs" caret="7154" fromTop="22" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FHard.cs" caret="641" fromTop="20" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FHard.cs" caret="1074" fromTop="31" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FHard.cs" caret="688" fromTop="22" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FHard.cs" caret="2596" fromTop="31" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/d:views/f:FHard.cs" caret="2619" fromTop="31" />
+      <File id="238500AE-7A0F-4540-A543-D8E88194FB33/f:monitorDataSet.Designer.cs" caret="590588" fromTop="22" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>

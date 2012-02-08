@@ -31,12 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMain));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.bShowScan = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tcOrganiz = new System.Windows.Forms.TabControl();
@@ -60,20 +61,9 @@
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.button1 = new System.Windows.Forms.Button();
             this.softwareDataGridView = new System.Windows.Forms.DataGridView();
-            this.checktypesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vmonDataGridView = new System.Windows.Forms.DataGridView();
-            this.vmonBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.редактироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bsMain = new System.Windows.Forms.BindingSource(this.components);
-            this.monitorDataSet1 = new PMonitor.monitorDataSet();
-            this.softwareTableAdapter = new PMonitor.monitorDataSetTableAdapters.softwareTableAdapter();
-            this.tableAdapterManager = new PMonitor.monitorDataSetTableAdapters.TableAdapterManager();
-            this.check_typesTableAdapter = new PMonitor.monitorDataSetTableAdapters.check_typesTableAdapter();
-            this.vmonTableAdapter = new PMonitor.monitorDataSetTableAdapters.vmonTableAdapter();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.checktypesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.login = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,6 +72,7 @@
             this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vmonDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -92,7 +83,17 @@
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.vmonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.редактироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bsMain = new System.Windows.Forms.BindingSource(this.components);
+            this.monitorDataSet1 = new PMonitor.monitorDataSet();
+            this.softwareTableAdapter = new PMonitor.monitorDataSetTableAdapters.softwareTableAdapter();
+            this.tableAdapterManager = new PMonitor.monitorDataSetTableAdapters.TableAdapterManager();
+            this.check_typesTableAdapter = new PMonitor.monitorDataSetTableAdapters.check_typesTableAdapter();
+            this.vmonTableAdapter = new PMonitor.monitorDataSetTableAdapters.vmonTableAdapter();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -127,22 +128,39 @@
             this.toolStripButton2,
             this.bShowScan,
             this.toolStripButton4,
-            this.toolStripButton1});
+            this.toolStripButton1,
+            this.toolStripButton7});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1114, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
-            // toolStripButton1
+            // toolStripButton5
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(86, 22);
-            this.toolStripButton1.Text = "Оборудование";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(108, 22);
+            this.toolStripButton5.Text = "Общий мониторинг";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(61, 22);
+            this.toolStripButton3.Text = "Обновить";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripButton2
             // 
@@ -164,16 +182,6 @@
             this.bShowScan.Text = "Сканировать";
             this.bShowScan.Click += new System.EventHandler(this.bShowScan_Click);
             // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(61, 22);
-            this.toolStripButton3.Text = "Обновить";
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
-            // 
             // toolStripButton4
             // 
             this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -184,15 +192,15 @@
             this.toolStripButton4.Text = "Настройки";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
-            // toolStripButton5
+            // toolStripButton1
             // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(108, 22);
-            this.toolStripButton5.Text = "Общий мониторинг";
-            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(86, 22);
+            this.toolStripButton1.Text = "Оборудование";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // panel1
             // 
@@ -249,6 +257,7 @@
             this.tvTopolog.Name = "tvTopolog";
             this.tvTopolog.Size = new System.Drawing.Size(356, 534);
             this.tvTopolog.TabIndex = 0;
+            this.tvTopolog.DrawNode += new System.Windows.Forms.DrawTreeNodeEventHandler(this.tvTopolog_DrawNode);
             this.tvTopolog.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvTopolog_AfterSelect);
             this.tvTopolog.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tvTopolog_NodeMouseClick);
             this.tvTopolog.Click += new System.EventHandler(this.tvTopolog_Click);
@@ -453,97 +462,6 @@
             this.softwareDataGridView.RowValidating += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.softwareDataGridView_RowValidating);
             this.softwareDataGridView.Validating += new System.ComponentModel.CancelEventHandler(this.softwareDataGridView_Validating);
             // 
-            // checktypesBindingSource
-            // 
-            this.checktypesBindingSource.DataMember = "check_types";
-            this.checktypesBindingSource.DataSource = this.mset1;
-            // 
-            // vmonDataGridView
-            // 
-            this.vmonDataGridView.AllowUserToAddRows = false;
-            this.vmonDataGridView.AllowUserToDeleteRows = false;
-            this.vmonDataGridView.AllowUserToResizeRows = false;
-            this.vmonDataGridView.AutoGenerateColumns = false;
-            this.vmonDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.vmonDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15});
-            this.vmonDataGridView.DataSource = this.vmonBindingSource;
-            this.vmonDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.vmonDataGridView.Location = new System.Drawing.Point(0, 0);
-            this.vmonDataGridView.Name = "vmonDataGridView";
-            this.vmonDataGridView.RowHeadersVisible = false;
-            this.vmonDataGridView.Size = new System.Drawing.Size(740, 270);
-            this.vmonDataGridView.TabIndex = 0;
-            // 
-            // vmonBindingSource
-            // 
-            this.vmonBindingSource.DataMember = "vmon";
-            this.vmonBindingSource.DataSource = this.mset1;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.редактироватьToolStripMenuItem,
-            this.удалитьToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(165, 48);
-            // 
-            // редактироватьToolStripMenuItem
-            // 
-            this.редактироватьToolStripMenuItem.Name = "редактироватьToolStripMenuItem";
-            this.редактироватьToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.редактироватьToolStripMenuItem.Text = "Редактировать";
-            // 
-            // удалитьToolStripMenuItem
-            // 
-            this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
-            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.удалитьToolStripMenuItem.Text = "Удалить";
-            // 
-            // monitorDataSet1
-            // 
-            this.monitorDataSet1.DataSetName = "monitorDataSet";
-            this.monitorDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // softwareTableAdapter
-            // 
-            this.softwareTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.action_typesTableAdapter = null;
-            this.tableAdapterManager.auditTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.check_typesTableAdapter = null;
-            this.tableAdapterManager.floorsTableAdapter = null;
-            this.tableAdapterManager.hardware_mail_listTableAdapter = null;
-            this.tableAdapterManager.hardwaresTableAdapter = null;
-            this.tableAdapterManager.monitoringTableAdapter = null;
-            this.tableAdapterManager.rolesTableAdapter = null;
-            this.tableAdapterManager.roomsTableAdapter = null;
-            this.tableAdapterManager.software_mail_listTableAdapter = null;
-            this.tableAdapterManager.softwareTableAdapter = this.softwareTableAdapter;
-            this.tableAdapterManager.sysdiagramsTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = PMonitor.monitorDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.usersTableAdapter = null;
-            // 
-            // check_typesTableAdapter
-            // 
-            this.check_typesTableAdapter.ClearBeforeFill = true;
-            // 
-            // vmonTableAdapter
-            // 
-            this.vmonTableAdapter.ClearBeforeFill = true;
-            // 
             // dataGridViewCheckBoxColumn1
             // 
             this.dataGridViewCheckBoxColumn1.DataPropertyName = "is_active";
@@ -561,7 +479,12 @@
             this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn4.ValueMember = "id";
-            this.dataGridViewTextBoxColumn4.Width = 102;
+            this.dataGridViewTextBoxColumn4.Width = 94;
+            // 
+            // checktypesBindingSource
+            // 
+            this.checktypesBindingSource.DataMember = "check_types";
+            this.checktypesBindingSource.DataSource = this.mset1;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -621,6 +544,32 @@
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.Visible = false;
             this.dataGridViewTextBoxColumn5.Width = 78;
+            // 
+            // vmonDataGridView
+            // 
+            this.vmonDataGridView.AllowUserToAddRows = false;
+            this.vmonDataGridView.AllowUserToDeleteRows = false;
+            this.vmonDataGridView.AllowUserToResizeRows = false;
+            this.vmonDataGridView.AutoGenerateColumns = false;
+            this.vmonDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.vmonDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15});
+            this.vmonDataGridView.DataSource = this.vmonBindingSource;
+            this.vmonDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vmonDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.vmonDataGridView.Name = "vmonDataGridView";
+            this.vmonDataGridView.RowHeadersVisible = false;
+            this.vmonDataGridView.Size = new System.Drawing.Size(740, 270);
+            this.vmonDataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -685,10 +634,75 @@
             this.dataGridViewTextBoxColumn15.HeaderText = "Expr1";
             this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
             // 
-            // toolStripSeparator1
+            // vmonBindingSource
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.vmonBindingSource.DataMember = "vmon";
+            this.vmonBindingSource.DataSource = this.mset1;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.редактироватьToolStripMenuItem,
+            this.удалитьToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(165, 48);
+            // 
+            // редактироватьToolStripMenuItem
+            // 
+            this.редактироватьToolStripMenuItem.Name = "редактироватьToolStripMenuItem";
+            this.редактироватьToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.редактироватьToolStripMenuItem.Text = "Редактировать";
+            // 
+            // удалитьToolStripMenuItem
+            // 
+            this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
+            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.удалитьToolStripMenuItem.Text = "Удалить";
+            // 
+            // monitorDataSet1
+            // 
+            this.monitorDataSet1.DataSetName = "monitorDataSet";
+            this.monitorDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // softwareTableAdapter
+            // 
+            this.softwareTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.action_typesTableAdapter = null;
+            this.tableAdapterManager.auditTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.check_typesTableAdapter = null;
+            this.tableAdapterManager.floorsTableAdapter = null;
+            this.tableAdapterManager.hardware_mail_listTableAdapter = null;
+            this.tableAdapterManager.hardwaresTableAdapter = null;
+            this.tableAdapterManager.monitoringTableAdapter = null;
+            this.tableAdapterManager.rolesTableAdapter = null;
+            this.tableAdapterManager.roomsTableAdapter = null;
+            this.tableAdapterManager.software_mail_listTableAdapter = null;
+            this.tableAdapterManager.softwareTableAdapter = this.softwareTableAdapter;
+            this.tableAdapterManager.sysdiagramsTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = PMonitor.monitorDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.usersTableAdapter = null;
+            // 
+            // check_typesTableAdapter
+            // 
+            this.check_typesTableAdapter.ClearBeforeFill = true;
+            // 
+            // vmonTableAdapter
+            // 
+            this.vmonTableAdapter.ClearBeforeFill = true;
+            // 
+            // toolStripButton7
+            // 
+            this.toolStripButton7.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
+            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(60, 22);
+            this.toolStripButton7.Text = "Выход";
+            this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click_1);
             // 
             // fMain
             // 
@@ -797,6 +811,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton toolStripButton7;
 
 
     }

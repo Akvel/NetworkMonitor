@@ -21,6 +21,9 @@ namespace PMonitor
         private FSMail fMail = new FSMail();
 
 
+        public static  Dictionary<string, int> newHard = new Dictionary<string, int>();
+
+
         private readonly Dictionary<string, Hardware> treeHardware = new Dictionary<string, Hardware>();
 
         public fMain()
@@ -73,7 +76,10 @@ namespace PMonitor
                 hard.desc = (string) h[4];
                 hard.hostname = "" + h[1];
                 hard.device_id = "" + h[0];
-                tvTopolog.Nodes.Add("" + hard);
+                TreeNode mynode = tvTopolog.Nodes.Add("" + hard);
+
+                if (newHard.ContainsKey(hard.hostname))
+                    mynode.BackColor = Color.Yellow;
                 treeHardware.Add("" + hard, hard);
             }
 
@@ -282,6 +288,26 @@ namespace PMonitor
         private void tvTopolog_DoubleClick(object sender, EventArgs e)
         {
             fHard.ShowDialog(getCurrentDeviceId());
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void tvTopolog_DrawNode(object sender, DrawTreeNodeEventArgs e)
+        {
+           
+                e.Graphics.DrawString(e.Node.Text,
+                        e.Node.TreeView.Font,
+                        Brushes.Red,
+                        e.Bounds);
+            
+        }
+
+        private void toolStripButton7_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
