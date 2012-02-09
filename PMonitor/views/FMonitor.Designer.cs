@@ -48,10 +48,29 @@ namespace PMonitor.views
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.vmon_groupBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vmon_groupTableAdapter = new PMonitor.monitorDataSetTableAdapters.vmon_groupTableAdapter();
+            this.tableAdapterManager = new PMonitor.monitorDataSetTableAdapters.TableAdapterManager();
+            this.vmon_groupBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.vmon_groupDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.monitorDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vmonBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vmonDataGridView)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vmon_groupBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vmon_groupBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vmon_groupDataGridView)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // monitorDataSet
@@ -86,12 +105,13 @@ namespace PMonitor.views
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9});
             this.vmonDataGridView.DataSource = this.vmonBindingSource;
-            this.vmonDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.vmonDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.vmonDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.vmonDataGridView.Location = new System.Drawing.Point(0, 275);
             this.vmonDataGridView.Name = "vmonDataGridView";
             this.vmonDataGridView.ReadOnly = true;
-            this.vmonDataGridView.Size = new System.Drawing.Size(847, 512);
+            this.vmonDataGridView.Size = new System.Drawing.Size(847, 237);
             this.vmonDataGridView.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.vmonDataGridView, "Сводная талица по всем событиям");
             this.vmonDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.vmonDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn3
@@ -178,6 +198,7 @@ namespace PMonitor.views
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -192,14 +213,140 @@ namespace PMonitor.views
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "Закрыть";
+            this.toolTip1.SetToolTip(this.button1, "Нажмите чтобы закрыть окно");
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // vmon_groupBindingSource
+            // 
+            this.vmon_groupBindingSource.DataSource = this.monitorDataSet;
+            this.vmon_groupBindingSource.Position = 0;
+            // 
+            // vmon_groupTableAdapter
+            // 
+            this.vmon_groupTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.action_typesTableAdapter = null;
+            this.tableAdapterManager.auditTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.check_typesTableAdapter = null;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.floorsTableAdapter = null;
+            this.tableAdapterManager.hardware_mail_listTableAdapter = null;
+            this.tableAdapterManager.hardwaresTableAdapter = null;
+            this.tableAdapterManager.monitoringTableAdapter = null;
+            this.tableAdapterManager.rolesTableAdapter = null;
+            this.tableAdapterManager.roomsTableAdapter = null;
+            this.tableAdapterManager.software_mail_listTableAdapter = null;
+            this.tableAdapterManager.softwareTableAdapter = null;
+            this.tableAdapterManager.sysdiagramsTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = PMonitor.monitorDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.usersTableAdapter = null;
+            // 
+            // vmon_groupBindingSource1
+            // 
+            this.vmon_groupBindingSource1.DataMember = "vmon_group";
+            this.vmon_groupBindingSource1.DataSource = this.monitorDataSet;
+            // 
+            // vmon_groupDataGridView
+            // 
+            this.vmon_groupDataGridView.AllowUserToAddRows = false;
+            this.vmon_groupDataGridView.AllowUserToDeleteRows = false;
+            this.vmon_groupDataGridView.AutoGenerateColumns = false;
+            this.vmon_groupDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.vmon_groupDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn16});
+            this.vmon_groupDataGridView.DataSource = this.vmon_groupBindingSource1;
+            this.vmon_groupDataGridView.Location = new System.Drawing.Point(0, 41);
+            this.vmon_groupDataGridView.Name = "vmon_groupDataGridView";
+            this.vmon_groupDataGridView.ReadOnly = true;
+            this.vmon_groupDataGridView.Size = new System.Drawing.Size(847, 198);
+            this.vmon_groupDataGridView.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.vmon_groupDataGridView, "Аналитическая таблица по оборудованию");
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "dns_name";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Хост";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "name";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Тест";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "type";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Результат";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "what_to_do";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Действия";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "dt";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Дата(макс.)";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "count";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Общее количество ошибок";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(0, 245);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(847, 24);
+            this.panel2.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(186, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Сводная талица по всем событиям";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(219, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Аналитическая таблица по оборудованию";
             // 
             // FMonitor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(847, 512);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.vmon_groupDataGridView);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.vmonDataGridView);
             this.Name = "FMonitor";
@@ -210,6 +357,12 @@ namespace PMonitor.views
             ((System.ComponentModel.ISupportInitialize)(this.vmonBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vmonDataGridView)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vmon_groupBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vmon_groupBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vmon_groupDataGridView)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -233,5 +386,20 @@ namespace PMonitor.views
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.BindingSource vmon_groupBindingSource;
+        private monitorDataSetTableAdapters.vmon_groupTableAdapter vmon_groupTableAdapter;
+        private monitorDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingSource vmon_groupBindingSource1;
+        private System.Windows.Forms.DataGridView vmon_groupDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
     }
 }

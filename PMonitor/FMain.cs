@@ -39,7 +39,10 @@ namespace PMonitor
             fScan = new FScan(this);
 
             log = new FConnection(this);
+
+
             
+
 
             tt.Start();
 
@@ -202,11 +205,11 @@ namespace PMonitor
         }
 
 
-
+        public bool mustStop = false;
 
         private void scan()
         {
-            while (true)
+            while (!mustStop)
             {
 
                 try
@@ -231,7 +234,7 @@ namespace PMonitor
                 {
                     TPing ping = new TPing(ip);
 
-
+                    if (mustStop) break;
                    
 
                          Invoke(new MethodInvoker(
@@ -294,6 +297,12 @@ namespace PMonitor
 
         private void fMain_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'mset1.audit' table. You can move, or remove it, as needed.
+            this.auditTableAdapter.Fill(this.mset1.audit);
+            // TODO: This line of code loads data into the 'mset1.action_types' table. You can move, or remove it, as needed.
+            this.action_typesTableAdapter.Fill(this.mset1.action_types);
+            // TODO: This line of code loads data into the 'mset1.action_types' table. You can move, or remove it, as needed.
+            this.action_typesTableAdapter.Fill(this.mset1.action_types);
             // TODO: This line of code loads data into the 'mset1.users' table. You can move, or remove it, as needed.
             this.usersTableAdapter.Fill(this.mset1.users);
             // TODO: This line of code loads data into the 'mset1.vmon' table. You can move, or remove it, as needed.
@@ -519,6 +528,31 @@ namespace PMonitor
         private void toolStripButton7_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+
+        private long lastLogon;
+
+        private void fMain_Activated(object sender, EventArgs e)
+        {
+            if ((DateTime.Now.Ticks - lastLogon) > 5 * 60 * TimeSpan.TicksPerSecond)
+            {
+                lastLogon = DateTime.Now.Ticks;
+                if (!log.Visible) log.ShowDialog();
+                
+            }
+        }
+
+        private void vmonDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        
+        FAudit audit = new FAudit();
+        
+        private void toolStripButton8_Click(object sender, EventArgs e)
+        {
+            audit.ShowDialog();
         }
     }
 }

@@ -27,6 +27,8 @@ namespace PMonitor.views
 
         private void FMonitor_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'monitorDataSet.vmon_group' table. You can move, or remove it, as needed.
+            this.vmon_groupTableAdapter.Fill(this.monitorDataSet.vmon_group);
             // TODO: This line of code loads data into the 'monitorDataSet.vmon' table. You can move, or remove it, as needed.
             this.vmonTableAdapter.Fill(this.monitorDataSet.vmon);
 
@@ -45,6 +47,8 @@ namespace PMonitor.views
         private void timer1_Tick(object sender, EventArgs e)
         {
             this.vmonTableAdapter.Fill(this.monitorDataSet.vmon);
+            this.vmon_groupTableAdapter.Fill(this.monitorDataSet.vmon_group);
+
         }
 
         private void vmonDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)

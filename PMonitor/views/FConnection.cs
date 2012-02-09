@@ -15,14 +15,12 @@ namespace PMonitor.views
 
         public FConnection(fMain pf)
         {
+            InitializeComponent();
             fm = pf;
         }
 
 
-        public FConnection()
-        {
-            InitializeComponent();
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -38,9 +36,34 @@ namespace PMonitor.views
         {
             if (fm.mset1.users.Where(a => a.nick.Equals(textBox2.Text) && a.pwd.Equals(textBox1.Text)).Count() > 0)
             {
+                // TODO: This line of code loads data into the 'mset1.audit' table. You can move, or remove it, as needed.
+                fm.auditTableAdapter.Fill(fm.mset1.audit);
+
+
+                /*monitorDataSet.auditRow row = fm.mset1.audit.NewauditRow();
+                row.description = "Успешный вход в систему";
+                row.id_action_type = 1;
+                row.id_user = ;
+                row.dt = ;
+
+              
+    
+                    fm.mset1.audit.Rows.Add(row);
+                    fm.tableAdapterManager.UpdateAll(fm.mset1);*/
+
+                PMonitor.monitorDataSetTableAdapters.auditTableAdapter hardwaresTableAdapter = new PMonitor.monitorDataSetTableAdapters.auditTableAdapter();
+                hardwaresTableAdapter.Insert("Успешный вход в систему", 1, fm.mset1.users.Where(
+                    a => a.nick.Equals(textBox2.Text) && a.pwd.Equals(textBox1.Text)).First().id, DateTime.Now);
+                
+
+
+                fm.tableAdapterManager.UpdateAll(fm.mset1);
                 Close();
             }else
             {
+
+                
+
                 MessageBox.Show("Неверный логин или пароль!");
             }
         }

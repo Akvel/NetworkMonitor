@@ -828,6 +828,46 @@ SELECT id, nick, fio, is_active, mail, id_role, comment, pwd FROM users WHERE (i
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vmon_groupTableAdapter" GeneratorDataComponentClassName="vmon_groupTableAdapter" Name="vmon_group" UserDataComponentName="vmon_groupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="monitorConnectionString (Settings)" DbObjectName="monitor.dbo.vmon_group" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT name, type, what_to_do, dt, dns_name, count FROM dbo.vmon_group</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="name" DataSetColumn="name" />
+              <Mapping SourceColumn="type" DataSetColumn="type" />
+              <Mapping SourceColumn="what_to_do" DataSetColumn="what_to_do" />
+              <Mapping SourceColumn="dt" DataSetColumn="dt" />
+              <Mapping SourceColumn="dns_name" DataSetColumn="dns_name" />
+              <Mapping SourceColumn="count" DataSetColumn="count" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vauditTableAdapter" GeneratorDataComponentClassName="vauditTableAdapter" Name="vaudit" UserDataComponentName="vauditTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="monitorConnectionString (Settings)" DbObjectName="monitor.dbo.vaudit" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT fio, nick, description, dt FROM dbo.vaudit</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="fio" DataSetColumn="fio" />
+              <Mapping SourceColumn="nick" DataSetColumn="nick" />
+              <Mapping SourceColumn="description" DataSetColumn="description" />
+              <Mapping SourceColumn="dt" DataSetColumn="dt" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -1190,6 +1230,70 @@ SELECT id, nick, fio, is_active, mail, id_role, comment, pwd FROM users WHERE (i
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vmon_group" msprop:Generator_TableClassName="vmon_groupDataTable" msprop:Generator_TableVarName="tablevmon_group" msprop:Generator_TablePropName="vmon_group" msprop:Generator_RowDeletingName="vmon_groupRowDeleting" msprop:Generator_UserTableName="vmon_group" msprop:Generator_RowChangingName="vmon_groupRowChanging" msprop:Generator_RowEvHandlerName="vmon_groupRowChangeEventHandler" msprop:Generator_RowDeletedName="vmon_groupRowDeleted" msprop:Generator_RowEvArgName="vmon_groupRowChangeEvent" msprop:Generator_RowChangedName="vmon_groupRowChanged" msprop:Generator_RowClassName="vmon_groupRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="type" msprop:Generator_ColumnVarNameInTable="columntype" msprop:Generator_ColumnPropNameInRow="type" msprop:Generator_ColumnPropNameInTable="typeColumn" msprop:Generator_UserColumnName="type">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="what_to_do" msprop:Generator_ColumnVarNameInTable="columnwhat_to_do" msprop:Generator_ColumnPropNameInRow="what_to_do" msprop:Generator_ColumnPropNameInTable="what_to_doColumn" msprop:Generator_UserColumnName="what_to_do" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dt" msprop:Generator_ColumnVarNameInTable="columndt" msprop:Generator_ColumnPropNameInRow="dt" msprop:Generator_ColumnPropNameInTable="dtColumn" msprop:Generator_UserColumnName="dt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="dns_name" msprop:Generator_ColumnVarNameInTable="columndns_name" msprop:Generator_ColumnPropNameInRow="dns_name" msprop:Generator_ColumnPropNameInTable="dns_nameColumn" msprop:Generator_UserColumnName="dns_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="count" msprop:Generator_ColumnVarNameInTable="columncount" msprop:Generator_ColumnPropNameInRow="count" msprop:Generator_ColumnPropNameInTable="countColumn" msprop:Generator_UserColumnName="count" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vaudit" msprop:Generator_TableClassName="vauditDataTable" msprop:Generator_TableVarName="tablevaudit" msprop:Generator_TablePropName="vaudit" msprop:Generator_RowDeletingName="vauditRowDeleting" msprop:Generator_UserTableName="vaudit" msprop:Generator_RowChangingName="vauditRowChanging" msprop:Generator_RowEvHandlerName="vauditRowChangeEventHandler" msprop:Generator_RowDeletedName="vauditRowDeleted" msprop:Generator_RowEvArgName="vauditRowChangeEvent" msprop:Generator_RowChangedName="vauditRowChanged" msprop:Generator_RowClassName="vauditRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fio" msprop:Generator_ColumnVarNameInTable="columnfio" msprop:Generator_ColumnPropNameInRow="fio" msprop:Generator_ColumnPropNameInTable="fioColumn" msprop:Generator_UserColumnName="fio">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nick" msprop:Generator_ColumnVarNameInTable="columnnick" msprop:Generator_ColumnPropNameInRow="nick" msprop:Generator_ColumnPropNameInTable="nickColumn" msprop:Generator_UserColumnName="nick">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="description" msprop:Generator_ColumnVarNameInTable="columndescription" msprop:Generator_ColumnPropNameInRow="description" msprop:Generator_ColumnPropNameInTable="descriptionColumn" msprop:Generator_UserColumnName="description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dt" msprop:Generator_ColumnVarNameInTable="columndt" msprop:Generator_ColumnPropNameInRow="dt" msprop:Generator_ColumnPropNameInTable="dtColumn" msprop:Generator_UserColumnName="dt" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -15,7 +15,10 @@ namespace PMonitor
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fMain());
+            fMain f = new fMain();
+            Application.Run(f);
+
+            f.mustStop = true;
         }
     }
 }

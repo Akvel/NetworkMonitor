@@ -132,6 +132,15 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="libs\mib.dll" />
+    <Content Include="libs\snmp.dll" />
+    <Content Include="libs\SnmpComp.dll" />
+    <Content Include="libs\SNMPDll.dll" />
+    <Content Include="libs\TableReader.dll" />
+    <Content Include="libs\TestSNMPDll.exe" />
+    <Content Include="libs\Tools.dll" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
