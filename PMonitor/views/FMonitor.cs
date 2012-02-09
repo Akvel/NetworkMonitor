@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DgvFilterPopup;
 
 namespace PMonitor.views
 {
@@ -31,6 +32,10 @@ namespace PMonitor.views
             this.vmon_groupTableAdapter.Fill(this.monitorDataSet.vmon_group);
             // TODO: This line of code loads data into the 'monitorDataSet.vmon' table. You can move, or remove it, as needed.
             this.vmonTableAdapter.Fill(this.monitorDataSet.vmon);
+
+
+            DgvFilterManager filterManager1 = new DgvFilterManager(vmonDataGridView);
+            DgvFilterManager filterManager2 = new DgvFilterManager(vmon_groupDataGridView);
 
         }
 
