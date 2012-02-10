@@ -36,11 +36,11 @@
             this.vauditBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vauditTableAdapter = new PMonitor.monitorDataSetTableAdapters.vauditTableAdapter();
             this.vauditDataGridView = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.monitorDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.auditBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vauditBindingSource)).BeginInit();
@@ -106,16 +106,6 @@
             this.vauditDataGridView.Size = new System.Drawing.Size(715, 420);
             this.vauditDataGridView.TabIndex = 0;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(543, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(174, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Закрыть журнал";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "dt";
@@ -144,6 +134,18 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "Описание";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // button1
+            // 
+            this.button1.Image = global::PMonitor.Properties.Resources._33;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(543, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(174, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Закрыть журнал";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FAudit
             // 

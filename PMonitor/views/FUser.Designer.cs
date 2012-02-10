@@ -31,12 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FUser));
             this.monitorDataSet = new PMonitor.monitorDataSet();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter = new PMonitor.monitorDataSetTableAdapters.usersTableAdapter();
-            this.tableAdapterManager = new PMonitor.monitorDataSetTableAdapters.TableAdapterManager();
             this.rolesTableAdapter = new PMonitor.monitorDataSetTableAdapters.rolesTableAdapter();
             this.usersBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -48,23 +47,23 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.usersBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.usersDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.rolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.rolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableAdapterManager = new PMonitor.monitorDataSetTableAdapters.TableAdapterManager();
+            this.usersDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.monitorDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingNavigator)).BeginInit();
             this.usersBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // monitorDataSet
@@ -72,32 +71,9 @@
             this.monitorDataSet.DataSetName = "monitorDataSet";
             this.monitorDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "users";
-            this.usersBindingSource.DataSource = this.monitorDataSet;
-            // 
             // usersTableAdapter
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.action_typesTableAdapter = null;
-            this.tableAdapterManager.auditTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.check_typesTableAdapter = null;
-            this.tableAdapterManager.floorsTableAdapter = null;
-            this.tableAdapterManager.hardware_mail_listTableAdapter = null;
-            this.tableAdapterManager.hardwaresTableAdapter = null;
-            this.tableAdapterManager.monitoringTableAdapter = null;
-            this.tableAdapterManager.rolesTableAdapter = this.rolesTableAdapter;
-            this.tableAdapterManager.roomsTableAdapter = null;
-            this.tableAdapterManager.software_mail_listTableAdapter = null;
-            this.tableAdapterManager.softwareTableAdapter = null;
-            this.tableAdapterManager.sysdiagramsTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = PMonitor.monitorDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
             // 
             // rolesTableAdapter
             // 
@@ -133,6 +109,7 @@
             this.usersBindingNavigator.Size = new System.Drawing.Size(743, 25);
             this.usersBindingNavigator.TabIndex = 0;
             this.usersBindingNavigator.Text = "bindingNavigator1";
+            this.usersBindingNavigator.RefreshItems += new System.EventHandler(this.usersBindingNavigator_RefreshItems);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -142,6 +119,11 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "users";
+            this.usersBindingSource.DataSource = this.monitorDataSet;
             // 
             // bindingNavigatorCountItem
             // 
@@ -237,6 +219,41 @@
             this.usersBindingNavigatorSaveItem.Text = "Save Data";
             this.usersBindingNavigatorSaveItem.Click += new System.EventHandler(this.usersBindingNavigatorSaveItem_Click);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(71, 22);
+            this.toolStripButton1.Text = "Закрыть";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // rolesBindingSource
+            // 
+            this.rolesBindingSource.DataMember = "roles";
+            this.rolesBindingSource.DataSource = this.monitorDataSet;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.action_typesTableAdapter = null;
+            this.tableAdapterManager.auditTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.check_typesTableAdapter = null;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.floorsTableAdapter = null;
+            this.tableAdapterManager.hardware_mail_listTableAdapter = null;
+            this.tableAdapterManager.hardwaresTableAdapter = null;
+            this.tableAdapterManager.monitoringTableAdapter = null;
+            this.tableAdapterManager.rolesTableAdapter = null;
+            this.tableAdapterManager.roomsTableAdapter = null;
+            this.tableAdapterManager.software_mail_listTableAdapter = null;
+            this.tableAdapterManager.softwareTableAdapter = null;
+            this.tableAdapterManager.sysdiagramsTableAdapter = null;
+            this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
+            this.tableAdapterManager.UpdateOrder = PMonitor.monitorDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+
+            // 
             // usersDataGridView
             // 
             this.usersDataGridView.AllowUserToAddRows = false;
@@ -247,7 +264,6 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn8,
@@ -265,32 +281,25 @@
             this.usersDataGridView.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.usersDataGridView_EditingControlShowing);
             this.usersDataGridView.Validating += new System.ComponentModel.CancelEventHandler(this.usersDataGridView_Validating);
             // 
-            // dataGridViewTextBoxColumn1
+            // dataGridViewTextBoxColumn7
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "comment";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Описание";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
-            // dataGridViewTextBoxColumn3
+            // dataGridViewTextBoxColumn8
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "fio";
-            this.dataGridViewTextBoxColumn3.HeaderText = "ФИО";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "pwd";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Пароль";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // dataGridViewTextBoxColumn2
+            // dataGridViewTextBoxColumn5
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "nick";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Логин";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "is_active";
-            this.dataGridViewTextBoxColumn4.HeaderText = "is_active";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Visible = false;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "mail";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Почта";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -303,40 +312,25 @@
             this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn6.ValueMember = "id";
             // 
-            // rolesBindingSource
+            // dataGridViewTextBoxColumn2
             // 
-            this.rolesBindingSource.DataMember = "roles";
-            this.rolesBindingSource.DataSource = this.monitorDataSet;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "nick";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Логин";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // dataGridViewTextBoxColumn5
+            // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "mail";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Почта";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "fio";
+            this.dataGridViewTextBoxColumn3.HeaderText = "ФИО";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // dataGridViewTextBoxColumn8
+            // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "pwd";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Пароль";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "comment";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Описание";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(71, 22);
-            this.toolStripButton1.Text = "Закрыть";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
             // 
             // FUser
             // 
@@ -351,12 +345,12 @@
             this.Text = "Пользователи";
             this.Load += new System.EventHandler(this.FUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.monitorDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingNavigator)).EndInit();
             this.usersBindingNavigator.ResumeLayout(false);
             this.usersBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -382,16 +376,15 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton usersBindingNavigatorSaveItem;
         private monitorDataSetTableAdapters.rolesTableAdapter rolesTableAdapter;
-        private System.Windows.Forms.DataGridView usersDataGridView;
         private System.Windows.Forms.BindingSource rolesBindingSource;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.DataGridView usersDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

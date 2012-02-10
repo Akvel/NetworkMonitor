@@ -27,6 +27,11 @@ namespace PMonitor.views
         private void usersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
+
+
+           // ((DataRowView) usersBindingSource.Current)["is_active"] = 1;
+
+
             this.usersBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.monitorDataSet);
 
@@ -62,14 +67,17 @@ namespace PMonitor.views
 
         private void usersDataGridView_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
+         //  if (usersDataGridView.colum.CurrentRow.Index == 5)
+           // {
 
-            
-            TextBox t = e.Control as TextBox;
-            if (t != null)
-            {
-                t.Text = "" + e.CellStyle.Tag;
-                t.UseSystemPasswordChar = true;
-            }
+             /*   TextBox t = e.Control as TextBox;
+                if (t != null)
+                {
+                    t.Text = "" + e.CellStyle.Tag;
+                    t.UseSystemPasswordChar = true;
+                }*/
+          //  }
+
         }
 
         private void usersDataGridView_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
@@ -79,7 +87,7 @@ namespace PMonitor.views
 
         private void usersDataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (e.ColumnIndex == 6)
+            if (e.ColumnIndex == 5)
             {
                 if (e.Value != null)
                     e.CellStyle.Tag = e.Value;
@@ -94,6 +102,11 @@ namespace PMonitor.views
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void usersBindingNavigator_RefreshItems(object sender, EventArgs e)
+        {
+
         }
     }
 }

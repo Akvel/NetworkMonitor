@@ -99,6 +99,9 @@ namespace PService
 
                 foreach (monitorDataSet.softwareRow l in mset1.software.Rows)
                 {
+                    if (l.hardwaresRow == null) continue;
+
+
                     if (!taskId.ContainsValue(l.id) && (!lastStart.ContainsKey(l.id) || ((DateTime.Now.Ticks - lastStart[l.id]) > l.req_interval_sec * 10000000)))
                     {
                         ITest test;

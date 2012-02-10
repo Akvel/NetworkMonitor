@@ -4763,8 +4763,6 @@ namespace PMonitor {
             
             private global::System.Data.DataColumn columnfio;
             
-            private global::System.Data.DataColumn columnis_active;
-            
             private global::System.Data.DataColumn columnmail;
             
             private global::System.Data.DataColumn columnid_role;
@@ -4827,14 +4825,6 @@ namespace PMonitor {
             public global::System.Data.DataColumn fioColumn {
                 get {
                     return this.columnfio;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn is_activeColumn {
-                get {
-                    return this.columnis_active;
                 }
             }
             
@@ -4907,19 +4897,18 @@ namespace PMonitor {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public usersRow AddusersRow(string nick, string fio, decimal is_active, string mail, rolesRow parentrolesRowByrole_user, string comment, string pwd) {
+            public usersRow AddusersRow(string nick, string fio, string mail, rolesRow parentrolesRowByrole_user, string comment, string pwd) {
                 usersRow rowusersRow = ((usersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         nick,
                         fio,
-                        is_active,
                         mail,
                         null,
                         comment,
                         pwd};
                 if ((parentrolesRowByrole_user != null)) {
-                    columnValuesArray[5] = parentrolesRowByrole_user[0];
+                    columnValuesArray[4] = parentrolesRowByrole_user[0];
                 }
                 rowusersRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowusersRow);
@@ -4953,7 +4942,6 @@ namespace PMonitor {
                 this.columnid = base.Columns["id"];
                 this.columnnick = base.Columns["nick"];
                 this.columnfio = base.Columns["fio"];
-                this.columnis_active = base.Columns["is_active"];
                 this.columnmail = base.Columns["mail"];
                 this.columnid_role = base.Columns["id_role"];
                 this.columncomment = base.Columns["comment"];
@@ -4969,8 +4957,6 @@ namespace PMonitor {
                 base.Columns.Add(this.columnnick);
                 this.columnfio = new global::System.Data.DataColumn("fio", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfio);
-                this.columnis_active = new global::System.Data.DataColumn("is_active", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnis_active);
                 this.columnmail = new global::System.Data.DataColumn("mail", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmail);
                 this.columnid_role = new global::System.Data.DataColumn("id_role", typeof(int), null, global::System.Data.MappingType.Element);
@@ -4991,7 +4977,6 @@ namespace PMonitor {
                 this.columnnick.MaxLength = 2147483647;
                 this.columnfio.AllowDBNull = false;
                 this.columnfio.MaxLength = 2147483647;
-                this.columnis_active.AllowDBNull = false;
                 this.columnmail.MaxLength = 2147483647;
                 this.columnid_role.AllowDBNull = false;
                 this.columncomment.MaxLength = 2147483647;
@@ -7953,17 +7938,6 @@ namespace PMonitor {
                 }
                 set {
                     this[this.tableusers.fioColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal is_active {
-                get {
-                    return ((decimal)(this[this.tableusers.is_activeColumn]));
-                }
-                set {
-                    this[this.tableusers.is_activeColumn] = value;
                 }
             }
             
@@ -13802,7 +13776,6 @@ SELECT name, principal_id, diagram_id, version, definition FROM sysdiagrams WHER
             tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("nick", "nick");
             tableMapping.ColumnMappings.Add("fio", "fio");
-            tableMapping.ColumnMappings.Add("is_active", "is_active");
             tableMapping.ColumnMappings.Add("mail", "mail");
             tableMapping.ColumnMappings.Add("id_role", "id_role");
             tableMapping.ColumnMappings.Add("comment", "comment");
@@ -13810,38 +13783,35 @@ SELECT name, principal_id, diagram_id, version, definition FROM sysdiagrams WHER
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[users] WHERE (([id] = @Original_id) AND ([is_active] = @Origin" +
-                "al_is_active) AND ([id_role] = @Original_id_role))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[users] WHERE (([id] = @Original_id) AND ([id_role] = @Original" +
+                "_id_role))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_is_active", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_active", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_role", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_role", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[users] ([nick], [fio], [is_active], [mail], [id_role], [comment], [pwd]) VALUES (@nick, @fio, @is_active, @mail, @id_role, @comment, @pwd);
-SELECT id, nick, fio, is_active, mail, id_role, comment, pwd FROM users WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[users] ([nick], [fio], [mail], [id_role], [comment], [pwd]) VA" +
+                "LUES (@nick, @fio, @mail, @id_role, @comment, @pwd);\r\nSELECT id, nick, fio, mail" +
+                ", id_role, comment, pwd FROM users WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nick", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nick", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fio", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@is_active", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_active", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mail", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "mail", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_role", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_role", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@comment", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "comment", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pwd", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pwd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[users] SET [nick] = @nick, [fio] = @fio, [is_active] = @is_active, [mail] = @mail, [id_role] = @id_role, [comment] = @comment, [pwd] = @pwd WHERE (([id] = @Original_id) AND ([is_active] = @Original_is_active) AND ([id_role] = @Original_id_role));
-SELECT id, nick, fio, is_active, mail, id_role, comment, pwd FROM users WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[users] SET [nick] = @nick, [fio] = @fio, [mail] = @mail, [id_role] = @id_role, [comment] = @comment, [pwd] = @pwd WHERE (([id] = @Original_id) AND ([id_role] = @Original_id_role));
+SELECT id, nick, fio, mail, id_role, comment, pwd FROM users WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nick", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nick", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fio", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@is_active", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_active", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mail", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "mail", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_role", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_role", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@comment", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "comment", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pwd", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pwd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_is_active", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "is_active", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_role", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_role", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -13859,7 +13829,7 @@ SELECT id, nick, fio, is_active, mail, id_role, comment, pwd FROM users WHERE (i
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, nick, fio, is_active, mail, id_role, comment, pwd FROM dbo.users";
+            this._commandCollection[0].CommandText = "SELECT id, nick, fio, mail, id_role, comment, pwd FROM dbo.users";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -13920,10 +13890,9 @@ SELECT id, nick, fio, is_active, mail, id_role, comment, pwd FROM users WHERE (i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, decimal Original_is_active, int Original_id_role) {
+        public virtual int Delete(int Original_id, int Original_id_role) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((decimal)(Original_is_active));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_id_role));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_id_role));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -13944,7 +13913,7 @@ SELECT id, nick, fio, is_active, mail, id_role, comment, pwd FROM users WHERE (i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string nick, string fio, decimal is_active, string mail, int id_role, string comment, string pwd) {
+        public virtual int Insert(string nick, string fio, string mail, int id_role, string comment, string pwd) {
             if ((nick == null)) {
                 throw new global::System.ArgumentNullException("nick");
             }
@@ -13957,25 +13926,24 @@ SELECT id, nick, fio, is_active, mail, id_role, comment, pwd FROM users WHERE (i
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(fio));
             }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((decimal)(is_active));
             if ((mail == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(mail));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(mail));
             }
-            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(id_role));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(id_role));
             if ((comment == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(comment));
+            }
+            if ((pwd == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(comment));
-            }
-            if ((pwd == null)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(pwd));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(pwd));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -13997,7 +13965,7 @@ SELECT id, nick, fio, is_active, mail, id_role, comment, pwd FROM users WHERE (i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string nick, string fio, decimal is_active, string mail, int id_role, string comment, string pwd, int Original_id, decimal Original_is_active, int Original_id_role, int id) {
+        public virtual int Update(string nick, string fio, string mail, int id_role, string comment, string pwd, int Original_id, int Original_id_role, int id) {
             if ((nick == null)) {
                 throw new global::System.ArgumentNullException("nick");
             }
@@ -14010,30 +13978,28 @@ SELECT id, nick, fio, is_active, mail, id_role, comment, pwd FROM users WHERE (i
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(fio));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((decimal)(is_active));
             if ((mail == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(mail));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(mail));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(id_role));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(id_role));
             if ((comment == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(comment));
+            }
+            if ((pwd == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(comment));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(pwd));
             }
-            if ((pwd == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(pwd));
-            }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_id));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((decimal)(Original_is_active));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_id_role));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(id));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_id));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_id_role));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -14054,8 +14020,8 @@ SELECT id, nick, fio, is_active, mail, id_role, comment, pwd FROM users WHERE (i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string nick, string fio, decimal is_active, string mail, int id_role, string comment, string pwd, int Original_id, decimal Original_is_active, int Original_id_role) {
-            return this.Update(nick, fio, is_active, mail, id_role, comment, pwd, Original_id, Original_is_active, Original_id_role, Original_id);
+        public virtual int Update(string nick, string fio, string mail, int id_role, string comment, string pwd, int Original_id, int Original_id_role) {
+            return this.Update(nick, fio, mail, id_role, comment, pwd, Original_id, Original_id_role, Original_id);
         }
     }
     
